@@ -29,7 +29,23 @@ module NPC_Generator(
     input wire BranchE,JalD,JalrE,
     output reg [31:0] PC_In
     );
-    
-    // 请补全此处代码
-    
+    always@(*)
+    begin
+        if( JalrE == 1 )
+        begin
+            PC_In = JalrTarget;
+        end
+        else if( BranchE == 1 )
+        begin
+            PC_In = BranchTarget;
+        end
+        else if( JalD == 1)
+        begin
+            PC_In = JalTarget;
+        end
+        else
+        begin
+            PC_In = PCF;
+        end
+    end
 endmodule

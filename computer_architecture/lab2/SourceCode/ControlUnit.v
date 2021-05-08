@@ -49,8 +49,202 @@ module ControlUnit(
     output wire AluSrc1D,
     output reg [2:0] ImmType        
     ); 
-    
-    // 请补全此处代码
+    /*
+instr_name      opcode     JalD  JalrD  RegWriteD  MemToRegD  MemWriteD  LoadNpcD  RegReadD  BranchTypeD  AluContrlD  AluSrc2D  AluSrc1D  ImmType                             
+slli            0010011    0     0      LW         0          0000       0         00        NOBRANCH     SLL         10        1         ITYPE   
+srli            0010011    0     0      LW         0          0000       0         00        NOBRANCH     SRL         10        1         ITYPE
+srai            0010011    0     0      LW         0          0000       0         00        NOBRANCH     SRA         10        1         ITYPE    
 
+add             0110011    0     0      LW         0          0000       0         00        000          0000        00        0         000
+sub             0110011    0     0      LW         0          0000       0         00        000          0000        00        0         000
+sll             0110011    0     0      LW         0          0000       0         00        000          0000        00        0         000
+srl             0110011    0     0      LW         0          0000       0         00        000          0000        00        0         000
+sra             0110011    0     0      LW         0          0000       0         00        000          0000        00        0         000
+slt             0110011    0     0      LW         0          0000       0         00        000          0000        00        0         000
+sltu            0110011    0     0      LW         0          0000       0         00        000          0000        00        0         000
+xor             0110011    0     0      LW         0          0000       0         00        000          0000        00        0         000
+or              0110011    0     0      LW         0          0000       0         00        000          0000        00        0         000
+and             0110011    0     0      LW         0          0000       0         00        000          0000        00        0         000
+            0010011    0     0      000        0          0000       0         00        000          0000        00        0         000
+            0010011    0     0      000        0          0000       0         00        000          0000        00        0         000
+            0010011    0     0      000        0          0000       0         00        000          0000        00        0         000
+*/            
+    always@(*)
+    begin
+        {JalD,JalrD,RegWriteD,MemToRegD,MemWriteD,LoadNpcD,RegReadD,BranchTypeD,AluContrlD,AluSrc2D,AluSrc1D,ImmType} = 26'b0;
+        case(Op)
+            7'b0010011:  //slli,srli,srai
+            begin
+                RegWriteD = `LW;
+                BranchTypeD = `NOBRANCH;
+                case(Fn3)
+                    3'b001:
+                    begin
+                        AluContrlD = `SLL;
+                    end
+                    3'b101:
+                    begin
+                        if(Fn7 == 7'b0000000)
+                        AluContrlD = `SRL;
+                        else
+                        AluContrlD = `SRA;
+                    end
+                endcase
+                AluSrc2D = 2'b10;
+                AluSrc1D = 1'b1;
+                ImmType = `ITYPE;
+            end
+            7'b0110011:
+            begin   
+                RegWriteD = `LW;
+                BranchTypeD = `NOBRANCH;
+                case(Fn3)
+                    3'b000:
+                    begin
+                        if(Fn7 == 7'b0000000)
+                        AluContrlD = `ADD;
+                        else
+                        AluContrlD = `SUB;
+                    end
+                    3'b001:
+                    AluContrlD = `SLL;
+                    3'b010:
+                    AluContrlD = `STL;
+                    3'b011:
+                    AluContrlD = `SLTU;
+                    3'b100:
+                    AluContrlD = `XOR;
+                    3'b101:
+                    begin
+                        if(Fn7 == 7'b0000000)
+                        AluContrlD = `SRL;
+                        else
+                        AluContrlD = `SRA;
+                    end
+                    3'b110:
+                    AluContrlD = `OR;
+                    3'b111:
+                    AluContrlD = `AND;
+                endcase
+                AluSrc2D = 2'b00;
+                AluSrc1D = 1'b1;
+                ImmType = `RTYPE;
+            end
+            7'b0010011:
+            begin
+                RegWriteD = `LW;
+                BranchTypeD = `NOBRANCH;
+                case(Fn3)
+                    3'b000:
+                    AluContrlD = `ADD;
+                    3'b010:
+                    AluContrlD = `SLT;
+                    3'b011:
+                    AluContrlD = `SLTU;
+                    3'b100:
+                    AluContrlD = `XOR;  
+                    3'b110:
+                    AluContrlD = `OR;
+                    3'b111:
+                    AluContrlD = `AND;
+                endcase  // case(Fn3)
+                AluSrc2D = 2'b10;
+                AluSrc1D = 1'b1;
+                ImmType = `ITYPE;
+            end // 7'b0010011 addi ,slti ,sltiu ,xori ,ori ,andi
+            7'b0110111:
+            begin
+            RegWriteD = `LW;
+            BranchTypeD = `NOBRANCH;
+            AluContrlD = `LUI;
+            AluSrc2D = 2'b10;
+            AluSrc1E = 1'b1;
+            ImmType = `UTYPE;
+            end // 7'b0110111 LUI
+            7'b0010111:
+            begin
+            RegWriteD = `LW;
+            BranchTypeD = `NOBRANCH;
+            AluContrlD = `LUI;
+            AluSrc2D = 2'b10;
+            AluSrc1E = 1'b0;
+            ImmType = `UTYPE;
+            end // 7'b0010111 AUIPC 
+            7'b1100111:  //JALR
+            begin
+            JalrD = 1;
+            RegWriteD = `LW;
+            LoadNpcD = 1'b1;
+            BranchTypeD = `NOBRANCH;
+            AluContrlD = `ADD;
+            AluSrc2D = 2'b01;
+            AluSrc1D = 1'b0
+            ImmType = `ITYPE;
+            end // 7'b1100111  JALR
+            7'b1101111:  //JAL
+            begin
+            JalrD = 1;
+            RegWriteD = `LW;
+            LoadNpcD = 1;
+            BranchTypeD = `NOBRANCH;
+            ImmType = `JTYPE;
+            end // 7'b1101111 JAL
+            7'b1100011: //BEQ BNE BLT BGE BLTU BGEU
+            begin
+            case(Fn3)
+                3'b000:
+                BranchTypeD = `BEQ;
+                3'b001:
+                BranchTypeD = `BNE;
+                3'b100:
+                BranchTypeD = `BLT;
+                3'b101:
+                BranchTypeD = `BGE;
+                3'b110:
+                BranchTypeD = `BLTU;
+                3'b111:
+                BranchTypeD = `BGEU;
+            endcase //case(Fn3)
+            AluSrc2D = 2'b00;
+            AluSrc1D = 1'b1;
+            ImmType = `BTYPE;
+            end // 7'b1100011 BEQ BNE BLT BGE BLTU BGEU
+
+            7'b0000011: //LB LH LW LBU LHU
+            begin
+            case(Fn3)
+                3'b000:
+                RegWriteD = `LB;
+                3'b001:
+                RegWriteD = `LH;
+                3'b010:
+                RegWriteD = `LW;
+                3'b100:
+                RegWriteD = `LBU;
+                3'b101:
+                RegWriteD = `LHU;
+            endcase  //case(Fn3)
+            MemToRegD = 1'b1;
+            AluContrlD = `ADD;
+            AluSrc2D = 2'b10;
+            AluSrc1D = 1'b1;
+            ImmType = `ITYPE;
+            end // 7'b0000011 LB LH LW LBU LHU
+            7'b0100011: //SB SH SW
+            begin
+            case(Fn3)
+                3'b000:
+                MemWriteD = 4'b0001;
+                3'b001:
+                MemWriteD = 4'b0011;
+                3'b010:
+                MemWriteD = 4'b1111;
+            endcase //case(Fn3)
+            AluContrlD = `ADD;
+            AluSrc2D = 2'b10;
+            AluSrc1D = 1'b1;
+            ImmType = `STYPE;
+            end // 7'b0100011 SB SH SW
+        endcase // case(opcode)
+    end //always@(*)
 endmodule
-

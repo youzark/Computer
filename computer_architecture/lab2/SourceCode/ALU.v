@@ -10,10 +10,10 @@
 // Description: ALU unit of RISCV CPU
 //////////////////////////////////////////////////////////////////////////////////
 
-//功能和接口说明
+//功能和接口说�?
 	//ALU接受两个操作数，根据AluContrl的不同，进行不同的计算操作，将计算结果输出到AluOut
-	//AluContrl的类型定义在Parameters.v中
-//推荐格式：
+	//AluContrl的类型定义在Parameters.v�?
+//推荐格式�?
     //case()
     //    `ADD:        AluOut<=Operand1 + Operand2; 
     //   	.......
@@ -33,39 +33,39 @@ module ALU(
     begin
     AluOut = 32'h0;
     case(AluContrl)
-        SLL:
+        `SLL:
         begin
             AluOut = Operand1 << Operand2[4:0];
         end
-        SRL:
+        `SRL:
         begin
             AluOut = Operand1 >> Operand2[4:0];
         end
-        SRA:
+        `SRA:
         begin
             AluOut = Operand1 >>> Operand2[4:0];
         end
-        ADD:
+        `ADD:
         begin
             AluOut = Operand1 + Operand2;
         end
-        SUB:
+        `SUB:
         begin
             AluOut = Operand1 - Operand2;
         end
-        XOR:
+        `XOR:
         begin
             AluOut = Operand1 ^ Operand2;
         end
-        OR: 
+        `OR: 
         begin
             AluOut = Operand1 | Operand2;
         end
-        AND:
+        `AND:
         begin
             AluOut = Operand1 & Operand2;
         end
-        SLT:
+        `SLT:
         begin
             if($signed(Operand1) < $signed(Operand2))
             begin   
@@ -74,9 +74,9 @@ module ALU(
             else
             begin   
                 AluOut = 32'h0;
-            else
+            end
         end
-        SLTU
+        `SLTU:
         begin
             if(Operand1 < Operand2)
             begin   
@@ -85,9 +85,9 @@ module ALU(
             else
             begin   
                 AluOut = 32'h0;
-            else
+            end
         end
-        LUI:
+        `LUI:
         begin
         AluOut = {Operand2[31:12],12'h0};
         end
