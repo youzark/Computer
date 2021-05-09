@@ -27,8 +27,6 @@ module BranchDecisionMaking(
     input wire [31:0] Operand1,Operand2,
     output reg BranchE
     );
-    
-    // 请补全此处代码
-
+    case(BranchTypeE)
 endmodule
 
