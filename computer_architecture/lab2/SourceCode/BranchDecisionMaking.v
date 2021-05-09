@@ -27,6 +27,43 @@ module BranchDecisionMaking(
     input wire [31:0] Operand1,Operand2,
     output reg BranchE
     );
-    case(BranchTypeE)
+	
+	always@(*)
+	begin
+		BranchE = 1'b0;
+    	case(BranchTypeE)
+	    	NOBRANCH:
+    		BEQ:
+			begin
+				if(Operand1 == Operand2)
+					BranchE = 1'b1;
+			end
+    		BNE:
+			begin
+				if(Operand1 != Operand2)
+					BranchE = 1'b1;
+			end
+    		BLT:
+			begin
+				if($signed(Operand1)<$signed(Operand2))
+					BranchE = 1'b1';
+			end
+    		BLTU:
+			begin
+				if(Operand1 < Operand2)
+					BranchE = 1'b1;
+			end
+    		BGE:
+			begin
+				if($signed(Operand1) > $signed(Operand2))
+					BranchE = 1'b1;
+			end
+    		BGEU:	  
+			begin
+				if(Operand1 > Operand2)
+					BranchE = 1'b1;
+			end
+    	endcase
+	end
 endmodule
 
