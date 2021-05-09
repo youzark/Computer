@@ -28,9 +28,34 @@ module DataExt(
     input wire [1:0] LoadedBytesSelect,
     input wire [2:0] RegWriteW,
     output reg [31:0] OUT
-    );    
-        
-    // 请补全此处代码
-
+    );   
+	always@(*)
+	begin
+		case(RegWriteW)
+        `NOREGWRITE:  	//	Do not write Register
+		begin
+		end
+        `LB:  			//	load 8bit from Mem then signed extended to 32bit
+		begin
+			OUT = {{24{IN[7]}}, IN[7:0]};
+		end
+        `LH:  			//	load 16bit from Mem then signed extended to 32bit
+		begin
+			OUT = {{16{IN[15]}}, IN[15:0]};
+		end
+        `LW:  			//	write 32bit to Register
+		begin
+			OUT = IN;
+		end
+        `LBU:  			//	load 8bit from Mem then unsigned extended to 32bit
+		begin
+			OUT = {24'b0, IN[7:0]};
+		end
+        `LHU:  			//	load 16bit from Mem then unsigned extended to 32bit
+		begin
+			OUT = {16'b0, IN[15:0]};
+		end
+		endcase
+	end
 endmodule
 

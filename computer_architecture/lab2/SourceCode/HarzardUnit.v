@@ -38,7 +38,6 @@ module HarzardUnit(
     output reg [1:0] Forward1E, Forward2E
     );
     
-    // 请补全此处代码
 
 endmodule
 
