@@ -45,7 +45,32 @@ reg [31:0] ram_cell [0:4095];
 
 initial begin    // 可以把测试数据手动输入此处
     ram_cell[0] = 32'h00000000;
-    // ......
+	ram_cell[1] = 32'h00000537;
+	ram_cell[2] = 32'h40050113;
+	ram_cell[3] = 32'h00806293;
+	ram_cell[4] = 32'h00c000ef;
+	ram_cell[5] = 32'h00652023;
+	ram_cell[6] = 32'h0000006f;
+	ram_cell[7] = 32'h00306e93;
+	ram_cell[8] = 32'h01d2f663;
+	ram_cell[9] = 32'h0002e313;
+	ram_cell[10] = 32'h00008067;
+	ram_cell[11] = 32'hfff28293;
+	ram_cell[12] = 32'hffc10113;
+	ram_cell[13] = 32'h00112023;
+	ram_cell[14] = 32'hffc10113;
+	ram_cell[15] = 32'h00512023;
+	ram_cell[16] = 32'hfddff0ef;
+	ram_cell[17] = 32'h00012283;
+	ram_cell[18] = 32'hfff28293;
+	ram_cell[19] = 32'h00612023;
+	ram_cell[20] = 32'hfcdff0ef;
+	ram_cell[21] = 32'h00012383;
+	ram_cell[22] = 32'h00410113;
+	ram_cell[23] = 32'h00730333;
+	ram_cell[24] = 32'h00012083;
+	ram_cell[25] = 32'h00410113;
+	ram_cell[26] = 32'h00008067;
 end
 
 always @ (posedge clk)

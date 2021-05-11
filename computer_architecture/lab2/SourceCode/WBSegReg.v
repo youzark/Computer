@@ -86,7 +86,7 @@ module WBSegReg(
     DataRam DataRamInst (
         .clk    (clk ),                      //请完善代码
         .wea    (WE),                      //请完善代码
-        .addra  (A),                      //请完善代码
+        .addra  (A[31:2]),                      //请完善代码
         .dina   (WD),                      //请完善代码
         .douta  ( RD_raw         ),
         .web    ( WE2            ),

@@ -37,8 +37,21 @@ module HarzardUnit(
     output reg StallF, FlushF, StallD, FlushD, StallE, FlushE, StallM, FlushM, StallW, FlushW,
     output reg [1:0] Forward1E, Forward2E
     );
-    
-
+	always@(negedge CpuRst)
+	begin
+    StallF = 1'b0;
+	FlushF = 1'b0;
+	StallD = 1'b0;
+	FlushD = 1'b0;
+	StallE = 1'b0;
+	FlushE = 1'b0;
+	StallM = 1'b0;
+	FlushM = 1'b0;
+	StallW = 1'b0;
+	FlushW = 1'b0;
+    Forward1E = 2'b00;
+   	Forward2E = 2'b00;
+	end
 endmodule
 
   

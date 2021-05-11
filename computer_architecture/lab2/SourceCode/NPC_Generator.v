@@ -45,7 +45,7 @@ module NPC_Generator(
         end
         else
         begin
-            PC_In = PCF;
+            PC_In = PCF + 4;
         end
     end
 endmodule
