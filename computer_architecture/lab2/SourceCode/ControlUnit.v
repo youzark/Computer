@@ -9,24 +9,24 @@
 // Tool Versions: Vivado 2017.4.1
 // Description: RISC-V Instruction Decoder
 //////////////////////////////////////////////////////////////////////////////////
-//功能和接口说�?
-    //ControlUnit       是本CPU的指令译码器，组合�?�辑电路
+//功能和接口说�?
+    //ControlUnit       是本CPU的指令译码器，组合�?�辑电路
 //输入
-    // Op               是指令的操作码部�?
+    // Op               是指令的操作码部�?
     // Fn3              是指令的func3部分
     // Fn7              是指令的func7部分
 //输出
     // JalD==1          表示Jal指令到达ID译码阶段
     // JalrD==1         表示Jalr指令到达ID译码阶段
-    // RegWriteD        表示ID阶段的指令对应的寄存器写入模�?
-    // MemToRegD==1     表示ID阶段的指令需要将data memory读取的�?�写入寄存器,
-    // MemWriteD        �?4bit，为1的部分表示有效，对于data memory�?32bit字按byte进行写入,MemWriteD=0001表示只写入最�?1个byte，和xilinx bram的接口类�?
+    // RegWriteD        表示ID阶段的指令对应的寄存器写入模�?
+    // MemToRegD==1     表示ID阶段的指令需要将data memory读取的�?�写入寄存器,
+    // MemWriteD        �?4bit，为1的部分表示有效，对于data memory�?32bit字按byte进行写入,MemWriteD=0001表示只写入最�?1个byte，和xilinx bram的接口类�?
     // LoadNpcD==1      表示将NextPC输出到ResultM
-    // RegReadD         表示A1和A2对应的寄存器值是否被使用到了，用于forward的处�?
-    // BranchTypeD      表示不同的分支类型，�?有类型定义在Parameters.v�?
-    // AluContrlD       表示不同的ALU计算功能，所有类型定义在Parameters.v�?
-    // AluSrc2D         表示Alu输入�?2的�?�择
-    // AluSrc1D         表示Alu输入�?1的�?�择
+    // RegReadD         表示A1和A2对应的寄存器值是否被使用到了，用于forward的处�?
+    // BranchTypeD      表示不同的分支类型，�?有类型定义在Parameters.v�?
+    // AluContrlD       表示不同的ALU计算功能，所有类型定义在Parameters.v�?
+    // AluSrc2D         表示Alu输入�?2的�?�择
+    // AluSrc1D         表示Alu输入�?1的�?�择
     // ImmType          表示指令的立即数格式
 //实验要求  
     //补全模块  
@@ -88,7 +88,7 @@ and             0110011    0     0      LW         0          0000       0      
     begin
         {r_JalD,r_JalrD,RegWriteD,r_MemToRegD,MemWriteD,r_LoadNpcD,RegReadD,BranchTypeD,AluContrlD,r_AluSrc2D,r_AluSrc1D,ImmType} = 26'b0;
         case(Op)
-            7'b0010011:  //slli,srli,srai
+            7'b0010011:  //slli,srli,srai,addi ,slti ,sltiu ,xori ,ori ,andi
             begin
                 RegWriteD = `LW;
                 BranchTypeD = `NOBRANCH;
@@ -104,11 +104,23 @@ and             0110011    0     0      LW         0          0000       0      
                         else
                         AluContrlD = `SRA;
                     end
+                    3'b000:
+                    AluContrlD = `ADD;
+                    3'b010:
+                    AluContrlD = `SLT;
+                    3'b011:
+                    AluContrlD = `SLTU;
+                    3'b100:
+                    AluContrlD = `XOR;  
+                    3'b110:
+                    AluContrlD = `OR;
+                    3'b111:
+                    AluContrlD = `AND;
                 endcase
                 r_AluSrc2D = 2'b10;
                 r_AluSrc1D = 1'b1;
                 ImmType = `ITYPE;
-            end
+            end  //slli,srli,srai,addi ,slti ,sltiu ,xori ,ori ,andi
             7'b0110011:
             begin   
                 RegWriteD = `LW;
@@ -145,29 +157,7 @@ and             0110011    0     0      LW         0          0000       0      
                 r_AluSrc1D = 1'b1;
                 ImmType = `RTYPE;
             end
-            7'b0010011:
-            begin
-                RegWriteD = `LW;
-                BranchTypeD = `NOBRANCH;
-                case(Fn3)
-                    3'b000:
-                    AluContrlD = `ADD;
-                    3'b010:
-                    AluContrlD = `SLT;
-                    3'b011:
-                    AluContrlD = `SLTU;
-                    3'b100:
-                    AluContrlD = `XOR;  
-                    3'b110:
-                    AluContrlD = `OR;
-                    3'b111:
-                    AluContrlD = `AND;
-                endcase  // case(Fn3)
-                r_AluSrc2D = 2'b10;
-                r_AluSrc1D = 1'b1;
-                ImmType = `ITYPE;
-            end // 7'b0010011 addi ,slti ,sltiu ,xori ,ori ,andi
-            7'b0110111:
+            7'b0110111: //LUI
             begin
             RegWriteD = `LW;
             BranchTypeD = `NOBRANCH;

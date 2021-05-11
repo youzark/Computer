@@ -91,7 +91,7 @@ module RV32Core(
     assign {Funct7D, Rs2D, Rs1D, Funct3D, RdD, OpCodeD} = Instr;
     assign JalNPC=ImmD+PCD;
     assign ForwardData1 = Forward1E[1]?(AluOutM):( Forward1E[0]?RegWriteData:RegOut1E );
-    assign Operand1 = AluSrc1E?PCE:ForwardData1;
+    assign Operand1 = AluSrc1E?ForwardData1:PCE;
     assign ForwardData2 = Forward2E[1]?(AluOutM):( Forward2E[0]?RegWriteData:RegOut2E );
     assign Operand2 = AluSrc2E[1]?(ImmE):( AluSrc2E[0]?Rs2E:ForwardData2 );
     assign ResultM = LoadNpcM ? (PCM+4) : AluOutM;
