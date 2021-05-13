@@ -9,7 +9,7 @@ begin
 	rst = 1;
 	clk = 1;
 	#5 rst = 0;
-	repeat(100)
+	repeat(1000)
    	#20 clk = ~clk;
 	$finish;
 end

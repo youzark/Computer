@@ -183,12 +183,12 @@ and             0110011    0     0      LW         0          0000       0      
             BranchTypeD = `NOBRANCH;
             AluContrlD = `ADD;
             r_AluSrc2D = 2'b01;
-            r_AluSrc1D = 1'b0;
+            r_AluSrc1D = 1'b1;
             ImmType = `ITYPE;
             end // 7'b1100111  JALR
             7'b1101111:  //JAL
             begin
-            r_JalrD = 1'b1;
+            r_JalD = 1'b1;
             RegWriteD = `LW;
             r_LoadNpcD = 1'b1;
             BranchTypeD = `NOBRANCH;
