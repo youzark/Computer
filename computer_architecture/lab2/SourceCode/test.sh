@@ -1,3 +1,3 @@
 iverilog -o test *.v ./BRAMModule/*.v
 ./test
-gtkwave test.vcd
+gnome-terminal -e 'gtkwave test.vcd'

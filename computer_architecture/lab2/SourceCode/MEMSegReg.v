@@ -59,5 +59,4 @@ module MEMSegReg(
             MemWriteM  <= clear ?  4'b0 : MemWriteE;
             LoadNpcM   <= clear ?     0 : LoadNpcE;
         end
-    
 endmodule

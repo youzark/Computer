@@ -18,6 +18,8 @@ initial
 begin
 	$dumpfile("test.vcd");
 	$dumpvars(0,test);
+	for(i = 0 ;i < 31; i = i + 1)
+		$dumpvar(1,RV32Core.RegisterFile.RegFile[i]);
 end
 
 RV32Core CPU1
