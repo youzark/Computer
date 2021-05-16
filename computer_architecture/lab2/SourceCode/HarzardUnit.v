@@ -39,18 +39,49 @@ module HarzardUnit(
     );
 	always@(negedge CpuRst)
 	begin
-    StallF = 1'b0;
-	FlushF = 1'b0;
-	StallD = 1'b0;
-	FlushD = 1'b0;
-	StallE = 1'b0;
-	FlushE = 1'b0;
-	StallM = 1'b0;
-	FlushM = 1'b0;
-	StallW = 1'b0;
-	FlushW = 1'b0;
-    Forward1E = 2'b00;
-   	Forward2E = 2'b00;
+		always@(*)
+		begin
+			{StallF, FlushF, StallD, FlushD, StallE, FlushE, StallM, FlushM, StallW, FlushW} = 10'b0;
+			{Forward1E,Forward2E} = 4'b0;
+
+			//control Hazard
+
+			if(BranchE == 1 || JalrE == 1)
+			begin
+				FlushF = 1;
+				FlushD = 1;
+			end
+			if(JalrD == 1)
+			begin
+				FlushF = 1;
+			end
+
+			//Forward (no Load and read)
+
+			if(Rs1E != 5'b00000 && Rs1E == RdM && RegWriteM != 3'b0)
+			begin
+				Forward1E = 2'b01;
+			end
+			else if(Rs1E != 5'b00000 && Rs1E == RdW && RegWriteM != 3'b0)
+			begin
+				Forward1E = 2'b10;
+			end
+			if(Rs2E != 5'b00000 && Rs2E == RdM && RegWriteW != 3'b0)
+			begin
+				Forward2E = 2'b01;
+			end
+			else if(Rs2E != 5'b00000 && Rs2E == RdW && RegWriteW != 3'b0))
+			begin
+				Forward2E = 2'b10;
+			end
+
+			//Load and read
+			
+			if(MemToRegE == 1 && (Rs1D == RdE || Rs2D == RdE))
+			begin
+				StallD = 1;
+			end
+		end
 	end
 endmodule
 
