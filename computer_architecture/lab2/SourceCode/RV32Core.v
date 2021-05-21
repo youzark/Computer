@@ -90,9 +90,11 @@ module RV32Core(
     //wire values assignments
     assign {Funct7D, Rs2D, Rs1D, Funct3D, RdD, OpCodeD} = Instr;
     assign JalNPC=ImmD+PCD;
-    assign ForwardData1 = Forward1E[1]?(AluOutM):( Forward1E[0]?RegWriteData:RegOut1E );
+    assign ForwardData1 = Forward1E[1]?(RegWriteData):( Forward1E[0]?AluOutM:RegOut1E );
+    // 00 : RegOut1E 01: AluOutM 1x:RegWriteData
     assign Operand1 = AluSrc1E?ForwardData1:PCE;
-    assign ForwardData2 = Forward2E[1]?(AluOutM):( Forward2E[0]?RegWriteData:RegOut2E );
+    assign ForwardData2 = Forward2E[1]?(RegWriteData):( Forward2E[0]?AluOutM:RegOut2E );
+    // 00: RegOut2E 01: AluOutM 1x:RegWriteData
     assign Operand2 = AluSrc2E[1]?(ImmE):( AluSrc2E[0]?Rs2E:ForwardData2 );
     assign ResultM = LoadNpcM ? (PCM+4) : AluOutM;
     assign RegWriteData = ~MemToRegW?ResultW:DM_RD_Ext;
