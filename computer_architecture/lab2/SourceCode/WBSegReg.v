@@ -63,6 +63,8 @@ module WBSegReg(
     input wire MemToRegM,
     output reg MemToRegW
     );
+    wire [4:0]  write_data;
+    assign write_data = {A[1:0],3'b0};
     
     //
     initial begin
@@ -85,9 +87,9 @@ module WBSegReg(
     wire [31:0] RD_raw;
     DataRam DataRamInst (
         .clk    (clk ),                      //请完善代码
-        .wea    (WE),                      //请完善代码
+        .wea    (WE << A[1:0]),                      //请完善代码
         .addra  (A[31:2]),                      //请完善代码
-        .dina   (WD),                      //请完善代码
+        .dina   (WD << write_data),                      //请完善代码
         .douta  ( RD_raw         ),
         .web    ( WE2            ),
         .addrb  ( A2[31:2]       ),

@@ -9,10 +9,10 @@
 // Tool Versions: Vivado 2017.4.1
 // Description: Decide whether to branch 
 //////////////////////////////////////////////////////////////////////////////////
-//功能和接口说�?
+//功能和接口说�?
     //BranchDecisionMaking接受两个操作数，根据BranchTypeE的不同，进行不同的判断，当分支应该taken时，令BranchE=1'b1
-    //BranchTypeE的类型定义在Parameters.v�?
-//推荐格式�?
+    //BranchTypeE的类型定义在Parameters.v�?
+//推荐格式�?
     //case()
     //    `BEQ: ???
     //      .......
@@ -57,12 +57,12 @@ module BranchDecisionMaking(
 			end
     		`BGE:
 			begin
-				if($signed(Operand1) > $signed(Operand2))
+				if($signed(Operand1) >= $signed(Operand2))
 					BranchE = 1'b1;
 			end
     		`BGEU:	  
 			begin
-				if(Operand1 > Operand2)
+				if(Operand1 >= Operand2)
 					BranchE = 1'b1;
 			end
     	endcase

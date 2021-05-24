@@ -170,7 +170,7 @@ and             0110011    0     0      LW         0          0000       0      
             begin
             RegWriteD = `LW;
             BranchTypeD = `NOBRANCH;
-            AluContrlD = `LUI;
+            AluContrlD = `ADD;
             r_AluSrc2D = 2'b10;
             r_AluSrc1D = 1'b0;
             ImmType = `UTYPE;

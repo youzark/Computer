@@ -37,11 +37,21 @@ module DataExt(
 		end
         `LB:  			//	load 8bit from Mem then signed extended to 32bit
 		begin
+			if(LoadedBytesSelect == 2'b00)
 			OUT = {{24{IN[7]}}, IN[7:0]};
+			else if(LoadedBytesSelect == 2'b01)
+			OUT = {{24{IN[15]}}, IN[15:8]};
+			else if(LoadedBytesSelect == 2'b10)
+			OUT = {{24{IN[23]}}, IN[23:16]};
+			else
+			OUT = {{24{IN[31]}}, IN[31:24]};
 		end
         `LH:  			//	load 16bit from Mem then signed extended to 32bit
 		begin
+			if(LoadedBytesSelect[1] == 1'b0)
 			OUT = {{16{IN[15]}}, IN[15:0]};
+			else
+			OUT = {{16{IN[31]}}, IN[31:16]};
 		end
         `LW:  			//	write 32bit to Register
 		begin
@@ -49,11 +59,21 @@ module DataExt(
 		end
         `LBU:  			//	load 8bit from Mem then unsigned extended to 32bit
 		begin
+			if(LoadedBytesSelect == 2'b00)
 			OUT = {24'b0, IN[7:0]};
+			else if(LoadedBytesSelect == 2'b01)
+			OUT = {24'b0, IN[15:8]};
+			else if(LoadedBytesSelect == 2'b10)
+			OUT = {24'b0, IN[23:16]};
+			else
+			OUT = {24'b0, IN[31:24]};
 		end
         `LHU:  			//	load 16bit from Mem then unsigned extended to 32bit
 		begin
+			if(LoadedBytesSelect[1] == 1'b0)
 			OUT = {16'b0, IN[15:0]};
+			else
+			OUT = {16'b0, IN[31:16]};
 		end
 		endcase
 	end
