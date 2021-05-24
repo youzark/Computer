@@ -23,12 +23,14 @@ module IFSegReg(
     initial PCF = 0;
     
     always@(posedge clk)
+    begin
         if(en) begin
             if(clear)
                 PCF <= 0;
             else 
                 PCF <= PC_In;
         end
+    end
     
 endmodule
 
