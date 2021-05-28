@@ -9,9 +9,9 @@ class tree:
     def add_children(self,child):
         self.children.append(child)
 
-    def search(self,data):
-        if self.data == data:
-            return self
+    def search(self,data): 
+        if self.data == data: 
+            return self 
         for node in self.children:
             result = node.search(data)
             if result != None:
@@ -54,16 +54,29 @@ class tree:
         else:
             return None
 
-def satisfy(max_sup,k,general_level_vec,records,marital_status_tree,race_tree,gender_tree):
+def valid_vec_gen(high,low):
+    mid = (high + low ) // 2
+    valid_vecs = []
+    for race_level in range(0,2):
+        for gender_level in range(0,2):
+            for marital_level in range(0,3):
+                age_level = mid - race_level - gender_level - marital_level
+                if age_level in range(0,5):
+                    valid_vecs.append((marital_level,race_level,gender_level,age_level))
+    return valid_vecs
+
+def satisfy(max_sup,k,general_level_vec,records,marital_status_tree,race_tree,gender_tree,age_tree):
     marital_child_list = marital_status_tree.get_children(general_level_vec[0])
     race_child_list = race_tree.get_children(general_level_vec[1])
     gender_child_list = gender_tree.get_children(general_level_vec[2])
+    age_child_list = age_tree.get_children(general_level_vec[3])
     quai_to_number = {}
     sup_number = 0
     for record in records:
         marital_info = record.split(",")[5].strip()
         race_info = record.split(",")[8].strip()
         gender_info = record.split(",")[9].strip()
+        age_info = record.split(",")[0].strip()
         
         for child in marital_child_list:
             gen = child.check_and_change(marital_info)
@@ -77,7 +90,11 @@ def satisfy(max_sup,k,general_level_vec,records,marital_status_tree,race_tree,ge
             gen = child.check_and_change(gender_info)
             if gen != None:
                 gender_info = gen
-        quai = marital_info+race_info+gender_info
+        for child in age_child_list:
+            gen = child.check_and_change(age_info)
+            if gen != None:
+                age_info = gen
+        quai = marital_info+race_info+gender_info+age_info
         if quai in quai_to_number:
             quai_to_number[quai] += 1
             if quai_to_number[quai] == k:
@@ -87,13 +104,38 @@ def satisfy(max_sup,k,general_level_vec,records,marital_status_tree,race_tree,ge
         else:
             quai_to_number[quai] = 1
             sup_number += 1 
-    print(quai_to_number)
-    print(sup_number)
     if sup_number > max_sup:
         return False
     else:
         return True
 
+def range_sever(lowerbound,upbound,step):
+    range_set = []
+    low = lowerbound
+    up = lowerbound + step - 1
+    while up <= upbound:
+        range_set.append((low,up))
+        low += step
+        up += step
+    return range_set
+
+def range_format(low,up):
+    if low == up:
+        return str(up)
+    else:
+        return str(low) + '_' + str(up)
+
+def numer_to_hier(lowerbound,upbound,hier):
+    if len(hier) != 0:
+        new_range_set = range_sever(lowerbound,upbound,hier[0])
+        date_file = open("./K-Anonymity实验数据/adult_date.txt","a")
+        for new_range in new_range_set:
+            date_file.write(range_format(new_range[0],new_range[1])+","+range_format(lowerbound,upbound)+'\n')
+        date_file.close()
+        for new_range in new_range_set:
+            numer_to_hier(new_range[0],new_range[1],hier[1:])
+
+        
 
 data = open("./K-Anonymity实验数据/adult.data","r")
 race_tree = tree("*")
@@ -102,9 +144,29 @@ marital_status_tree = tree("*")
 marital_status_tree.read_and_construct("./K-Anonymity实验数据/adult_marital_status.txt")
 gender_tree = tree("*")
 gender_tree.read_and_construct("./K-Anonymity实验数据/adult_gender.txt")
+age_tree = tree("0_59") age_tree.read_and_construct("./K-Anonymity实验数据/adult_date.txt") 
 records = data.readlines();
-print(satisfy(10,10,[1,1,1],records,marital_status_tree,race_tree,gender_tree))
+
+low = 0
+high = 8 
+best_vec = (0,0,0,0)
+while low < high:
+    mid = (high + low) // 2 + 1
+    sati = False
+    valid_vecs = valid_vec_gen(high,low)
+    for valid_vec in valid_vecs:
+        if(sati == True):
+            break
+        if satisfy(30,20,valid_vec,records,marital_status_tree,race_tree,gender_tree,age_tree):
+            sati = True
+            low = mid
+            best_vec = valid_vec
+    if sati != True:
+        high = mid -1
+
 data.close()
+
+
 
 
 
