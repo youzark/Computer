@@ -1,2 +1,2 @@
 clear
-python3 ./samarati.py
+python3 ./mondrian.py
