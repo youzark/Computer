@@ -80,12 +80,11 @@ def myBreadthFirstSearch(problem):
     return []
 
 def myAStarSearch(problem, heuristic):
-    visited = {} #tupel 0:prev_state 1:path cost to prev_state 
+    visited = {} #prev_state of key
     frontier = util.PriorityQueue()
 
     state = problem.getStartState()
-    frontier.push((state,None,cost),heuristic(state))
-    visited[state] = (prev_state,0)
+    frontier.push((state,None,0),heuristic(state))
     
     while not frontier.isEmpty():
         state, prev_state, cost = frontier.pop()
@@ -98,10 +97,10 @@ def myAStarSearch(problem, heuristic):
             return solution[::-1]
         
         if state not in visited:
-            visited[state] = (prev_state,cost + visted[prev_state][1])
+            visited[state] = prev_state
 
             for next_state, step_cost in problem.getChildren(state):
-                frontier.push((next_state,state),heuristic(next_state)+step_cost)
+                frontier.push((next_state,state,cost+step_cost),heuristic(next_state)+step_cost+cost)
     return []
 
 """
@@ -128,13 +127,20 @@ class MyMinimaxAgent():
     def minimax(self, state, depth):
         if state.isTerminated():
             return None, state.evaluateScore()        
+        if depth == 0 and state.isMe():
+            return None, state.evaluateScore()        
 
         best_state, best_score = None, -float('inf') if state.isMe() else float('inf')
 
         for child in state.getChildren():
-            # YOUR CODE HERE
-            util.raiseNotDefined()
-        
+            if state.isMe(): # current state is pacman,maximize utility of child
+                next_state, next_score = self.minimax(child,depth-1)
+                if next_score > best_score:
+                    best_state, best_score = child, next_score
+            else:
+                next_state, next_score = self.minimax(child,depth)
+                if next_score < best_score:
+                    best_state, best_score = child, next_score
         return best_state, best_score
 
     def getNextState(self, state):
@@ -146,6 +152,40 @@ class MyAlphaBetaAgent():
     def __init__(self, depth):
         self.depth = depth
 
+    # return value: best_score
+    # prun_able if parent and child is the same type of node,no prunning can happen
+    def alpha_beta_pruning(self,state,depth,alpha,beta):
+        #terminal states
+        if state.isTerminated():
+            return None, state.evaluateScore()        
+        if depth == 0 and state.isMe():
+            return None, state.evaluateScore()        
+
+        #Init best_state 
+        best_state ,best_score =None, -float('inf') if state.isMe() else float('inf')
+        for child in state.getChildren():
+            #decide whether child can prun
+            if state.isMe(): #Max node
+                _,next_score = self.alpha_beta_pruning(child,depth-1,alpha,beta)
+                if next_score > best_score:
+                    best_state = child
+                    best_score = next_score
+                if best_score > beta:
+                    return child,best_score
+                if best_score > alpha:
+                    alpha = best_score
+            else:
+                _,next_score = self.alpha_beta_pruning(child,depth,alpha,beta)
+                if next_score < best_score:
+                    best_state = child
+                    best_score = next_score
+                if best_score < alpha:
+                    return child,best_score
+                if best_score < beta:
+                    beta = best_score
+        return best_state,best_score
+
+
     def getNextState(self, state):
-        # YOUR CODE HERE
-        util.raiseNotDefined()
+        return self.alpha_beta_pruning(state,self.depth,-float('inf'),float('inf'))[0]
+

@@ -1,3 +1,4 @@
+clear
 if [[ $(grep 'import' myImpl.py) != 'import util' ]]; then
   echo "Wrong import"
   exit 1
