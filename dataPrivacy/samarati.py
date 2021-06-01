@@ -1,3 +1,5 @@
+k = 10
+max_sup = 10
 # Utility:
 # represent generalization hierarchy
 class tree:
@@ -182,6 +184,7 @@ def satisfy(max_sup,k,general_level_vec,records,marital_status_tree,race_tree,ge
             quai_to_number[quai] = 1
             sup_number += 1 
     if generalize :
+        print("sup_number:",sup_number,"new_record_number:",len(new_records_list))
         return new_records_list
     # if sup_number > max_sup too many records need to be suppressed
     if sup_number > max_sup:
@@ -256,7 +259,7 @@ while low < high:
     for valid_vec in valid_vecs:
         if(sati == True):
             break
-        if satisfy(10,10,valid_vec,records,marital_status_tree,race_tree,gender_tree,age_tree):
+        if satisfy(max_sup,k,valid_vec,records,marital_status_tree,race_tree,gender_tree,age_tree):
             sati = True
             low = mid
             best_vec = valid_vec
@@ -264,6 +267,6 @@ while low < high:
         high = mid -1
 # write record list into new_file name
 new_file_name = "./K-Anonymity实验数据/new_adult.data"
-new_records_list = satisfy(10,10,best_vec,records,marital_status_tree,race_tree,gender_tree,age_tree,True)
+new_records_list = satisfy(max_sup,k,best_vec,records,marital_status_tree,race_tree,gender_tree,age_tree,True)
 write_new_file(new_file_name,new_records_list)
 data.close()

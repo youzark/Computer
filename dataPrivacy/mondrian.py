@@ -1,6 +1,12 @@
 from queue import PriorityQueue
 import heapq
+# quai_identifier
 attri = {'age':0,'education_num':4}
+attri_name = list(attri)
+# domain of quai_indentifier
+init_range_list = [(0,99),(0,19)]
+# k stands for k_anonymity
+k = 90 
 data = open("./K-Anonymity实验数据/adult.data","r")
 records = data.readlines()
 
@@ -177,12 +183,10 @@ def generalize(range_tree,global_new_records):
 
 
 # init range_tree
-tree = range_tree(('age','education_num'),[(0,99),(0,19)])
+tree = range_tree(attri_name,init_range_list)
 for record in records:
     tree.add_leaf(record)
 records_count = len(records)
-# k stands for k_anonymity
-k = 10 
 
 # use priority queue to decide next range_node to split
 # priority is each node's leaf_count
@@ -214,6 +218,7 @@ while len(node_queue) != 0:
         heapq.heappush(node_queue,(records_count-child.leaf_count,child))
 
 # generalize all the records in range_tree and write result in new file
+tree.print_tree()
 global_new_records = []
 generalize(tree,global_new_records)
 new_file = open("./K-Anonymity实验数据/new_mondrain_adult.data","w")

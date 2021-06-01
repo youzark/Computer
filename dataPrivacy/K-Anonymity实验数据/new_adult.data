@@ -185,7 +185,8 @@
 55_59,  State-gov,  268700,  HS-grad,  9, *,  Other-service,  Husband, *, Male,  0,  0,  40,  United-States,  <=50K
 55_59,  Private,  236596,  HS-grad,  9, *,  Adm-clerical,  Husband, *, Male,  0,  0,  45,  United-States,  >50K
 30_34,  Private,  183916,  HS-grad,  9, *,  Other-service,  Not-in-family, *, Female,  0,  0,  34,  United-States,  <=50K
-30_34,  Private,  45781,  Masters,  14, *,  Prof-specialty,  Not-in-family, *, Female,  14084,  0,  50,  United-States,  >50K 30_34,  Private,  309974,  Bachelors,  13, *,  Sales,  Own-child, *, Female,  0,  0,  40,  United-States,  <=50K
+30_34,  Private,  45781,  Masters,  14, *,  Prof-specialty,  Not-in-family, *, Female,  14084,  0,  50,  United-States,  >50K
+30_34,  Private,  309974,  Bachelors,  13, *,  Sales,  Own-child, *, Female,  0,  0,  40,  United-States,  <=50K
 30_34,  Private,  117747,  HS-grad,  9, *,  Sales,  Wife, *, Female,  0,  1573,  35,  ?,  <=50K
 30_34,  Local-gov,  189265,  HS-grad,  9, *,  Adm-clerical,  Not-in-family, *, Female,  0,  0,  40,  United-States,  <=50K
 30_34,  Private,  185814,  HS-grad,  9, *,  Transport-moving,  Unmarried, *, Female,  0,  0,  30,  United-States,  <=50K
