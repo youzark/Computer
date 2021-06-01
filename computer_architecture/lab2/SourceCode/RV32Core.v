@@ -268,7 +268,7 @@ module RV32Core(
         .clear(FlushW),
         .A(AluOutM),
         .WD(StoreDataM),
-        .WE(MemWriteM),
+        .WE(Mem3riteM),
         .RD(DM_RD),
         .LoadedBytesSelect(LoadedBytesSelect),
         .A2(CPU_Debug_DataRAM_A2),
