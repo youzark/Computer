@@ -68,6 +68,14 @@ class activity:
         file_inst.write('\n')
         file_inst.write(str(duration+interval))
 
+    def write_daily_report(self):
+        file_name = date_record_file_name_gen(self.time.get_start_date())
+        file_prompt_inst = open('../prompt/date_report.txt','w')
+        file_record_inst = open(file_name,'r')
+        records = file_record_inst.readlines()
+
+
+
 if __name__ == '__main__':
     act_type = activity_type('homework','计算方法','10')
     activity_inst = activity(act_type)
