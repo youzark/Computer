@@ -1,14 +1,11 @@
 import time
 import multiprocessing
-from tkinter import messagebox
 
 # countdonw for interval minutes
 def main(interval):
     countdown_pro = multiprocessing.Process(target = countdown,args = [interval])
     countdown_pro.start()
     countdown_pro.join()
-    print("\a")
-    messagebox.showinfo("Time's up","Take a rest!")
     
 #invoked by main function ,core of countdown
 def countdown(interval,write_gap = 30):
