@@ -1,4 +1,4 @@
-file_name_list = ['count','aim']
+file_name_list = ['count','aim','date_report']
 
 def convert_to_path(file_name_list):
     path_list = []

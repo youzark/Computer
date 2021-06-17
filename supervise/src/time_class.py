@@ -35,5 +35,5 @@ class time_class:
         end_time = time.time()
         duration = interval * 60
         start_time = end_time - duration
-        self.work_instance_list.append((start_time,end_time,duration))
+        self.act_instance_list.append((start_time,end_time,duration))
 

@@ -1,6 +1,7 @@
 import os
 from time_class import time_class
 import countdown
+import prompt_gen
 
 #parameter:
 #    priority_status: study rest afterschool
@@ -21,9 +22,14 @@ class activity_type:
         self.subject = subject
         self.chapter_num = chapter_num
         self.description = description
-    def activity_type_info(self):
-        info = f'{self.priority_status}_{self.subject}_{self.chapter_num}'
-        return info
+    def activity_type_info(self,for_prompt = False):
+        if for_prompt:
+            info = f'性质:{self.priority_status}   科目:{self.subject}   章节:{self.chapter_num}'
+            return info
+        else:
+            info = f'{self.priority_status}_{self.subject}_{self.chapter_num}'
+            return info
+
     def aim_gene(self):
         if self.priority_status == 'homework':
             if not self.subject == None:
@@ -47,6 +53,7 @@ class activity:
             file_inst.close()
             countdown.main(duration)
             self.write_file(duration)
+            prompt_gen.main()
             self.time.end_interval(duration)
 
     def write_file(self,interval):
@@ -54,29 +61,37 @@ class activity:
         if not os.path.exists(file_name):
             duration = 0
             file_inst = open(file_name,'w')
+            file_prompt_inst = open('../prompt/date_report.txt','w')
+            file_prompt_inst.write(f'当日累积已完成学习时间:{interval} 分钟\n')
+            file_prompt_inst.write('当日完成事物列表:\n')
+            file_prompt_inst.close()
             file_inst.close()
         else:
             file_inst = open(file_name,'r')
             records = file_inst.readlines()
-            duration = int(records[-1])
+            duration = int(records[-2].strip())
             file_inst.close()
+        file_prompt_inst = open('../prompt/date_report.txt','r')
+        day_records = file_prompt_inst.readlines()
+        day_records[0] = f'当日累积已完成学习时间:{duration+interval} 分钟\n'
+        file_prompt_inst.close()
+        file_prompt_inst = open('../prompt/date_report.txt','w')
+        day_records = file_prompt_inst.writelines(day_records)
+        file_prompt_inst.close()
+        file_prompt_inst = open('../prompt/date_report.txt','a')
+        day_records = file_prompt_inst.write(self.act_type.activity_type_info(True) + f'   时间:{interval} 分钟')
+        day_records = file_prompt_inst.write('\n')
+        file_prompt_inst.close()
         file_inst = open(file_name,'a')
-        file_inst.write('\n')
         file_inst.write(date_formate(self.time.get_start_date()))
         file_inst.write('\n')
-        file_inst.write(self.act_type.activity_type_info())
+        file_inst.write(self.act_type.activity_type_info()+f'_{interval}')
         file_inst.write('\n')
         file_inst.write(str(duration+interval))
-
-    def write_daily_report(self):
-        file_name = date_record_file_name_gen(self.time.get_start_date())
-        file_prompt_inst = open('../prompt/date_report.txt','w')
-        file_record_inst = open(file_name,'r')
-        records = file_record_inst.readlines()
-
-
+        file_inst.write('\n')
+        file_inst.write('\n')
 
 if __name__ == '__main__':
-    act_type = activity_type('homework','计算方法','10')
+    act_type = activity_type('homework','计算方法','11')
     activity_inst = activity(act_type)
-    activity_inst.start_exc(45)
+    activity_inst.start_exc(1)

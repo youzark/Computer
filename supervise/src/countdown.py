@@ -1,6 +1,5 @@
 import time
 import multiprocessing
-import prompt_gen
 from tkinter import messagebox
 
 # countdonw for interval minutes
@@ -27,7 +26,6 @@ def write_interval(remain_time):
     file_inst.write(f"剩余时间 : {round(remain_time,2)} 分钟\n" )
     print(f"remain_time : {round(remain_time,2)}")
     file_inst.close()
-    prompt_gen.main()
 
 
 
