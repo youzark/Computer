@@ -53,45 +53,16 @@ class activity:
             file_inst = open('../prompt/aim.txt','w')
             file_inst.write(self.act_type.aim_gene())
             file_inst.close()
+            prompt_gen.main()
             countdown.main(duration)
             self.write_file(duration)
             prompt_gen.main()
             self.time.end_interval(duration)
 
     def write_file(self,interval):
-        file_name = date_record_file_name_gen(self.time.get_start_date())
-        if not os.path.exists(file_name):
-            duration = 0
-            file_inst = open(file_name,'w')
-            file_prompt_inst = open('../prompt/date_report.txt','w')
-            file_prompt_inst.write(f'当日累积已完成学习时间:{interval} 分钟\n')
-            file_prompt_inst.write('当日完成事物列表:\n')
-            file_prompt_inst.close()
-            file_inst.close()
-        else:
-            file_inst = open(file_name,'r')
-            records = file_inst.readlines()
-            duration = int(records[-2].strip())
-            file_inst.close()
-        file_prompt_inst = open('../prompt/date_report.txt','r')
-        day_records = file_prompt_inst.readlines()
-        day_records[0] = f'当日累积已完成学习时间:{duration+interval} 分钟\n'
-        file_prompt_inst.close()
-        file_prompt_inst = open('../prompt/date_report.txt','w')
-        day_records = file_prompt_inst.writelines(day_records)
-        file_prompt_inst.close()
-        file_prompt_inst = open('../prompt/date_report.txt','a')
-        day_records = file_prompt_inst.write(self.act_type.activity_type_info(True) + f'   时间:{interval} 分钟')
-        day_records = file_prompt_inst.write('\n')
-        file_prompt_inst.close()
-        file_inst = open(file_name,'a')
-        file_inst.write(date_formate(self.time.get_start_date()))
-        file_inst.write('\n')
-        file_inst.write(self.act_type.activity_type_info()+f'_{interval}')
-        file_inst.write('\n')
-        file_inst.write(str(duration+interval))
-        file_inst.write('\n')
-        file_inst.write('\n')
+        if not self.act_type.priority_status == 'rest':
+            self.write_prompt(interval)
+            self.write_record(interval)
 
     def write_prompt(self,interval):
         file_name = date_record_file_name_gen(self.time.get_start_date())
@@ -137,12 +108,14 @@ class activity:
         file_inst.write('\n')
 
 if __name__ == '__main__':
-    while not stop:
+    while True:
         priority_status = textinput('priority_status','please input priority_status')
         subject = textinput('subject','please input subject')
         chapter = textinput('chapter','please input chapter')
         interval = textinput('time','please input study time')
         act_type = activity_type(priority_status,subject,chapter)
         activity_inst = activity(act_type)
-        activity_inst.start_exc(interval)
-        act_type('rest')
+        activity_inst.start_exc(int(interval))
+        act_type = activity_type('rest')
+        activity_inst = activity(act_type)
+        activity_inst.start_exc(1)
