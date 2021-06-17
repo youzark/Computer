@@ -39,7 +39,7 @@ class activity_type:
             if not self.chapter_num == 0:
                 aim += f'目标章节：{self.chapter_num}\n'
         else:
-            aim =f'正在:self.{self.priority_status}\n'
+            aim =f'正在:{self.priority_status}\n'
         return aim
 
 class activity: 
@@ -60,7 +60,7 @@ class activity:
             self.time.end_interval(duration)
 
     def write_file(self,interval):
-        if not self.act_type.priority_status == 'rest':
+        if not self.act_type.priority_status == '休息':
             self.write_prompt(interval)
             self.write_record(interval)
 
@@ -110,12 +110,18 @@ class activity:
 if __name__ == '__main__':
     while True:
         priority_status = textinput('priority_status','please input priority_status')
-        subject = textinput('subject','please input subject')
-        chapter = textinput('chapter','please input chapter')
-        interval = textinput('time','please input study time')
+        if priority_status == 'end':
+            exit()
+        if not priority_status == 'continue':
+            old_priority = priority_status
+            subject = textinput('subject','please input subject')
+            chapter = textinput('chapter','please input chapter')
+            interval = textinput('time','please input study time')
+        else:
+            priority_status = old_priority
         act_type = activity_type(priority_status,subject,chapter)
         activity_inst = activity(act_type)
         activity_inst.start_exc(int(interval))
-        act_type = activity_type('rest')
+        act_type = activity_type('休息')
         activity_inst = activity(act_type)
         activity_inst.start_exc(1)

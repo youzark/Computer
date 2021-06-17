@@ -36,4 +36,3 @@ class homework:
         self.subject = subject
         self.chapter  = chapter
         self.ddl = ddl
-        

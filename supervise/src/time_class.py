@@ -37,3 +37,12 @@ class time_class:
         start_time = end_time - duration
         self.act_instance_list.append((start_time,end_time,duration))
 
+def minute_to_formatted_time(minutes):
+    hour = int(minutes )// 60
+    minute = int(minutes )% 60
+    seconds = int( (minutes - 60*hour - minute) * 60)
+    if hour == 0:
+        return f'{minute}分{seconds}秒'
+    else:
+        return f'{hour}时{minute}分{seconds}秒'
+
