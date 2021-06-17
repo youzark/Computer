@@ -1,0 +1,35 @@
+
+,--------.
+|abstract|
+|--------|
+|--------|
+`--------'
+
+@startuml
+class task_type{
+	-string subject
+	-string type //study rest exercise
+	-string chapter_num
+	-string priority_status //homework afterschool review
+	+get_subject()
+	+get_type()
+	+get_unit()
+	+get_priority_status()
+}
+class task{
+	-init(ddl,task_type)
+	-int task_id
+	-task_type type
+	-point_time start_time
+	-point_time deadline
+	-dur_time duration
+	-int priority
+}
+class time{
+	-localtime start
+	-localtime ddl
+}
+class dur_time(time){
+	-int interval
+}
+@enduml
