@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/hyx/Computer/parallel/mpi/build",
+  "command": "/usr/bin/cc  -isystem /home/hyx/soft/mpich2/3.0.4/include    -o CMakeFiles/PSRS.dir/psrs.c.o   -c /home/hyx/Computer/parallel/mpi/psrs.c",
+  "file": "/home/hyx/Computer/parallel/mpi/psrs.c"
+}
+]

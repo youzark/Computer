@@ -2,13 +2,12 @@
 #include <mpi.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../include/MergeSort.h"
+#include "MergeSort.h"
 
 
 void psrs(int *arr,int start,int end,int id,int world_size)
 {
 	int step = (end - start + 1)/world_size;
-
 	int *global_sample;
 	if(id == 0)
 	{

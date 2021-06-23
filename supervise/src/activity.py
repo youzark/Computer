@@ -1,5 +1,6 @@
 import os
 from time_class import time_class
+from time_class import minute_to_formatted_time
 import countdown
 import prompt_gen
 from turtle import textinput
@@ -18,28 +19,38 @@ def date_formate(date):
     return formate
 
 class activity_type:
-    def __init__(self,priority_status,subject = None,chapter_num = 0,description = None):
+    def __init__(self,priority_status,subject = None,section = None,description = None):
         self.priority_status = priority_status
         self.subject = subject
-        self.chapter_num = chapter_num
+        self.section = section 
         self.description = description
 
     def activity_type_info(self,for_prompt = False):
         if for_prompt:
-            info = f'性质:{self.priority_status}   科目:{self.subject}   章节:{self.chapter_num}'
+            info = f'性质:{self.priority_status}   科目:{self.subject}   章节:{self.section}'
             return info
         else:
-            info = f'{self.priority_status}_{self.subject}_{self.chapter_num}'
+            info = f'{self.priority_status}_{self.subject}_{self.section}'
             return info
 
     def aim_gene(self):
-        if self.priority_status == 'homework':
+        if self.priority_status == '作业':
+            aim = '正在写作业\n'
             if not self.subject == None:
-                aim = f'目标科目：{self.subject}\n'
-            if not self.chapter_num == 0:
-                aim += f'目标章节：{self.chapter_num}\n'
+                aim += f'科目：{self.subject}\n'
+            if not self.section == None:
+                aim += f'章节：{self.section}\n'
+        elif self.priority_status == '复习':
+            aim = '正在复习\n'
+            if not self.subject == None:
+                aim += f'科目：{self.subject}\n'
+            if not self.section == None:
+                aim += f'章节：{self.section}\n'
+        elif self.priority_status == '课外':
+            aim  = f'正在{self.subject}\n'
+            aim += f'目标:{self.section}\n'
         else:
-            aim =f'正在:{self.priority_status}\n'
+            aim = '正在休息\n'
         return aim
 
 class activity: 
@@ -55,6 +66,7 @@ class activity:
             file_inst.close()
             prompt_gen.main()
             countdown.main(duration)
+            print('\n')
             self.write_file(duration)
             prompt_gen.main()
             self.time.end_interval(duration)
@@ -69,7 +81,7 @@ class activity:
         if not os.path.exists(file_name):
             duration = 0
             file_prompt_inst = open('../prompt/date_report.txt','w')
-            file_prompt_inst.write(f'当日累积已完成学习时间:{interval} 分钟\n')
+            file_prompt_inst.write(f'当日累积已完成学习时间:{minute_to_formatted_time(interval)}\n')
             file_prompt_inst.write('当日完成事物列表:\n')
             file_prompt_inst.close()
         else:
@@ -79,7 +91,7 @@ class activity:
             file_inst.close()
         file_prompt_inst = open('../prompt/date_report.txt','r')
         day_records = file_prompt_inst.readlines()
-        day_records[0] = f'当日累积已完成学习时间:{duration+interval} 分钟\n'
+        day_records[0] = f'当日累积已完成学习时间:{minute_to_formatted_time(interval + duration)}\n'
         file_prompt_inst.close()
         file_prompt_inst = open('../prompt/date_report.txt','w')
         file_prompt_inst.writelines(day_records)
@@ -107,7 +119,39 @@ class activity:
         file_inst.write('\n')
         file_inst.write('\n')
 
-if __name__ == '__main__':
+# interval_vec 课内学习 课外学习 休息
+def task_list_gen(interval_vec = (45,30,10)):
+    with open('../task_list.txt','r') as f:
+        task_list = []
+        task_records = f.readlines()
+        for task_record in task_records:
+            task_record_items = task_record.split('_')
+            task = []
+            task.append(task_record_items[0].strip())
+            task.append(task_record_items[1].strip())
+            task.append(task_record_items[2].strip())
+            if task[0] == '作业' or task[0] == '复习':
+                task.append(interval_vec[0])
+            else:
+                task.append(interval_vec[1])
+            task.append(interval_vec[2])
+            task_list.append(task)
+    return task_list
+
+
+# task : activity_type info + interval + rest_interval 
+def load_task_list(task_list = []):
+    while not len(task_list) == 0:
+        task_list.reverse()
+        task = task_list.pop()
+        act_type = activity_type(task[0],task[1],task[2])
+        activity_inst = activity(act_type)
+        activity_inst.start_exc(int(task[3]))
+        print('\a')
+        act_type = activity_type('休息')
+        activity_inst = activity(act_type)
+        activity_inst.start_exc(task[4])
+        print('\a')
     while True:
         priority_status = textinput('priority_status','please input priority_status')
         if priority_status == 'end':
@@ -115,13 +159,20 @@ if __name__ == '__main__':
         if not priority_status == 'continue':
             old_priority = priority_status
             subject = textinput('subject','please input subject')
-            chapter = textinput('chapter','please input chapter')
+            section = textinput('chapter','please input chapter')
             interval = textinput('time','please input study time')
         else:
             priority_status = old_priority
-        act_type = activity_type(priority_status,subject,chapter)
+        act_type = activity_type(priority_status,subject,section)
         activity_inst = activity(act_type)
         activity_inst.start_exc(int(interval))
+        print('\a')
         act_type = activity_type('休息')
         activity_inst = activity(act_type)
-        activity_inst.start_exc(1)
+        activity_inst.start_exc(10)
+        print('\a')
+
+
+if __name__ == '__main__':
+    print(task_list_gen())
+    load_task_list(task_list_gen())

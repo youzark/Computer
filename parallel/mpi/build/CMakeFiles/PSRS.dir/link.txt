@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/PSRS.dir/psrs.c.o  -o PSRS  /home/hyx/soft/mpich2/3.0.4/lib/libmpich.a /home/hyx/soft/mpich2/3.0.4/lib/libopa.a /home/hyx/soft/mpich2/3.0.4/lib/libmpl.a /usr/lib/x86_64-linux-gnu/librt.so /usr/lib/x86_64-linux-gnu/libpthread.so 
