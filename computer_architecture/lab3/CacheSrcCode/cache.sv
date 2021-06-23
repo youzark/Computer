@@ -1,5 +1,3 @@
-
-
 module cache #(
     parameter  LINE_ADDR_LEN = 3, // line内地址长度，决定了每个line具有2^3个word
     parameter  SET_ADDR_LEN  = 3, // 组地址长度，决定了一共有2^3=8组
@@ -21,10 +19,11 @@ localparam UNUSED_ADDR_LEN = 32 - TAG_ADDR_LEN - SET_ADDR_LEN - LINE_ADDR_LEN - 
 localparam LINE_SIZE       = 1 << LINE_ADDR_LEN  ;         // 计算 line 中 word 的数量，即 2^LINE_ADDR_LEN 个word 每 line
 localparam SET_SIZE        = 1 << SET_ADDR_LEN   ;         // 计算一共有多少组，即 2^SET_ADDR_LEN 个组
 
-reg [            31:0] cache_mem    [SET_SIZE][LINE_SIZE]; // SET_SIZE个line，每个line有LINE_SIZE个word
-reg [TAG_ADDR_LEN-1:0] cache_tags   [SET_SIZE];            // SET_SIZE个TAG
-reg                    valid        [SET_SIZE];            // SET_SIZE个valid(有效位)
-reg                    dirty        [SET_SIZE];            // SET_SIZE个dirty(脏位)
+// cache_size = SET_SIZE * WAY_CNT * LINE_SIZE 
+reg [            31:0] cache_mem    [SET_SIZE][WAY_CNT][LINE_SIZE]; // SET_SIZE个line，每个line有LINE_SIZE个word
+reg [TAG_ADDR_LEN-1:0] cache_tags   [SET_SIZE][WAY_CNT];            // SET_SIZE个TAG
+reg                    valid        [SET_SIZE][WAY_CNT];            // SET_SIZE个valid(有效位)
+reg                    dirty        [SET_SIZE][WAY_CNT];            // SET_SIZE个dirty(脏位)
 
 wire [              2-1:0]   word_addr;                   // 将输入地址addr拆分成这5个部分
 wire [  LINE_ADDR_LEN-1:0]   line_addr;
@@ -45,68 +44,161 @@ wire [31:0] mem_rd_line [LINE_SIZE];
 
 wire mem_gnt;      // 主存响应读写的握手信号
 
+integer hit_line = WAY_CNT; // record number of hitted line init to WAY_CNT(invalid line number)
+integer SWAP_LINE[SET_SIZE];  // document which line in a set should get replaces
+integer EXITS_TIME[SET_SIZE][WAY_CNT];
+integer OLDEST,OLDEST_LINE;
+
 assign {unused_addr, tag_addr, set_addr, line_addr, word_addr} = addr;  // 拆分 32bit ADDR
 
 reg cache_hit = 1'b0;
-always @ (*) begin              // 异步判断 输入的address 是否在 cache 中命中
-    if(valid[set_addr] && cache_tags[set_addr] == tag_addr)   // 如果 cache line有效，并且tag与输入地址中的tag相等，则命中
-        cache_hit = 1'b1;
-    else
-        cache_hit = 1'b0;
+always @ (*) 
+begin              // 异步判断 输入的address 是否在 cache 中命中 use a for loop to check each possible line
+    for(integer i = 0;i < WAY_CNT; i++)
+    begin
+        if(valid[set_addr][i] && cache_tags[set_addr][i] == tag_addr)
+        begin
+            cache_hit = 1'b1;
+            hit_line = i;
+        end
+        else
+        begin
+            cache_hit = 1'b0;
+            hit_line = WAY_CNT; // valid value [0,way_cnt - 1] ,way_cnt is invalid
+        end
+    end
 end
 
-always @ (posedge clk or posedge rst) begin     // ?? cache ???
-    if(rst) begin
+always@(posedge clk or posedge rst) 
+begin     // ?? cache ???
+    if(rst) 
+    begin
         cache_stat <= IDLE;
-        for(integer i = 0; i < SET_SIZE; i++) begin
-            dirty[i] = 1'b0;
-            valid[i] = 1'b0;
+        for(integer i = 0; i < SET_SIZE; i++)  // set_wise addign
+        begin
+            SWAP_LINE[i] <= 0;
+            for(integer j = 0; j < WAY_CNT; j++)  // line_wise assign
+            begin
+                dirty[i][j] <= 1'b0;
+                valid[i][j] <= 1'b0;
+                EXITS_TIME[i][j] <= 1'b0; // no line is valid(exist for 0 time slot)
+            end
         end
         for(integer k = 0; k < LINE_SIZE; k++)
+        begin
             mem_wr_line[k] <= 0;
+        end
         mem_wr_addr <= 0;
         {mem_rd_tag_addr, mem_rd_set_addr} <= 0;
         rd_data <= 0;
-    end else begin
+        OLDEST <= 0;  //init value doesn't matter
+        OLDEST_LINE <= 0;
+    end 
+    else 
+    begin
         case(cache_stat)
-        IDLE:       begin
-                        if(cache_hit) begin
-                            if(rd_req) begin    // 如果cache命中，并且是读请求，
-                                rd_data <= cache_mem[set_addr][line_addr];   //则直接从cache中取出要读的数据
-                            end else if(wr_req) begin // 如果cache命中，并且是写请求，
-                                cache_mem[set_addr][line_addr] <= wr_data;   // 则直接向cache中写入数据
-                                dirty[set_addr] <= 1'b1;                     // 写数据的同时置脏位
-                            end 
-                        end else begin
-                            if(wr_req | rd_req) begin   // 如果 cache 未命中，并且有读写请求，则需要进行换入
-                                if(valid[set_addr] & dirty[set_addr]) begin    // 如果 要换入的cache line 本来有效，且脏，则需要先将它换出
-                                    cache_stat  <= SWAP_OUT;
-                                    mem_wr_addr <= {cache_tags[set_addr], set_addr};
-                                    mem_wr_line <= cache_mem[set_addr];
-                                end else begin                                   // 反之，不需要换出，直接换入
-                                    cache_stat  <= SWAP_IN;
-                                end
-                                {mem_rd_tag_addr, mem_rd_set_addr} <= {tag_addr, set_addr};
-                            end
+        IDLE:       
+        begin
+            if(cache_hit) 
+            begin  //hit
+                if(rd_req) 
+                begin    // 如果cache命中，并且是读请求，
+                    rd_data <= cache_mem[set_addr][hit_line][line_addr];   //则直接从cache中取出要读的数据
+                end 
+                else if(wr_req) 
+                begin // 如果cache命中，并且是写请求，
+                    cache_mem[set_addr][hit_line][line_addr] <= wr_data;   // 则直接向cache中写入数据
+                    dirty[set_addr][hit_line] <= 1'b1;                     // 写数据的同时置脏位
+                end 
+                //deploy LUR scheme
+                //update LUR line time info
+                //both write or read are treated as use
+                if(rd_req | wr_req)
+                begin
+                    for(integer i = 0; i<WAY_CNT; i++)
+                    begin
+                        if(i == hit_line)  //cache is hitted and line i integer in given set is used
+                            EXITS_TIME[set_addr][hit_line] <= 0; // hit_line's exist time reset
+                        else
+                            EXITS_TIME[set_addr][hit_line] <= EXITS_TIME[set_addr][hit_line] + 1;
+                    end
+                    for(integer i = 0; i<WAY_CNT; i++)
+                    begin
+                        if (SUR_TIME[set_addr][i] > OLDEST)
+                        begin
+                            OLDEST <= SUR_TIME[set_addr][i];
+                            OLDEST_LINE <= i;
                         end
                     end
-        SWAP_OUT:   begin
-                        if(mem_gnt) begin           // 如果主存握手信号有效，说明换出成功，跳到下一状态
-                            cache_stat <= SWAP_IN;
-                        end
+                    SWAP_LINE[set_addr] = OLDEST_LINE;
+                    OLDEST <= 0
+                    OLDEST_LINE <= 0; //OLDEST_LINE only used for this specific set_addr ,after finished,reset it
+                end
+            end   //hit end
+            else  //not hit
+            begin
+                if(wr_req | rd_req) 
+                begin   // 如果 cache 未命中，并且有读写请求，则需要进行换入
+                    if(valid[set_addr][SWAP_LINE[set_addr]] & dirty[set_addr][SWAP_LINE[set_addr]]) 
+                    begin    // 如果 要换入的cache line 本来有效，且脏，则需要先将它换出
+                        cache_stat  <= SWAP_OUT;
+                        mem_wr_addr <= {cache_tags[set_addr][SWAP_LINE[set_addr]], set_addr};
+                        mem_wr_line <= cache_mem[set_addr][SWAP_LINE[set_addr]];
+                    end 
+                    else 
+                    begin   // 反之，不需要换出，直接换入
+                        cache_stat  <= SWAP_IN;
                     end
-        SWAP_IN:    begin
-                        if(mem_gnt) begin           // 如果主存握手信号有效，说明换入成功，跳到下一状态
-                            cache_stat <= SWAP_IN_OK;
-                        end
-                    end
-        SWAP_IN_OK: begin           // 上一个周期换入成功，这周期将主存读出的line写入cache，并更新tag，置高valid，置低dirty
-                        for(integer i=0; i<LINE_SIZE; i++)  cache_mem[mem_rd_set_addr][i] <= mem_rd_line[i];
-                        cache_tags[mem_rd_set_addr] <= mem_rd_tag_addr;
-                        valid     [mem_rd_set_addr] <= 1'b1;
-                        dirty     [mem_rd_set_addr] <= 1'b0;
-                        cache_stat <= IDLE;        // 回到就绪状态
-                    end
+                    {mem_rd_tag_addr, mem_rd_set_addr} <= {tag_addr, set_addr};
+                end
+            end //not hit end
+        end
+        SWAP_OUT:   
+        begin
+            if(mem_gnt) 
+            begin           // 如果主存握手信号有效，说明换出成功，跳到下一状态
+                cache_stat <= SWAP_IN;
+            end
+        end
+        SWAP_IN:    
+        begin
+            if(mem_gnt) 
+            begin           // 如果主存握手信号有效，说明换入成功，跳到下一状态
+                cache_stat <= SWAP_IN_OK;
+            end
+        end
+        SWAP_IN_OK: 
+        begin           // 上一个周期换入成功，这周期将主存读出的line写入cache，并更新tag，置高valid，置低dirty    And at the same time ,update next swap line for each set
+            for(integer i=0; i<LINE_SIZE; i++)  
+                cache_mem[mem_rd_set_addr][i] <= mem_rd_line[i];
+            cache_tags[mem_rd_set_addr] <= mem_rd_tag_addr;
+            valid     [mem_rd_set_addr] <= 1'b1;
+            dirty     [mem_rd_set_addr] <= 1'b0;
+            cache_stat <= IDLE;        // 回到就绪状态
+            //update swap line
+            for(integer i = 0; i < WAY_CNT; i++)
+            begin
+                if (i == way_addr)
+                begin
+                    EXITS_TIME[mem_rd_set_addr][i] <= 0;
+                end
+                else
+                begin
+                    EXITS_TIME[mem_rd_set_addr][i] <=EXITS_TIME[mem_rd_set_addr][i] + 1;
+                end
+            end
+            for(integer i = 0; i < WAY_CNT; i++)
+            begin
+                if (EXITS_TIME[mem_rd_set_addr][i] > OLDEST)
+                begin
+                    OLDEST =EXITS_TIME[mem_rd_set_addr][i];
+                    OLDEST_LINE= i;
+                end
+            end
+            SWAP_LINE[set_addr] <=OLDEST_LINE;
+            OLDEST <= 0;
+            OLDEST_LINE<= 0;
+        end
         endcase
     end
 end
@@ -132,8 +224,4 @@ main_mem #(     // 主存，每次读写以line 为单位
 );
 
 endmodule
-
-
-
-
 
