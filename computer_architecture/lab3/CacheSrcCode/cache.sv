@@ -131,7 +131,7 @@ begin     // ?? cache ???
                         end
                     end
                     SWAP_LINE[set_addr] = OLDEST_LINE;
-                    OLDEST <= 0
+                    OLDEST <= 0;
                     OLDEST_LINE <= 0; //OLDEST_LINE only used for this specific set_addr ,after finished,reset it
                 end
             end   //hit end
