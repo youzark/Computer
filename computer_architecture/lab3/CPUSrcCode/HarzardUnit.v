@@ -58,6 +58,16 @@ module HarzardUnit(
 		{StallF, FlushF, StallD, FlushD, StallE, FlushE, StallM, FlushM, StallW, FlushW} = 10'b0;
 		{Forward1E,Forward2E} = 4'b0;
 
+		//Dcache miss
+		if(DCacheMiss)
+		begin
+			{StallF, FlushF, StallD, FlushD, StallE, FlushE, StallM, FlushM, StallW, FlushW} = 10'b1010101010;
+		end
+		else
+		begin
+			{StallF, FlushF, StallD, FlushD, StallE, FlushE, StallM, FlushM, StallW, FlushW} = 10'b0;
+		end
+
 		//control Hazard
 
 		if(BranchE == 1 || JalrE == 1)

@@ -283,6 +283,8 @@ module RV32Core(
         .RegWriteW(RegWriteW),
         .MemToRegM(MemToRegM),
         .MemToRegW(MemToRegW)
+        .rst(CPU_RST),
+        .CacheMiss(CacheMiss),
     );
     
     DataExt DataExt1(
@@ -311,7 +313,7 @@ module RV32Core(
         .RdW(RdW),
         .RegWriteW(RegWriteW),
         .ICacheMiss(1'b0),
-        .DCacheMiss(1'b0),
+        .DCacheMiss(CacheMiss),
         .StallF(StallF),
         .FlushF(FlushF),
         .StallD(StallD),

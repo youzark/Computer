@@ -41,6 +41,8 @@ module WBSegReg(
     input wire clk,
     input wire en,
     input wire clear,
+    input wire rst,
+    output wire CacheMiss,
     //Data Memory Access
     input wire [31:0] A,
     input wire [31:0] WD,
@@ -85,17 +87,21 @@ module WBSegReg(
         end
 
     wire [31:0] RD_raw;
-    DataRam DataRamInst (
-        .clk    (clk ),                      //请完善代码
-        .wea    (WE << A[1:0]),                      //请完善代码
-        .addra  (A[31:2]),                      //请完善代码
-        .dina   (WD << write_data),                      //请完善代码
-        .douta  ( RD_raw         ),
-        .web    ( WE2            ),
-        .addrb  ( A2[31:2]       ),
-        .dinb   ( WD2            ),
-        .doutb  ( RD2            )
-    );   
+    cache #(
+    .LINE_ADDR_LEN  (3), // word addr(offset) len within line
+    .SET_ADDR_LEN   (3), // set addr len 
+    .TAG_ADDR_LEN   (6), // tag addr len
+    .WAY_CNT        (3) 
+    ) cache_test (
+    .clk    (clk),
+    .rst    (rst),
+    .miss(CacheMiss),
+    .addr(A),        // read request addr
+    .rd_req(MemToRegM),        //only load word need to read data cache
+    .rd_data(RD_raw), 
+    .wr_req(|WE),  // no need to take care of half word and byte 
+    .wr_data(WD)     
+);
     // Add clear and stall support
     // if chip not enabled, output output last read result
     // else if chip clear, output 0
