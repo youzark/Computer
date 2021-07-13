@@ -38,6 +38,7 @@ class NaiveBayes:
 def main():
     # 加载训练集和测试集
     train_data,train_label,test_data,test_label=load_and_process_data()
+    print(train_data,train_label,test_data,test_label)
     feature_type=[0,1,1,1,1,1,1,1] #表示特征的数据类型，0表示离散型，1表示连续型
 
     Nayes=NaiveBayes()
