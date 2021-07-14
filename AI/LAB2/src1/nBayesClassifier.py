@@ -95,9 +95,6 @@ class NaiveBayes:
         '''       
 
 
-
-
-
 def main():
     # 加载训练集和测试集
     train_data,train_label,test_data,test_label=load_and_process_data()
