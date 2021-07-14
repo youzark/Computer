@@ -54,6 +54,7 @@ class NaiveBayes:
             else:
                 fea_count[(trainlabel[iter][0],traindata[iter][0])] = 1
         
+
         for fea_key in fea_count:
             self.Pxc[fea_key] = math.log(fea_count[fea_key] + 1) - math.log(lable_count[fea_key[0] - 1] + 3)
         
