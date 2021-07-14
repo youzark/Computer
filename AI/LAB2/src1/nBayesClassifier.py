@@ -11,7 +11,7 @@ class norm_pdf:
 
     def log_pdf(self,value):
         part1 = 1 / (self.standard_derivation * math.pi)
-        part2 = (value - self.mean)*(value - self.mean)/self.standard_derivation/self.standard_derivation/2
+        part2 = (value - self.mean)*(value - self.mean)/(self.standard_derivation*self.standard_derivation*2)
         part3 = math.exp(-part2)
         return math.log(part1 * part3)
 
@@ -41,9 +41,9 @@ class NaiveBayes:
                 lable_count[1] += 1 
             else:
                 lable_count[2] += 1
-        self.Pc[1] = (lable_count[0] + 1) / (data_size + n)
-        self.Pc[2] = (lable_count[1] + 1) / (data_size + n)
-        self.Pc[3] = (lable_count[2] + 1) / (data_size + n)
+        self.Pc[1] = math.log(lable_count[0] + 1) - math.log(data_size + n)
+        self.Pc[2] = math.log(lable_count[1] + 1) - math.log(data_size + n)
+        self.Pc[3] = math.log(lable_count[2] + 1) - math.log(data_size + n)
 
         # posterior probobility
         # discrete feature: gender
@@ -61,9 +61,10 @@ class NaiveBayes:
         for label in range(1,4):
             label_data = traindata
             #select data with specific lable
-            for iter in range(trainlabel.shape[0]):
+            for iter in reversed(range(trainlabel.shape[0])):
                 if trainlabel[iter][0] != label:
-                    np.delete(label_data,iter,0)
+                    label_data = np.delete(label_data,iter,0)
+            print(label_data.shape)
             # calculate mean and derivation for specific (label,feature)
             for feature in range(1,8):
             #calculate mean and dev for each possible lable
@@ -72,9 +73,7 @@ class NaiveBayes:
             #get normal pdf and append it to self.pxc
                 norm = norm_pdf(mean,std_dev)
                 self.Pxc[(1,label,feature)] = norm
-
-        print(self.Pxc)
-        
+                print((label,feature),mean,norm.log_pdf(mean))
         
         '''
         需要你实现的部分
@@ -85,21 +84,21 @@ class NaiveBayes:
     feature_type为0-1数组，表示特征的数据类型，0表示离散型，1表示连续型
     '''
     def predict(self,features,featuretype):
-        for iter in features.shape[0]:
-            prob = []
+        # predict for each data
+        pred = np.zeros((features.shape[0],1),dtype=int)
+        for iter in range(features.shape[0]):
+            prob = {} 
             for type_id in range(1,4):
+                # prior prob
                 prob[type_id] = self.Pc[type_id] 
-                # feature gender
-                prob[type_id] *= self.Pxc[(type_id,features[iter][0])]
-                # other continuous features
+                # feature gender prob
+                prob[type_id] += self.Pxc[(type_id,features[iter][0])]
+                # other continuous features prob
                 for feature_id in range(1,8):
-                    prob[type_id] *= self.Pxc[feature_id]
-
-
-        
-        '''
-        需要你实现的部分
-        '''       
+                    prob[type_id] += self.Pxc[(1,type_id,feature_id)].log_pdf(features[iter][feature_id])
+            prob = np.array(list(prob.values()))
+            pred[iter][0] = prob.argmax() + 1
+        return pred 
 
 
 def main():
@@ -108,7 +107,6 @@ def main():
     feature_type=[0,1,1,1,1,1,1,1] #表示特征的数据类型，0表示离散型，1表示连续型
     Nayes=NaiveBayes()
     Nayes.fit(train_data,train_label,feature_type) # 在训练集上计算先验概率和条件概率
-    print(Nayes.Pc)
     pred=Nayes.predict(test_data,feature_type)  # 得到测试集上的预测结果
 
     # 计算准确率Acc及多分类的F1-score
