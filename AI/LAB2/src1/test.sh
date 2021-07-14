@@ -1,1 +1,1 @@
-python3 ./linearclassification.py
+python3 ./nBayesClassifier.py
