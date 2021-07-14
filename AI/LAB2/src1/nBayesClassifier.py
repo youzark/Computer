@@ -88,9 +88,6 @@ class NaiveBayes:
                 for feature_id in range(1,8):
                     prob[type_id] *= self.Pxc[feature_id]
 
-            
-
-
 
         
         '''
