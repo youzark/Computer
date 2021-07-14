@@ -53,20 +53,27 @@ class NaiveBayes:
                 fea_count[(trainlabel[iter][0],traindata[iter][0])] += 1
             else:
                 fea_count[(trainlabel[iter][0],traindata[iter][0])] = 1
-        
-
         for fea_key in fea_count:
             self.Pxc[fea_key] = math.log(fea_count[fea_key] + 1) - math.log(lable_count[fea_key[0] - 1] + 3)
         
         # continuous feature
-        for feature in range(1,8):
-            #calculate mean and dev
+        # all possible label
+        for label in range(1,4):
+            label_data = traindata
+            #select data with specific lable
             for iter in range(trainlabel.shape[0]):
-                mean = np.mean(traindata[:,feature])
-                std_dev = np.std(traindata[:,feature])
+                if trainlabel[iter][0] != label:
+                    np.delete(label_data,iter,0)
+            # calculate mean and derivation for specific (label,feature)
+            for feature in range(1,8):
+            #calculate mean and dev for each possible lable
+                mean = np.mean(label_data[:,feature])
+                std_dev = np.std(label_data[:,feature])
             #get normal pdf and append it to self.pxc
-            norm = norm_pdf(mean,std_dev)
-            self.Pxc[feature] = norm
+                norm = norm_pdf(mean,std_dev)
+                self.Pxc[(1,label,feature)] = norm
+
+        print(self.Pxc)
         
         
         '''
