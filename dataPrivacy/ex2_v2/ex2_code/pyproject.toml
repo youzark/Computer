@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "lab2"
+version = "0.1.0"
+description = ""
+authors = ["hyx <gacforstudy@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+numpy = "^1.21.0"
+wheel = "^0.36.2"
+gmpy2 = "^2.0.8"
+torch = "^1.9.0"
+torchvision = "^0.10.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
