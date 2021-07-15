@@ -64,7 +64,6 @@ class NaiveBayes:
             for iter in reversed(range(trainlabel.shape[0])):
                 if trainlabel[iter][0] != label:
                     label_data = np.delete(label_data,iter,0)
-            print(label_data.shape)
             # calculate mean and derivation for specific (label,feature)
             for feature in range(1,8):
             #calculate mean and dev for each possible lable
@@ -73,7 +72,6 @@ class NaiveBayes:
             #get normal pdf and append it to self.pxc
                 norm = norm_pdf(mean,std_dev)
                 self.Pxc[(1,label,feature)] = norm
-                print((label,feature),mean,norm.log_pdf(mean))
         
         '''
         需要你实现的部分

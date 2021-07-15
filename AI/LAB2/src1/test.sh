@@ -1,1 +1,1 @@
-python3 ./nBayesClassifier.py
+python3 ./SVM.py

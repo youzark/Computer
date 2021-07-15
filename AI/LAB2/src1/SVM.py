@@ -47,6 +47,48 @@ class SupportVectorMachine:
     预测结果的数据类型应为np数组，shape=(test_num,1) test_num为测试数据的数目
     '''
     def fit(self,train_data,train_label,test_data):
+
+        data_size = train_data.shape[0]
+        K = np.zeros((data_size,data_size))
+        for i in range(data_size):
+            for j in range(data_size):
+                K[i,j] = self.KERNEL(train_data[i], train_data[j])
+        y_mat1 = np.tile(train_label,(data_size,1))
+        y_mat2 = np.transpose(y_mat1)
+        train_label = np.array(train_label).reshape(len(train_label),1)
+        h_mat = K * y_mat1 * y_mat2
+        p_mat = cvxopt.matrix(h_mat)
+        q_mat = cvxopt.matrix(-np.ones((data_size,1)))
+        g_mat = cvxopt.matrix(np.vstack((-np.eye(data_size),np.eye(data_size))))
+        h_vec = cvxopt.matrix(np.hstack((np.zeros(data_size),self.C*np.ones(data_size))))
+        a_mat = cvxopt.matrix(train_label.astype(float).reshape(1,-1))
+        b_sca = cvxopt.matrix(np.zeros(1))
+
+        cvxopt.solvers.options['abstol'] = self.Epsilon
+        cvxopt.solvers.options['reltol'] = self.Epsilon 
+        cvxopt.solvers.options['feastol'] = self.Epsilon 
+        sol = cvxopt.solvers.qp(p_mat,q_mat,g_mat,h_vec,a_mat,b_sca)
+        alphas = np.array(sol['x'])
+
+
+        ind = (alphas > self.Epsilon).flatten()
+        y_sat = train_label[ind]
+        x_sat = train_data[ind]
+        alpha_sat = alphas[ind]
+        b = y_sat[0][0]
+        for iter in range(y_sat.shape[0]):
+            b -= alpha_sat[iter]*y_sat[iter]*self.KERNEL(x_sat[0],x_sat[iter])
+        
+        
+        test_size = test_data.shape[0]
+        pred = np.zeros((test_size,1))
+        for iter in range(test_size):
+            pred[iter] = b
+            for id in range(y_sat.shape[0]):
+                pred[iter] += alpha_sat[id]*y_sat[id]*self.KERNEL(train_data[id],test_data[iter])
+
+        return pred
+
         '''
         需要你实现的部分
         '''
@@ -92,6 +134,5 @@ def main():
     print("Acc: "+str(get_acc(test_label,pred)))
     print("macro-F1: "+str(get_macro_F1(test_label,pred)))
     print("micro-F1: "+str(get_micro_F1(test_label,pred)))
-
 
 main()
