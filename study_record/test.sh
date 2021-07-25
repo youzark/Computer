@@ -1,1 +1,1 @@
-python3 ./sqlalchemy/connection.py
+python3 ./sqlalchemy/orm_DDL.py
