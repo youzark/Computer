@@ -7,6 +7,7 @@ from options import args_parser
 from client import *
 from server import *
 import copy
+from phe import paillier
 
 def load_dataset():
     trans_mnist = transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.1307,), (0.3081,))])
@@ -24,7 +25,11 @@ def create_client_server():
     for i in range(args.num_users):
         new_idxs = set(np.random.choice(all_idxs, num_items, replace=False))
         all_idxs = list(set(all_idxs) - new_idxs)
-        new_client = Client(args=args, dataset=dataset_train, idxs=new_idxs, w=copy.deepcopy(net_glob.state_dict()))
+        if args.mode == 'Paillier':
+            pub,priv = paillier.generate_paillier_keypair()
+        else:
+            pub,priv = None,None
+        new_client = Client(args=args, dataset=dataset_train, idxs=new_idxs, w=copy.deepcopy(net_glob.state_dict()),pub=pub,priv=priv)
         clients.append(new_client)
 
     server = Server(args=args, w=copy.deepcopy(net_glob.state_dict()))
@@ -48,6 +53,7 @@ if __name__ == '__main__':
     for iter in range(args.epochs):
         server.clients_update_w, server.clients_loss = [], []
         for idx in range(args.num_users):
+            print(args.num_users,idx)
             update_w, loss = clients[idx].train()
             server.clients_update_w.append(update_w)
             server.clients_loss.append(loss)

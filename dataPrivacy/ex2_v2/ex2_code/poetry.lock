@@ -34,6 +34,18 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
+name = "phe"
+version = "1.4.0"
+description = "Partially Homomorphic Encryption library for Python"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.extras]
+cli = ["click"]
+examples = ["numpy", "scipy", "sklearn"]
+
+[[package]]
 name = "pillow"
 version = "8.3.1"
 description = "Python Imaging Library (Fork)"
@@ -95,7 +107,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "4554b76cd8beebe348acf1a35457a5379470baa8cb89cd45b6f3cab47d58e3f8"
+content-hash = "7f971bfb2aa36d30d4bd8d3b4dbfc65083faa3b66180f12cac1f87294fd80ca3"
 
 [metadata.files]
 gmpy2 = [
@@ -220,6 +232,9 @@ numpy = [
     {file = "numpy-1.21.0-cp39-cp39-win_amd64.whl", hash = "sha256:2ba579dde0563f47021dcd652253103d6fd66165b18011dce1a0609215b2791e"},
     {file = "numpy-1.21.0-pp37-pypy37_pp73-manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:3c40e6b860220ed862e8097b8f81c9af6d7405b723f4a7af24a267b46f90e461"},
     {file = "numpy-1.21.0.zip", hash = "sha256:e80fe25cba41c124d04c662f33f6364909b985f2eb5998aaa5ae4b9587242cce"},
+]
+phe = [
+    {file = "phe-1.4.0.tar.gz", hash = "sha256:b5785c8e824eb7b02ebbe9b1e2080982d48a10db7b827a6771e04e22da99f473"},
 ]
 pillow = [
     {file = "Pillow-8.3.1-cp36-cp36m-macosx_10_10_x86_64.whl", hash = "sha256:196560dba4da7a72c5e7085fccc5938ab4075fd37fe8b5468869724109812edd"},

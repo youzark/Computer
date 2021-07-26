@@ -28,7 +28,16 @@ class Server():
         # 2. part two
         #     Paillier add
         elif self.args.mode == 'Paillier':
-            pass
+            update_w_avg = copy.deepcopy(self.clients_update_w[0])
+            for k in update_w_avg.keys():
+                for i in range(1,len(self.clients_update_w)):
+                    for iter in range(len(update_w_avg[k])):
+                        update_w_avg[k][iter] += self.clients_update_w[i][k][iter]
+                    for iter in range(len(update_w_avg[k])):
+                        update_w_avg[k][iter] /= len(self.clients_update_w)
+            return update_w_avg, sum(self.clients_loss) / len(self.clients_loss)
+        else:
+            exit()
 
     
 
