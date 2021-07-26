@@ -18,8 +18,9 @@ class DatasetSplit(Dataset):
         image, label = self.dataset[self.idxs[item]]
         return image, label
 
+pub,priv = paillier.generate_paillier_keypair()
 class Client():
-    def __init__(self, args, dataset=None, idxs=None, w = None,C = 0.5,sigma = 0.05,pub=None,priv=None):
+    def __init__(self, args, dataset=None, idxs=None, w = None,C = 0.5,sigma = 0.05):
         self.args = args
         self.loss_func = nn.CrossEntropyLoss()
         self.ldr_train = DataLoader(DatasetSplit(dataset, idxs), batch_size=self.args.local_bs, shuffle=True)
@@ -92,7 +93,8 @@ class Client():
             for k in w_glob_ciph.keys():
                 for iter,item in enumerate(w_glob_ciph[k]):
                     w_glob_ciph[k][iter] = self.priv.decrypt(item)
-                w_glob_ciph[k] = torch.FloatTensor(w_glob_ciph[k]).to(self.args.device).view(*list(self.model.state_dict()[k].size()))
+                shape =list(self.model.state_dict()[k].size())
+                w_glob_ciph[k] = torch.FloatTensor(w_glob_ciph[k]).to(self.args.device).view(*shape)
                 self.model.state_dict()[k] += w_glob_ciph[k]
         else:
             exit()

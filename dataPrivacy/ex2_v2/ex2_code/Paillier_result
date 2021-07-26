@@ -1,0 +1,103 @@
+cuda:0
+load dataset...
+clients and server initialization...
+start training...
+8
+start   conv1.weight
+end 
+start   conv1.bias
+end 
+start   conv2.weight
+end 
+start   conv2.bias
+end 
+start   fc1.weight
+end 
+start   fc1.bias
+end 
+start   fc2.weight
+end 
+start   fc2.bias
+end 
+8
+start   conv1.weight
+end 
+start   conv1.bias
+end 
+start   conv2.weight
+end 
+start   conv2.bias
+end 
+start   fc1.weight
+end 
+start   fc1.bias
+end 
+start   fc2.weight
+end 
+start   fc2.bias
+end 
+Round   0, Training average loss 0.340
+Round   0, Testing accuracy: 12.31
+8
+start   conv1.weight
+end 
+start   conv1.bias
+end 
+start   conv2.weight
+end 
+start   conv2.bias
+end 
+start   fc1.weight
+end 
+start   fc1.bias
+end 
+start   fc2.weight
+end 
+start   fc2.bias
+end 
+8
+start   conv1.weight
+end 
+start   conv1.bias
+end 
+start   conv2.weight
+end 
+start   conv2.bias
+end 
+start   fc1.weight
+end 
+start   fc1.bias
+end 
+start   fc2.weight
+end 
+start   fc2.bias
+end 
+Round   1, Training average loss 0.245
+Round   1, Testing accuracy: 12.31
+8
+start   conv1.weight
+end 
+start   conv1.bias
+end 
+start   conv2.weight
+end 
+start   conv2.bias
+end 
+start   fc1.weight
+end 
+start   fc1.bias
+end 
+start   fc2.weight
+end 
+start   fc2.bias
+end 
+8
+start   conv1.weight
+end 
+start   conv1.bias
+end 
+start   conv2.weight
+end 
+start   conv2.bias
+end 
+start   fc1.weight
