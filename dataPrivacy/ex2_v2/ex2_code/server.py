@@ -13,22 +13,23 @@ class Server():
         self.model.load_state_dict(w)
 
     def FedAvg(self):
-        if self.args.mode == 'plain':
+        # 1. part one
+        #     DP mechanism
+        # cause we choose to add noise at client end,the fedavg should be the same as plain
+        if self.args.mode == 'plain' or self.args.mode == 'DP':
             update_w_avg = copy.deepcopy(self.clients_update_w[0])
             for k in update_w_avg.keys():
                 for i in range(1, len(self.clients_update_w)):
                     update_w_avg[k] += self.clients_update_w[i][k]
                 update_w_avg[k] = torch.div(update_w_avg[k], len(self.clients_update_w))
                 self.model.state_dict()[k] += update_w_avg[k]        
+            return copy.deepcopy(self.model.state_dict()), sum(self.clients_loss) / len(self.clients_loss)
 
-        '''
-        1. part one
-            DP mechanism
-        2. part two
-            Paillier add
-        '''
+        # 2. part two
+        #     Paillier add
+        elif self.args.mode == 'Paillier':
+            pass
 
-        return copy.deepcopy(self.model.state_dict()), sum(self.clients_loss) / len(self.clients_loss)
     
 
     def test(self, datatest):

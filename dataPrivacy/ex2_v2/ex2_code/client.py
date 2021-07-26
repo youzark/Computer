@@ -1,4 +1,5 @@
 import torch
+import numpy as np
 from torch import nn, autograd
 from torch.utils.data import DataLoader, Dataset
 from models.Nets import CNNMnist
@@ -18,12 +19,14 @@ class DatasetSplit(Dataset):
 
 class Client():
     
-    def __init__(self, args, dataset=None, idxs=None, w = None):
+    def __init__(self, args, dataset=None, idxs=None, w = None,C = 0.5,sigma = 0.05):
         self.args = args
         self.loss_func = nn.CrossEntropyLoss()
         self.ldr_train = DataLoader(DatasetSplit(dataset, idxs), batch_size=self.args.local_bs, shuffle=True)
         self.model = CNNMnist(args=args).to(args.device)
         self.model.load_state_dict(w)
+        self.C = C
+        self.sigma = sigma
         
     def train(self):
         w_old = copy.deepcopy(self.model.state_dict())
@@ -51,9 +54,18 @@ class Client():
             for k in w_new.keys():
                 update_w[k] = w_new[k] - w_old[k]
 
+        # 1. part one
+        #     DP mechanism
+        elif self.args.mode == 'DP':
+            for k in w_new.keys():
+                # calculate update_w
+                update_w[k] = w_new[k] - w_old[k]
+                # clip the update
+                update_w[k] = update_w[k] / max(1,torch.norm(update_w[k],2)/self.C)
+                # add noise ,cause update_w might reveal user's data also ,we should add noise before send to server
+                update_w[k] += np.random.normal(0.0,self.sigma**2 * self.C**2)
+
         '''
-        1. part one
-            DP mechanism
         2. part two
             Paillier enc
         '''
@@ -61,6 +73,8 @@ class Client():
 
     def update(self, w_glob):
         if self.args.mode == 'plain':
+            self.model.load_state_dict(w_glob)
+        elif self.args.mode == 'DP':
             self.model.load_state_dict(w_glob)
         
         '''

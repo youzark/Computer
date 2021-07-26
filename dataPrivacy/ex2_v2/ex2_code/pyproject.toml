@@ -11,6 +11,7 @@ wheel = "^0.36.2"
 gmpy2 = "^2.0.8"
 torch = "^1.9.0"
 torchvision = "^0.10.0"
+pynvim = "^0.4.3"
 
 [tool.poetry.dev-dependencies]
 
