@@ -1,0 +1,24 @@
+{
+	"configurations":
+	{
+		"attach":
+		{
+			"adapter":"vscode-cpptools",
+			"default":true,
+			"breakpoints":
+			{
+				"exception":
+				{
+					"all":"N",
+					"uncaught":"N"
+				}
+			},
+			"configurations":
+			{
+				"name":"attach to process",
+				"type":"cpp",
+				"request":"attach"
+			}
+		}
+	}
+}

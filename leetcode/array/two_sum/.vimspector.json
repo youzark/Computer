@@ -1,0 +1,13 @@
+{
+	"configurations":
+	{
+		"test_config":
+		{
+			"adapter":"vscode-cpptools",
+			"configuration":
+			{
+				"request":"launch"
+			}
+		}
+	}
+}
