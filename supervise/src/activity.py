@@ -14,6 +14,7 @@ def date_record_file_name_gen(date):
     file_name = f'../prompt/date_record/{date[0]}_{date[1]}_{date[2]}'
     return file_name
 
+
 def date_formate(date):
     formate = f'{date[0]}_{date[1]}_{date[2]}'
     return formate

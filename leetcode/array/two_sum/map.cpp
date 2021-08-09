@@ -27,3 +27,9 @@ public:
 		return result;
 	}
 };
+
+int main()
+{
+	class Solution so;
+
+}
