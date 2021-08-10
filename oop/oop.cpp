@@ -2,6 +2,33 @@
 #include <string>
 
 
+enum Knowledge_parts
+{
+// Rule1 : encapsulation
+// bind operation and data
+// prevent object outside class interact with data directly
+// provide own way for doing that (by function)
+encapsulation,
+
+// Rule2 : abstraction
+// hide complex operation series behind simple interface
+// By: interface class or abstract class
+abstraction,
+
+// Rule3 : inheritance
+// explained by developer class and teacher class 
+inheritance,
+
+// Rule4 : polymorphism
+// muliple implementation of the same function for different sub classes
+// most commen usage is 
+polymorphism,
+
+// By codeBeauty
+Virtual_function_pure_virual_function_abstract_class
+
+};
+
 class abstract_employee
 {
 	// abstract class
@@ -151,67 +178,131 @@ class teacher:public employee
 		{
 			std::cout << get_name() << " is teaching " << subject <<  std::endl;
 		}
-	
 };
 
 
+// virtual_function...
+class instrument
+{
+	public:
+		// actually every specific instrument should inplement makesound
+		// no default is needed
+		// and subclassed should be forced to implement 
+		// so let use pure virtual function
+		virtual void makesound() = 0;
+		/* { */
+		/* 	std::cout << "Instrument playing..." << std::endl; */
+		/* } */
+};
+
+class accordion:public instrument
+{
+	public:
+		void makesound()
+		{
+			std::cout << "accordion playing" << std::endl;
+		}
+};
+
+class piano:public instrument
+{
+	public:
+		void makesound()
+		{
+			std::cout << "piano playing" << std::endl;
+		}
+};
+
+void tester(int part)
+{
+	switch(part) 
+	{
+		case encapsulation:
+			{
+				// class_name inst_name = constructor();
+				employee employee1 = employee("Saldina","CodeBeauty",25);
+				// if no constructor specified , default constructor is call ,assign random string
+				/* employee1.name = "Saldina"; */
+				/* employee1.company = "CodeBeauty"; */
+				/* employee1.age = 25; */
+				employee1.introduce();
+				employee1.ask_for_promotion();
+
+				employee employee2 = employee("Jhon","Amazon",43);
+				employee2.set_name("Bob");
+				/* employee2.name = "Jhon"; */
+				/* employee2.company = "Amazon"; */
+				/* employee2.age = 23; */
+				employee2.introduce();
+				employee2.ask_for_promotion();
+				break;
+			}
+		case abstraction: //same as inheritance
+			{
+				developer dev1 = developer("Saldina","CodeBeaty",25,"C++");
+				dev1.ask_for_promotion();
+				teacher tea1 = teacher("Jhon","Amazon",43,"Math");
+				tea1.ask_for_promotion();
+			}
+		case inheritance:
+			{
+				developer dev1 = developer("Saldina","CodeBeaty",25,"C++");
+				dev1.fix_bug();
+				dev1.ask_for_promotion();
+
+				teacher tea1 = teacher("Jhon","Amazon",43,"Math");
+				tea1.prepare_lession();
+				tea1.ask_for_promotion();
+				break;
+			}
+		case polymorphism:
+			{
+				developer dev1 = developer("Saldina","CodeBeaty",25,"C++");
+				dev1.work();
+
+				teacher tea1 = teacher("Jhon","Amazon",43,"Math");
+				tea1.work();
+
+				// most common usage of polymorphism is below
+				employee *emp1 = &dev1;
+				employee *emp2 = &tea1;
+
+				emp1->work();
+				emp2->work();
+				// if work() is not defined as virtual in employee class ,emp1->work() will use work() defined at employee class 
+				// else it will use subclasses defination
+				break;
+			}
+		case Virtual_function_pure_virual_function_abstract_class:
+			{
+				// abstract class don't have constructor
+				/* instrument *inst1 = new instrument(); */
+				/* inst1->makesound(); */
+				// instrument playing...
+
+				// virtual function enable different implementation of different subclasses and have a default implement
+				instrument *inst2 = new accordion();
+				inst2->makesound();
+				// if in instrument:
+				//   virtual void makesound() 
+				//   output: accordion playing...
+				// else
+				// 	 output: instrument playing...
+
+				instrument *inst3 = new piano();
+				inst3->makesound();
+
+
+				instrument *instruments[2] = {inst2,inst3};
+				for(int i =0;i < 2;i++)
+				{
+					instruments[i]->makesound();
+				}
+			}
+	}
+}
+
 int main()
 {
-	// class_name inst_name = constructor();
-	employee employee1 = employee("Saldina","CodeBeauty",25);
-	// if no constructor specified , default constructor is call ,assign random string
-	/* employee1.name = "Saldina"; */
-	/* employee1.company = "CodeBeauty"; */
-	/* employee1.age = 25; */
-	employee1.introduce();
-	employee1.ask_for_promotion();
-
-	employee employee2 = employee("Jhon","Amazon",43);
-	employee2.set_name("Bob");
-	/* employee2.name = "Jhon"; */
-	/* employee2.company = "Amazon"; */
-	/* employee2.age = 23; */
-	employee2.introduce();
-	employee2.ask_for_promotion();
-
-	developer dev1 = developer("Saldina","CodeBeaty",25,"C++");
-	dev1.fix_bug();
-	dev1.ask_for_promotion();
-	dev1.work();
-
-	teacher tea1 = teacher("Jhon","Amazon",43,"Math");
-	tea1.prepare_lession();
-	tea1.ask_for_promotion();
-	tea1.work();
-	
-	// most common usage of polymorphism is below
-	employee *emp1 = &dev1;
-	employee *emp2 = &tea1;
-
-	emp1->work();
-	emp2->work();
-	// if work() is not defined as virtual in employee class ,emp1->work() will use work() defined at employee class 
-	// else it will use subclasses defination
-
-
-
-	
-	
-
-	// Rule1 : encapsulation
-	// bind operation and data
-	// prevent object outside class interact with data directly
-	// provide own way for doing that (by function)
-	//
-	// Rule2 : abstraction
-	// hide complex operation series behind simple interface
-	// By: interface class or abstract class
-	//
-	// Rule3 : inheritance
-	// explained by developer class and teacher class 
-	//
-	// Rule4 : polymorphism
-	// muliple implementation of the same function for different sub classes
-	// most commen usage is 
-
+	tester(Virtual_function_pure_virual_function_abstract_class);
 }
