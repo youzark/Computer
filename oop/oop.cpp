@@ -17,6 +17,8 @@ class abstract_employee
 
 };
 
+// object in abstract_employee is private by default
+// you can specify it to public
 class employee:abstract_employee
 {
 	private:
@@ -85,6 +87,57 @@ class employee:abstract_employee
 		}
 };  // need ; at end of class defination
 
+
+// chile class / sub class
+// super class / parent class
+//
+// object in abstract_employee is private by default
+// you can specify it to public
+class developer:public employee
+{
+	private:
+		std::string favorite_programming_language;
+	public:
+		// constructor of subclasses
+		// inherit constructor from super class, so no default constructor exists.
+		// better create one
+
+		developer(std::string i_name,std::string i_company,int i_age,std::string i_favorite_programming_language)
+			:employee(i_name,i_company,i_age)  // construct base type this way
+		{
+			favorite_programming_language = i_favorite_programming_language;
+		}
+
+		void fix_bug()
+		{
+			// notice we have to use get_name()
+			// cant access super private property directly
+			std::cout << get_name() << " fixed bug using " << favorite_programming_language << std::endl;
+			// if name define in employee as:
+			// protected:
+			// std::string name
+			// you can use it directly
+		}
+};
+
+class teacher:public employee
+{ 
+	private:
+		std::string subject;
+	public:
+		teacher(std::string i_name,std::string i_company,int i_age,std::string i_subject)
+			:employee(i_name,i_company,i_age)
+		{
+			subject = i_subject;
+		}
+		void prepare_lession()
+		{
+			std::cout << get_name() << " is preparing " << subject << "lesson" << std::endl;
+		}
+	
+};
+
+
 int main()
 {
 	// class_name inst_name = constructor();
@@ -103,6 +156,17 @@ int main()
 	/* employee2.age = 23; */
 	employee2.introduce();
 	employee2.ask_for_promotion();
+
+	developer dev1 = developer("Saldina","CodeBeaty",25,"C++");
+	dev1.fix_bug();
+	dev1.ask_for_promotion();
+
+	teacher tea1 = teacher("Jhon","Amazon",43,"Math");
+	tea1.prepare_lession();
+	tea1.ask_for_promotion();
+	
+
+	
 	
 
 	// Rule1 : encapsulation
@@ -113,5 +177,9 @@ int main()
 	// Rule2 : abstraction
 	// hide complex operation series behind simple interface
 	// By: interface class or abstract class
+	//
+	// Rule3 : inheritance
+	// base class 
+	//
 
 }
