@@ -49,7 +49,12 @@ integer SWAP_LINE[SET_SIZE];  // document which line in a set should get replace
 integer EXIST_TIME[SET_SIZE][WAY_CNT];
 integer OLDEST,OLDEST_LINE;
 
+
+
+
+
 assign {unused_addr, tag_addr, set_addr, line_addr, word_addr} = addr;  // 拆分 32bit ADDR
+
 
 reg cache_hit = 1'b0;
 always @ (*) 
