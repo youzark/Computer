@@ -78,6 +78,13 @@ class employee:abstract_employee
 			std::cout << "Company - " << company << std::endl;
 			std::cout << "Age - " << age << std::endl;
 		}
+		// not a pure virtual ,
+		// if it's child class dont implement such a funciton
+		// this implementation will be executed
+		virtual void work()
+		{
+			std::cout << name << " is checking email ,task backlog, performing tasks... " << std::endl;
+		}
 		void ask_for_promotion()
 		{
 			if(age > 30)
@@ -108,6 +115,11 @@ class developer:public employee
 			favorite_programming_language = i_favorite_programming_language;
 		}
 
+		void work()
+		{
+			std::cout << get_name() << " is writing " << favorite_programming_language << " code " << std::endl;
+		}
+
 		void fix_bug()
 		{
 			// notice we have to use get_name()
@@ -118,6 +130,7 @@ class developer:public employee
 			// std::string name
 			// you can use it directly
 		}
+
 };
 
 class teacher:public employee
@@ -133,6 +146,10 @@ class teacher:public employee
 		void prepare_lession()
 		{
 			std::cout << get_name() << " is preparing " << subject << "lesson" << std::endl;
+		}
+		void work()
+		{
+			std::cout << get_name() << " is teaching " << subject <<  std::endl;
 		}
 	
 };
@@ -160,11 +177,23 @@ int main()
 	developer dev1 = developer("Saldina","CodeBeaty",25,"C++");
 	dev1.fix_bug();
 	dev1.ask_for_promotion();
+	dev1.work();
 
 	teacher tea1 = teacher("Jhon","Amazon",43,"Math");
 	tea1.prepare_lession();
 	tea1.ask_for_promotion();
+	tea1.work();
 	
+	// most common usage of polymorphism is below
+	employee *emp1 = &dev1;
+	employee *emp2 = &tea1;
+
+	emp1->work();
+	emp2->work();
+	// if work() is not defined as virtual in employee class ,emp1->work() will use work() defined at employee class 
+	// else it will use subclasses defination
+
+
 
 	
 	
@@ -179,7 +208,10 @@ int main()
 	// By: interface class or abstract class
 	//
 	// Rule3 : inheritance
-	// base class 
+	// explained by developer class and teacher class 
 	//
+	// Rule4 : polymorphism
+	// muliple implementation of the same function for different sub classes
+	// most commen usage is 
 
 }
