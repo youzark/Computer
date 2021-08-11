@@ -1,0 +1,12 @@
+{
+	"executionEnvironments":
+	[
+		{
+			"root": "~/Computer/AI/LAB1"
+		}
+	],
+	"include": ["~/Computer/AI/LAB1/multiagent/util.py"],
+	"reportMissingImports": false
+
+	
+}
