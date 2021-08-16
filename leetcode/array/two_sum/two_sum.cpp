@@ -16,9 +16,7 @@ public:
 					vector<int> result = {i,j};
 					return result;
 				}
-
 			}
 		}
-	
     }
 };

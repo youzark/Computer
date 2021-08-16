@@ -21,6 +21,7 @@ public:
 			else 
 			{
 				mp_exist[nums[i]] = 1;
+				
 			}
 			mp_pos[nums[i]] = i;
 		}
