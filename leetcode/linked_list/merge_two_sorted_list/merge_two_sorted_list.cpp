@@ -12,13 +12,15 @@ public:
 	{
 		ListNode *front,*head,*edge1,*edge2;
 
-		if(l1 == nullptr)
+		edge1 = l1;
+		edge2 = l2;
+		if(edge1 == nullptr)
 		{
-			return l2;
+			return edge2;
 		}
-		if(l2 == nullptr)
+		if(edge2 == nullptr)
 		{
-			return l1;
+			return edge1;
 		}
 		//guarantee l1 and l2 are not empty
 
@@ -26,12 +28,17 @@ public:
 		// edge is the two node(or null) waiting to be appended to ans
 
 		// init front and edge
-		edge1 = l1;
-		edge2 = l2;
 		front = edge1->val < edge2->val ? edge1 : edge2;
 		head = front;
-		edge1 = edge1->val < edge2->val ? edge1->next : edge1;
-		edge2 = edge1->val < edge2->val ? edge2 : edge2->next;
+		// caution here :
+		// in one scope
+		// if you edit one pointer(edge1 here)
+		// don't visit it's member again unless you can verifiy it is not null
+		// edit edge1 and edge2 are logically parallel ,should be executed in parallel 
+		// if sequence does affect
+		bool comp = edge1->val < edge2->val;
+		edge1 = comp  ? edge1->next : edge1;
+		edge2 = comp  ? edge2 : edge2->next;
 
 		while(edge1 != nullptr && edge2 != nullptr)
 		{
