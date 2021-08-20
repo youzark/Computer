@@ -1,0 +1,16 @@
+{
+	"configurations" :
+	{
+		"test":
+		{
+			"adapter": "vscode-cpptools",
+			"configuration":
+			{
+				"request": "launch",
+				"protocal" : "auto",
+				"stopOnEntry" : true,
+				"program" : "${workspaceRoot}/test"
+			}
+		}
+	}
+}
