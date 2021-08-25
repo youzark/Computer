@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/OLAS.dir/main.cpp.o  -o OLAS  Adder/libadder.a 

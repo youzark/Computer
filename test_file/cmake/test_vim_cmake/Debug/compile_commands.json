@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/hyx/Computer/test_file/cmake/test_vim_cmake/Debug",
+  "command": "/usr/bin/c++   -I/home/hyx/Computer/test_file/cmake/test_vim_cmake/include  -g   -std=gnu++17 -o CMakeFiles/Tester.dir/src/main.cpp.o -c /home/hyx/Computer/test_file/cmake/test_vim_cmake/src/main.cpp",
+  "file": "/home/hyx/Computer/test_file/cmake/test_vim_cmake/src/main.cpp"
+},
+{
+  "directory": "/home/hyx/Computer/test_file/cmake/test_vim_cmake/Debug",
+  "command": "/usr/bin/c++   -I/home/hyx/Computer/test_file/cmake/test_vim_cmake/include  -g   -std=gnu++17 -o CMakeFiles/Tester.dir/src/printer.cpp.o -c /home/hyx/Computer/test_file/cmake/test_vim_cmake/src/printer.cpp",
+  "file": "/home/hyx/Computer/test_file/cmake/test_vim_cmake/src/printer.cpp"
+}
+]
