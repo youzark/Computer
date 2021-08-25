@@ -1,5 +1,6 @@
 #include <cstddef>
 #include <iostream>
+#include <new>
 
 // basic feature implementation
 //
@@ -15,7 +16,7 @@ class Vector
 
 		~Vector()
 		{
-			delete[] m_data;
+			clear();
 		}
 
 		void push_back(const T& value)
@@ -93,7 +94,11 @@ class Vector
 			// 2. copy accross all the old var (move rather than cope is better)
 			// 3. delete
 			
-			T *new_block = new T[new_capacity];
+			//cause not constructor is actually needed ,we just need to alloc a piece of memory
+			/* T *new_block = new T[new_capacity]; */
+			T *new_block = (T*)::operator new(new_capacity * sizeof(T)) ;
+			// ::operator new return a nullptr
+			
 
 			// for downsize 
 			if ( new_capacity < m_size )
@@ -106,7 +111,12 @@ class Vector
 				new_block[i] = std::move(m_data[i]);
 			}
 
-			delete [] m_data;
+			for (int i = 0; i < m_size; ++i) 
+			{
+				m_data[i].~T();
+			}
+
+			::operator delete(m_data,(std::size_t)(m_capacity * sizeof(T) ))  ;
 			m_data = new_block;
 			m_capacity = new_capacity;
 		}
@@ -123,26 +133,40 @@ class Vector
 struct Vector3
 {
 	float x = 0.0f,y = 0.0f,z = 0.0f;
+	int* mem_block;
 
 	Vector3() {}
 	Vector3(float scalar)
-		: x(scalar),y(scalar),z(scalar) {}
+		: x(scalar),y(scalar),z(scalar) 
+	{
+		mem_block = new int[5];
+	}
 	Vector3(float x,float y,float z)
-		: x(x) ,y(y) ,z(z) {}
+		: x(x) ,y(y) ,z(z) 
+	{
+		mem_block = new int[5];
+	}
 
 	Vector3(const Vector3& other)
 		: x(other.x) ,y(other.y) ,z(other.z)
 	{
 		std::cout << "Copy\n";
+		mem_block = other.mem_block;
 	}
 
-	Vector3(const Vector3&& other)
+	Vector3(Vector3&& other)
 		: x(other.x) ,y(other.y) ,z(other.z)
 	{
+		mem_block = other.mem_block;
+		other.mem_block = nullptr;
 		std::cout << "Move\n";
 	}
 
-	~Vector3() {}
+	~Vector3() 
+	{
+		std::cout << "destroyed" << std::endl;
+		delete[] mem_block;
+	}
 
 	Vector3& operator=(const Vector3& other)
 	{
@@ -153,8 +177,10 @@ struct Vector3
 		return *this;
 	}
 
-	Vector3& operator=(const Vector3&& other)
+	Vector3& operator=(Vector3&& other)
 	{
+		mem_block = other.mem_block;
+		other.mem_block = nullptr;
 		std::cout << "Move\n"; 
 		x = other.x;
 		y = other.y;
