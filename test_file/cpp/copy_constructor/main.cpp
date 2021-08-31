@@ -91,3 +91,21 @@ int main()
 	print_string(string1);
 	print_string(second);
 }
+
+/**
+* @brief: test
+*
+* @param: 
+
+:p: TODO
+:a: TODO
+:r: TODO
+:a: TODO
+:m: TODO
+*
+* @return: ReturnType
+*/
+void print_num(int a)
+{
+	std::cout << a << std::endl;
+}
