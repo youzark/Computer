@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/Tester.dir/src/main.cpp.o CMakeFiles/Tester.dir/src/printer.cpp.o  -o Tester 

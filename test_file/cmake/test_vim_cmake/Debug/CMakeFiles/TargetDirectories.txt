@@ -1,3 +1,0 @@
-/home/hyx/Computer/test_file/cmake/test_vim_cmake/Debug/CMakeFiles/rebuild_cache.dir
-/home/hyx/Computer/test_file/cmake/test_vim_cmake/Debug/CMakeFiles/edit_cache.dir
-/home/hyx/Computer/test_file/cmake/test_vim_cmake/Debug/CMakeFiles/Tester.dir

@@ -3,3 +3,4 @@
 * [GTD](GTD.md)
 * [timewarrior](timewarrior.md)
 * [taskwarrior](taskwarrior.md)
+* [snippets](snippets.md)

@@ -1,3 +1,9 @@
+
+* [annotation_system](annotation_system.md)
+
+
+
+
 * syntax : 5mins
 	* start 14:49
 	* summary :
@@ -142,7 +148,8 @@
 * uda : 15 mins: (watch when use)
 
 * external : 25 mins:
+	* start 23:07
+	* summary:
+		* look into taskopen for knowledge base build
+* DOM : 15 mins: (skim through)
 
-* DOM : 15 mins:
-
-* learn task sh:
