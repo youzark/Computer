@@ -2,9 +2,8 @@ package sudoku;
 import java.io.IOException;
 
 import javafx.application.Application;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
+import sudoku.buildLogic.SudokuBuildLogic;
 import sudoku.userInterface.IUserInterfaceContract;
 import sudoku.userInterface.UserInterfaceImpl;
 
@@ -24,7 +23,6 @@ public class SudokuApplication extends Application
 		{
 			e.printStackTrace();
 		}
-
 	}
 	
 	public static void main(String[] args)
