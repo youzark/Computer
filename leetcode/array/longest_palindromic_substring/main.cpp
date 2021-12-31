@@ -1,10 +1,10 @@
-#include <typeinfo>
 #include <iostream>
 #include <string>
 #include <stack>
 
 class Solution {
 public:
+	// O(n^3)
     std::string longestPalindrome(std::string s) 
 	{
 		int i=0,j;
@@ -25,6 +25,7 @@ public:
 		return s.substr(start,end - start + 1);
     }
 
+	// O((end - start))
 	bool is_palindrome(int start,int end,std::string s)
 	{
 		std::stack<char> reverse_string;

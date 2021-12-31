@@ -1,0 +1,8 @@
+hello.py
+setup.py
+HelloWrold.egg-info/PKG-INFO
+HelloWrold.egg-info/SOURCES.txt
+HelloWrold.egg-info/dependency_links.txt
+HelloWrold.egg-info/entry_points.txt
+HelloWrold.egg-info/requires.txt
+HelloWrold.egg-info/top_level.txt

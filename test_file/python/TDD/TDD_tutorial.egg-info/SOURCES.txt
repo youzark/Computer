@@ -1,0 +1,7 @@
+setup.py
+TDD_tutorial.egg-info/PKG-INFO
+TDD_tutorial.egg-info/SOURCES.txt
+TDD_tutorial.egg-info/dependency_links.txt
+TDD_tutorial.egg-info/top_level.txt
+tests/__init__.py
+tests/test_client.py
