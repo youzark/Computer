@@ -4,6 +4,7 @@ import java.util.HashMap;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Dialog;
 import javafx.scene.control.TextField;
@@ -22,7 +23,7 @@ import sudoku.problemdomain.Coordinates;
 import sudoku.problemdomain.SudokuGame;
 import sudoku.userInterface.IUserInterfaceContract.EventListener;
 
-public class UserInterfaceImpl implements IUserInterfaceContract.View, EventHandler<KeyEvent>
+public class UserInterfaceImpl implements IUserInterfaceContract.View, EventHandler<KeyEvent> 
 {
 	private final Stage stage;
 	private final Group root;
@@ -31,15 +32,16 @@ public class UserInterfaceImpl implements IUserInterfaceContract.View, EventHand
 	private IUserInterfaceContract.EventListener listener;
 
 	private static final double WINDOW_Y = 732;
-	private static final double WINDOW_X = 668;
+	private static final double WINDOW_X = 868;
 	private static final double BOARD_PADDING = 50;
 	private static final double BOARD_X_AND_Y = 576;
+	private static final double BUTTON_WIDTH = 100;
+	private static final double BUTTON_HEIGHT = 30;
+	private static final double BUTTON_PADDING = 658;
 	
 	private static final Color WINDOW_BACKGROUND_COLOR = Color.rgb(0, 150, 136);
 	private static final Color BOARD_BACKGROUND_COLOR = Color.rgb(224, 242, 241);
 	private static final String SUDOKU = "Sudoku";
-
-
 
 	public UserInterfaceImpl(Stage stage) {
 		this.stage = stage;
@@ -55,7 +57,42 @@ public class UserInterfaceImpl implements IUserInterfaceContract.View, EventHand
 		drawSudokuBoard(root);
 		drawTextFields(root);
 		drawGridLines(root);
+		drawButton();
 		stage.show();
+	}
+
+	public void drawButton() {
+		Button newGame = drawNewGame();
+		// Button withdraw = drawWithdraw();
+		root.getChildren().add(newGame);
+	}
+
+	// private Button drawWithdraw() {
+	// 	Button load = new Button();
+	// 	load.setText("Withdraw");
+	// 	load.setFont(Font.font("Arial",30));
+	// 	load.setLayoutX(BUTTON_PADDING);
+	// 	load.setLayoutY(BOARD_PADDING + 80);
+	// 	load.setMinWidth(BUTTON_WIDTH);
+	// 	load.setMinHeight(BUTTON_HEIGHT);
+	// 	return load;
+	// }
+
+
+	private Button drawNewGame() {
+		Button newGame = new Button();
+		newGame.setText("New Game");
+		newGame.setFont(Font.font("Arial",30));
+		newGame.setLayoutX(BUTTON_PADDING);
+		newGame.setLayoutY(BOARD_PADDING + 10);
+		newGame.setMinWidth(BUTTON_WIDTH);
+		newGame.setMinHeight(BUTTON_HEIGHT);
+		newGame.setOnAction(event -> {
+			System.out.println("test ");
+			listener.onNewGameButtonClick();
+			event.consume();
+		});
+		return newGame;
 	}
 
 	private void drawGridLines(Group root) {

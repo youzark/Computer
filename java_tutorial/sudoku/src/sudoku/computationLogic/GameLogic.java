@@ -69,17 +69,17 @@ public class GameLogic {
 		return false;
 	}
 
-    public static boolean SudokuIsInvalid(int[][] grid) {
-		for(int xIndex = 0; xIndex < SudokuGame.GRID_BOUNDARY; xIndex++) {
-			for(int yIndex = 0; yIndex < SudokuGame.GRID_BOUNDARY;yIndex ++) {
-				if(givenTileIsInvalid(grid,new Coordinates(xIndex,yIndex))) ;
-				else {
-					return false;
-				}
-			}
-		}
-        return true;
-    }
+    // public static boolean SudokuIsInvalid(int[][] grid) {
+		// for(int xIndex = 0; xIndex < SudokuGame.GRID_BOUNDARY; xIndex++) {
+			// for(int yIndex = 0; yIndex < SudokuGame.GRID_BOUNDARY;yIndex ++) {
+				// if(givenTileIsInvalid(grid,new Coordinates(xIndex,yIndex))) ;
+				// else {
+					// return false;
+				// }
+			// }
+		// }
+    //     return true;
+    // }
 
     public static GameState checkForCompletion(int[][] grid) {
 		if(gameIsCompleted(grid)) {

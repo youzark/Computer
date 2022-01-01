@@ -8,6 +8,7 @@ public interface IUserInterfaceContract
 	{
 		void onSudokuInput(int x,int y,int input);
 		void onDialogClick();
+		void onNewGameButtonClick();
 	}
 	
 	interface View

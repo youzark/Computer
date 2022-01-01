@@ -14,8 +14,6 @@ import sudoku.problemdomain.SudokuGame;
 
 public class SudokuSolver {
 
-	private static final int ArrayList = 0;
-
 	public static boolean puzzleIsSolvable(int[][] puzzle) {
 		for(int i = 0;i < SudokuGame.GRID_BOUNDARY; i ++) {
 			for (int j = 0;j < SudokuGame.GRID_BOUNDARY; j++) {
@@ -68,6 +66,13 @@ public class SudokuSolver {
 		return true;
 	}
 
+	public static boolean solvePuzzleEfficiently(int[][] puzzle) {
+
+
+
+		return true;
+	}
+
 	private static Stack<Coordinates> getEmptyCells(int[][] puzzle) {
 		Stack<Coordinates> emptyCells = new Stack<Coordinates>();
 		for (int x = 0;x < SudokuGame.GRID_BOUNDARY;x ++) {
@@ -79,5 +84,7 @@ public class SudokuSolver {
 		}
 		return emptyCells;
 	}
+
+	
 }
 
