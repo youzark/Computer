@@ -1,5 +1,7 @@
 package sudoku.computationLogic;
 
+import java.util.Arrays;
+
 import sudoku.problemdomain.SudokuGame;
 
 public class SudokuUtilities {
@@ -19,5 +21,14 @@ public class SudokuUtilities {
 			}
 		}
 		return newArray;
+	}
+
+	public static void printBoard(int[][] grid) {
+		System.out.println("########################################### ");
+		System.out.println("Board: ");
+		for(int i = 0; i < SudokuGame.GRID_BOUNDARY;i ++) {
+			System.out.println(Arrays.toString(grid[i]));
+		}
+		System.out.println("########################################### ");
 	}
 }

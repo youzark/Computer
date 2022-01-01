@@ -16,6 +16,7 @@ public class SudokuBuildLogic {
 		SudokuGame initGameState;
 		IStorage storage = new LocalStorageImpl();
 
+
 		try {
 			initGameState = storage.getGameData();
 		} catch (IOException e) {

@@ -55,6 +55,7 @@ public class UserInterfaceImpl implements IUserInterfaceContract.View, EventHand
 		drawSudokuBoard(root);
 		drawTextFields(root);
 		drawGridLines(root);
+		stage.show();
 	}
 
 	private void drawGridLines(Group root) {
@@ -63,10 +64,10 @@ public class UserInterfaceImpl implements IUserInterfaceContract.View, EventHand
 		while( index < 8 ) {
 			int thickness;
 			if (index == 2 || index == 5) {
-				thickness = 5;
+				thickness = 3;
 			}
 			else {
-				thickness = 3;
+				thickness = 2;
 			}
 
 			Rectangle verticalLine = getLine(
@@ -85,7 +86,8 @@ public class UserInterfaceImpl implements IUserInterfaceContract.View, EventHand
 					verticalLine,
 					horizontalLine
 					);
-			
+
+			index++;
 		}
 	}
 
@@ -107,8 +109,8 @@ public class UserInterfaceImpl implements IUserInterfaceContract.View, EventHand
 
 		final int xAndyDelta = 64;
 
-		for(int xIndex = 0 ; xIndex < 9 ;xIndex ++) {
-			for(int yIndex = 0;yIndex < 9;yIndex ++) {
+		for(int xIndex = 0 ; xIndex < SudokuGame.GRID_BOUNDARY ;xIndex ++) {
+			for(int yIndex = 0;yIndex < SudokuGame.GRID_BOUNDARY ;yIndex ++) {
 				int x = xOrigin + xAndyDelta * xIndex;
 				int y = yOrigin + xAndyDelta * yIndex;
 
@@ -147,7 +149,7 @@ public class UserInterfaceImpl implements IUserInterfaceContract.View, EventHand
 		
 		boardBackground.setFill(BOARD_BACKGROUND_COLOR);
 
-		root.getChildren().addAll(boardBackground);
+		root.getChildren().add(boardBackground);
 	}
 
 	private void drawTitle(Group root) {
@@ -155,7 +157,7 @@ public class UserInterfaceImpl implements IUserInterfaceContract.View, EventHand
 		title.setFill(Color.WHITE);
 		Font font = new Font(43);
 		title.setFont(font);
-		root.getChildren().addAll(title);
+		root.getChildren().add(title);
 	}
 
 	private void drawBackground(Group root) {
@@ -166,7 +168,7 @@ public class UserInterfaceImpl implements IUserInterfaceContract.View, EventHand
 
 	@Override
 	public void setListener(EventListener listener) {
-		
+		this.listener = listener;
 	}
 
 	@Override
@@ -184,8 +186,8 @@ public class UserInterfaceImpl implements IUserInterfaceContract.View, EventHand
 
 	@Override
 	public void updateBoard(SudokuGame game) {
-		for(int xIndex = 0;xIndex < 8;xIndex++) {
-			for(int yIndex = 0;yIndex < 8;yIndex++) {
+		for(int xIndex = 0;xIndex < SudokuGame.GRID_BOUNDARY;xIndex++) {
+			for(int yIndex = 0;yIndex < SudokuGame.GRID_BOUNDARY;yIndex++) {
 				TextField tile = textFieldCoordinates.get(new Coordinates(xIndex, yIndex));
 
 				String value = Integer.toString(

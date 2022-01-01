@@ -12,6 +12,13 @@ public class GameGenerator {
 		return unsolveGame(getSolvedGame());
 	}
 
+	private static int[][] getSolvedGame() {
+		int[][] newGrid = new int[SudokuGame.GRID_BOUNDARY][SudokuGame.GRID_BOUNDARY];
+		SudokuSolver.solvePuzzleRandomly(newGrid);
+		SudokuUtilities.printBoard(newGrid);
+		return newGrid;
+	}
+
 	private static int[][] unsolveGame(int[][] solvedGame) {
 		Random random = new Random(System.currentTimeMillis());
 		boolean solvable = false;
@@ -37,51 +44,51 @@ public class GameGenerator {
 		return solvableArray;
 	}
 
-	private static int[][] getSolvedGame() {
-		Random random = new Random(System.currentTimeMillis());
-		int[][] newGrid = new int[SudokuGame.GRID_BOUNDARY][SudokuGame.GRID_BOUNDARY];
+	// private static int[][] getSolvedGame() {
+	// 	Random random = new Random(System.currentTimeMillis());
+	// 	int[][] newGrid = new int[SudokuGame.GRID_BOUNDARY][SudokuGame.GRID_BOUNDARY];
 
-		for(int value = 1;value <= SudokuGame.GRID_BOUNDARY;value ++) {
-			int allocations = 0;
-			int interrupt = 0;
-			int attempts = 0;
+	// 	for(int value = 1;value <= SudokuGame.GRID_BOUNDARY;value ++) {
+	// 		int allocations = 0;
+	// 		int interrupt = 0;
+	// 		int attempts = 0;
 
-			List<Coordinates> allocatTracker = new ArrayList<Coordinates>();
+	// 		List<Coordinates> allocatTracker = new ArrayList<Coordinates>();
 
-			while(allocations <= SudokuGame.GRID_BOUNDARY) {
-				if(interrupt > 200) {
-					allocatTracker.forEach(coord -> {
-						newGrid[coord.getX()][coord.getY()] = 0;
-					});
-					interrupt = 0;
-					allocations = 0;
-					allocatTracker.clear();
-					attempts += 1;
+	// 		while(allocations <= SudokuGame.GRID_BOUNDARY) {
+	// 			if(interrupt > 200) {
+	// 				allocatTracker.forEach(coord -> {
+	// 					newGrid[coord.getX()][coord.getY()] = 0;
+	// 				});
+	// 				interrupt = 0;
+	// 				allocations = 0;
+	// 				allocatTracker.clear();
+	// 				attempts += 1;
 
-					if(attempts > 500) {
-						clearArray(newGrid);
-						attempts = 0;
-						value = 1;
-					}
-				}
+	// 				if(attempts > 500) {
+	// 					clearArray(newGrid);
+	// 					attempts = 0;
+	// 					value = 1;
+	// 				}
+	// 			}
 
-				int xCoordinate = random.nextInt(SudokuGame.GRID_BOUNDARY);
-				int yCoordinate = random.nextInt(SudokuGame.GRID_BOUNDARY);
+	// 			int xCoordinate = random.nextInt(SudokuGame.GRID_BOUNDARY);
+	// 			int yCoordinate = random.nextInt(SudokuGame.GRID_BOUNDARY);
 
-				if ( newGrid[xCoordinate][yCoordinate] == 0 ) {
-					newGrid[xCoordinate][yCoordinate] = value;
-					if (!GameLogic.SudokuIsvalid(newGrid)) {
-						newGrid[xCoordinate][yCoordinate] = 0;
-						interrupt++;
-					} else {
-						allocatTracker.add(new Coordinates(xCoordinate,yCoordinate));
-						allocations ++;
-					}
-				}
-			}
-		}
-		return newGrid;
-	}
+	// 			if ( newGrid[xCoordinate][yCoordinate] == 0 ) {
+	// 				newGrid[xCoordinate][yCoordinate] = value;
+	// 				if (!GameLogic.SudokuIsvalid(newGrid)) {
+	// 					newGrid[xCoordinate][yCoordinate] = 0;
+	// 					interrupt++;
+	// 				} else {
+	// 					allocatTracker.add(new Coordinates(xCoordinate,yCoordinate));
+	// 					allocations ++;
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// 	return newGrid;
+	// }
 
 	private static void clearArray(int[][] newGrid) {
 		for(int xIndex = 0; xIndex < SudokuGame.GRID_BOUNDARY;xIndex ++) {

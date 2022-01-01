@@ -23,14 +23,14 @@ public class GameLogic {
 		return true;
 	}
 
-    public static boolean givenTileIsvalid(int[][] grid, Coordinates coordinates) {
-		if(rowIsValid(grid, coordinates));
-		if(columnIsValid(grid, coordinates));
-		if(sectionIsValid(grid, coordinates));
+    public static boolean givenTileIsInvalid(int[][] grid, Coordinates coordinates) {
+		if(rowIsInvalid(grid, coordinates)) return true;
+		if(columnIsInvalid(grid, coordinates)) return true;
+		if(sectionIsInvalid(grid, coordinates)) return true;
         return false;
     }
 
-	private static boolean sectionIsValid(int[][] grid, Coordinates coordinates) {
+	private static boolean sectionIsInvalid(int[][] grid, Coordinates coordinates) {
 		int sectorLocX = (coordinates.getX() / 3) * 3;
 		int sectorLocY = (coordinates.getY() / 3) * 3;
 		int xIndex = coordinates.getX();
@@ -38,41 +38,41 @@ public class GameLogic {
 		for(int x = sectorLocX; x < sectorLocX + 3; x++) {
 			for(int y = sectorLocY; y < sectorLocY + 3; y++) {
 				if(x != xIndex && y != yIndex && grid[x][y] == grid[xIndex][yIndex]) {
-					return false;
+					return true;
 				}
 			}
 		}
-		return true;
+		return false;
 	}
 
-	private static boolean rowIsValid(int[][] grid, Coordinates coordinates) {
+	private static boolean rowIsInvalid(int[][] grid, Coordinates coordinates) {
 		int xIndex = coordinates.getX();
 		int yIndex = coordinates.getY();
 		int y = yIndex;
 		for(int x = 0; x < SudokuGame.GRID_BOUNDARY;x ++) {
 			if(x != xIndex && grid[x][y] == grid[xIndex][yIndex]) {
-				return false;
+				return true;
 			}
 		}
-		return true;
+		return false;
 	}
 
-	private static boolean columnIsValid(int[][] grid, Coordinates coordinates) {
+	private static boolean columnIsInvalid(int[][] grid, Coordinates coordinates) {
 		int xIndex = coordinates.getX();
 		int yIndex = coordinates.getY();
 		int x = xIndex;
 		for(int y = 0; y < SudokuGame.GRID_BOUNDARY;y ++) {
 			if(y != yIndex && grid[x][y] == grid[xIndex][yIndex]) {
-				return false;
+				return true;
 			}
 		}
-		return true;
+		return false;
 	}
 
-    public static boolean SudokuIsvalid(int[][] grid) {
+    public static boolean SudokuIsInvalid(int[][] grid) {
 		for(int xIndex = 0; xIndex < SudokuGame.GRID_BOUNDARY; xIndex++) {
 			for(int yIndex = 0; yIndex < SudokuGame.GRID_BOUNDARY;yIndex ++) {
-				if(givenTileIsvalid(grid,new Coordinates(xIndex,yIndex))) ;
+				if(givenTileIsInvalid(grid,new Coordinates(xIndex,yIndex))) ;
 				else {
 					return false;
 				}
@@ -87,5 +87,6 @@ public class GameLogic {
 		}
 		return GameState.ACTIVE;
     }
+
 }
 

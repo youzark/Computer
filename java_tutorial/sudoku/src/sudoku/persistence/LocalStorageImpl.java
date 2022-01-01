@@ -34,12 +34,14 @@ public class LocalStorageImpl implements IStorage{
 			FileInputStream fileInputStream = new FileInputStream(GAME_DATA);
 			ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
 			SudokuGame game = (SudokuGame) objectInputStream.readObject();
+			fileInputStream.close();
 			objectInputStream.close();
 			return game;
 		} catch (ClassNotFoundException e) {
 			throw new IOException("Stored data crashed!");
+		} catch (IOException e) {
+			throw new IOException("No datafile has been stored");
 		}
-
 	}
 	
 
