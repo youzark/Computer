@@ -43,6 +43,4 @@ public class LocalStorageImpl implements IStorage{
 			throw new IOException("No datafile has been stored");
 		}
 	}
-	
-
 }
