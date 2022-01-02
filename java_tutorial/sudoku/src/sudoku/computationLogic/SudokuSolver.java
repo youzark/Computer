@@ -9,7 +9,6 @@ import sudoku.problemdomain.Coordinates;
 import sudoku.problemdomain.SudokuGame;
 
 public class SudokuSolver {
-
 	public static boolean puzzleIsSolvable(int[][] puzzle) {
 		for(int i = 0;i < SudokuGame.GRID_BOUNDARY; i ++) {
 			for (int j = 0;j < SudokuGame.GRID_BOUNDARY; j++) {
@@ -62,35 +61,6 @@ public class SudokuSolver {
 		return true;
 	}
 
-	public static boolean solvePuzzleEfficiently(int[][] puzzle) {
-		BoardWithImplication board = new BoardWithImplication(puzzle);
-		boolean solvable = recursiveEfficientSolver(board);
-		puzzle = board.getPuzzle();
-		return solvable;
-	}
-
-
-
-	private static boolean recursiveEfficientSolver(BoardWithImplication board) {
-		while(!board.isFull()) {
-			GridWithImplication grid = board.getNextGrid();
-			if(grid.noChoiceLeft()) {
-				return false;
-			} else {
-				for(int value : grid.getAlternatives()) {
-					Coordinates changedGridCoord = grid.getCoordinates();
-					board.updateImplicationAndValueOnOneGrid(changedGridCoord,value);
-					if(!recursiveEfficientSolver(board)) {
-						board.withDrawImplicationAndValueOnOneGrid(changedGridCoord);
-					} else {
-						return true;
-					}
-				}
-			}
-		}
-		return true;
-	}
-
 	private static Stack<Coordinates> getEmptyCells(int[][] puzzle) {
 		Stack<Coordinates> emptyCells = new Stack<Coordinates>();
 		for (int x = 0;x < SudokuGame.GRID_BOUNDARY;x ++) {
@@ -101,6 +71,46 @@ public class SudokuSolver {
 			}
 		}
 		return emptyCells;
+	}
+	
+	public static boolean solvePuzzleEfficiently(int[][] puzzle) {
+		BoardWithImplication board = new BoardWithImplication(puzzle);
+		boolean solvable = recursiveEfficientSolver(board);
+		puzzle = board.getPuzzle();
+		return solvable;
+	}
+
+	private static boolean recursiveEfficientSolver(BoardWithImplication board) {
+		if(!board.isFull()) {
+			GridWithImplication grid = board.getNextGridWithMostClearImplication();
+			ArrayList<Integer> alternatives = grid.getAlternatives();
+			Coordinates gridPos = grid.getCoordinates();
+			try {
+				for (Integer value : alternatives) {
+					board.updateGrid(gridPos, value);
+					return recursiveEfficientSolver(board);
+				}
+				return false;
+			} catch (InvalidBoardException e) {
+				board.withdrawChangeOnGrid(gridPos);
+				board.setWithdrawedGridasUntackled(gridPos);
+			}
+		}
+		return true;
+		// if(grid.noChoiceLeft()) {
+		// 	return false;
+		// } else {
+		// 	for(int value : grid.getAlternatives()) {
+		// 		Coordinates changedGridCoord = grid.getCoordinates();
+		// 		board.updateImplicationAndValueOnOneGrid(changedGridCoord,value);
+		// 		if(!recursiveEfficientSolver(board)) {
+		// 			board.withDrawImplicationAndValueOnOneGrid(changedGridCoord);
+		// 		} else {
+		// 			return true;
+		// 		}
+		// 	}
+		// }
+		// return true;
 	}
 }
 

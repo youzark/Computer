@@ -18,11 +18,16 @@ public class GridWithImplication implements Comparable<GridWithImplication>{
 		this.alternatives = alternatives;
 		this.choices = choices;
 	}
-    public void removeGivenAlternative(int value) {
+    public void removeGivenAlternative(int value) throws InvalidBoardException{
 		if(alternatives.contains(value)) {
 			alternatives.remove(Integer.valueOf(value));
+			choices --;
+			if(choices <= 0) {
+				throw new InvalidBoardException("no Choice left!");
+			}
 		}
     }
+
 	@Override
 	public int compareTo(GridWithImplication other) {
 		if(choices > other.choices) {
@@ -41,5 +46,11 @@ public class GridWithImplication implements Comparable<GridWithImplication>{
     }
     public boolean noChoiceLeft() {
 		return choices == 0;
+    }
+    public void addGivenAlternative(int value) {
+		alternatives.add(value);
+    }
+    public boolean isFilled() {
+        return false;
     }
 }
