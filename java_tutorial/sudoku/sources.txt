@@ -16,3 +16,5 @@
 ./src/sudoku/computationLogic/SudokuSolver.java
 ./src/sudoku/computationLogic/GameGenerator.java
 ./src/sudoku/computationLogic/SudokuUtilities.java
+./src/sudoku/computationLogic/GridWithImplication.java
+./src/sudoku/computationLogic/BoardWithImplication.java

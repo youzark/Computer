@@ -1,11 +1,7 @@
 package sudoku.computationLogic;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.Collections;
-import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
 
@@ -44,7 +40,7 @@ public class SudokuSolver {
 			possibleNumbers.add(i);
 		}
 		Collections.shuffle(possibleNumbers);
-		System.out.println(possibleNumbers);
+		// System.out.println(possibleNumbers);
 		while(!emptyCells.empty()) {
 			Coordinates emptyCell = emptyCells.pop();
 			for (int value : possibleNumbers) {
@@ -67,9 +63,31 @@ public class SudokuSolver {
 	}
 
 	public static boolean solvePuzzleEfficiently(int[][] puzzle) {
+		BoardWithImplication board = new BoardWithImplication(puzzle);
+		boolean solvable = recursiveEfficientSolver(board);
+		puzzle = board.getPuzzle();
+		return solvable;
+	}
 
 
 
+	private static boolean recursiveEfficientSolver(BoardWithImplication board) {
+		while(!board.isFull()) {
+			GridWithImplication grid = board.getNextGrid();
+			if(grid.noChoiceLeft()) {
+				return false;
+			} else {
+				for(int value : grid.getAlternatives()) {
+					Coordinates changedGridCoord = grid.getCoordinates();
+					board.updateImplicationAndValueOnOneGrid(changedGridCoord,value);
+					if(!recursiveEfficientSolver(board)) {
+						board.withDrawImplicationAndValueOnOneGrid(changedGridCoord);
+					} else {
+						return true;
+					}
+				}
+			}
+		}
 		return true;
 	}
 
@@ -84,7 +102,5 @@ public class SudokuSolver {
 		}
 		return emptyCells;
 	}
-
-	
 }
 

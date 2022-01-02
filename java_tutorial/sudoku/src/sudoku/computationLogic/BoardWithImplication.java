@@ -1,5 +1,6 @@
 package sudoku.computationLogic;
 import java.util.ArrayList;
+import java.util.PriorityQueue;
 
 import sudoku.problemdomain.Coordinates;
 import sudoku.problemdomain.SudokuGame;
@@ -7,6 +8,7 @@ import sudoku.problemdomain.SudokuGame;
 public class BoardWithImplication {
 	public GridWithImplication [][] impliedGrid;
 	private int [][] grid;
+	private PriorityQueue<GridWithImplication> gridsToTackle = new PriorityQueue<GridWithImplication>(81);
 
 	public BoardWithImplication(int[][] grid) {
 		this.grid = grid;
@@ -14,11 +16,10 @@ public class BoardWithImplication {
 		makeImplication();
 	}
 
-	public void withDrawImplicationOnOneGrid(Coordinates coordinates) {
-
+	public void withDrawImplicationAndValueOnOneGrid(Coordinates coordinates) {
 	}
 	
-	public void updateImplicationOnOneGrid(Coordinates coordinates,int value) {
+	public void updateImplicationAndValueOnOneGrid(Coordinates coordinates,int value) {
 		int xIndex = coordinates.getX();
 		int yIndex = coordinates.getY();
 		impliedGrid[xIndex][yIndex] = 
@@ -75,7 +76,7 @@ public class BoardWithImplication {
 	private void makeImplication() {
 		ArrayList<Coordinates> filledGrids = getFilledGrids(grid);
 		for(Coordinates gridPos : filledGrids) {
-			updateImplicationOnOneGrid(gridPos,grid[gridPos.getX()][gridPos.getY()]);
+			updateImplicationAndValueOnOneGrid(gridPos,grid[gridPos.getX()][gridPos.getY()]);
 		}
 	}
 
@@ -90,5 +91,17 @@ public class BoardWithImplication {
 		}
 		return filledGrids;
 	}
+
+    public boolean isFull() {
+		return gridsToTackle.isEmpty();
+    }
+
+    public GridWithImplication getNextGrid() {
+		return gridsToTackle.poll();
+    }
+
+    public int[][] getPuzzle() {
+        return grid;
+    }
 
 }
