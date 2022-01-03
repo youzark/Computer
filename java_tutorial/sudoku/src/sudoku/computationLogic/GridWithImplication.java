@@ -13,10 +13,11 @@ public class GridWithImplication implements Comparable<GridWithImplication>{
 		this.value = value;
 		this.coordinate = coord;
 	}
-	public GridWithImplication(int value, ArrayList<Integer> alternatives, int choices) {
+	public GridWithImplication(int value,Coordinates coord, ArrayList<Integer> alternatives, int choices) {
 		this.value = value;
 		this.alternatives = alternatives;
 		this.choices = choices;
+		this.coordinate = coord;
 	}
     public void removeGivenAlternative(int value) throws InvalidBoardException{
 		if(alternatives.contains(value)) {

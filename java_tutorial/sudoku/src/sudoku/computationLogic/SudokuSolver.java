@@ -44,18 +44,17 @@ public class SudokuSolver {
 			Coordinates emptyCell = emptyCells.pop();
 			for (int value : possibleNumbers) {
 				puzzle[emptyCell.getX()][emptyCell.getY()] = value;
-				if(GameLogic.givenTileIsInvalid(puzzle,emptyCell)) {
+				if(!GameLogic.givenTileIsInvalid(puzzle,emptyCell)) {
+					if(recursiveRandomSolver(puzzle,emptyCells)) {
+						return true;
+					}
 					puzzle[emptyCell.getX()][emptyCell.getY()] = 0;
 					SudokuUtilities.printBoard(puzzle);
 				} else {
-					SudokuUtilities.printBoard(puzzle);
-					if(recursiveRandomSolver(puzzle,emptyCells)) {
-						return true;
-					} else {
-						emptyCells.add(emptyCell);
-					}
+					puzzle[emptyCell.getX()][emptyCell.getY()] = 0;
 				}
 			}
+			emptyCells.add(emptyCell);
 			return false;
 		}
 		return true;
@@ -73,11 +72,15 @@ public class SudokuSolver {
 		return emptyCells;
 	}
 	
-	public static boolean solvePuzzleEfficiently(int[][] puzzle) {
-		BoardWithImplication board = new BoardWithImplication(puzzle);
-		boolean solvable = recursiveEfficientSolver(board);
-		puzzle = board.getPuzzle();
-		return solvable;
+	public static boolean solvePuzzleEfficiently(int[][] puzzle) throws InvalidBoardException {
+		try {
+			BoardWithImplication board = new BoardWithImplication(puzzle);
+			boolean solvable = recursiveEfficientSolver(board);
+			puzzle = board.getPuzzle();
+			return solvable;
+		} catch (InvalidBoardException e) {
+			throw new InvalidBoardException("Board Initialization Failed");
+		}
 	}
 
 	private static boolean recursiveEfficientSolver(BoardWithImplication board) {

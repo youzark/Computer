@@ -1,5 +1,6 @@
 package sudoku.userInterface;
 
+import sudoku.computationLogic.InvalidBoardException;
 import sudoku.problemdomain.SudokuGame;
 
 public interface IUserInterfaceContract
@@ -9,6 +10,8 @@ public interface IUserInterfaceContract
 		void onSudokuInput(int x,int y,int input);
 		void onDialogClick();
 		void onNewGameButtonClick();
+        void onSolveButtonClicked() throws InvalidBoardException;
+        void onEmptyBoardButtonClicked();
 	}
 	
 	interface View

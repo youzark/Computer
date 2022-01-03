@@ -18,3 +18,4 @@
 ./src/sudoku/computationLogic/SudokuUtilities.java
 ./src/sudoku/computationLogic/GridWithImplication.java
 ./src/sudoku/computationLogic/BoardWithImplication.java
+./src/sudoku/computationLogic/InvalidBoardException.java

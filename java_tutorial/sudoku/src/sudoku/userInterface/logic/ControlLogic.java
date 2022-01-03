@@ -3,6 +3,8 @@ package sudoku.userInterface.logic;
 import java.io.IOException;
 
 import sudoku.computationLogic.GameLogic;
+import sudoku.computationLogic.InvalidBoardException;
+import sudoku.computationLogic.SudokuSolver;
 import sudoku.constants.GameState;
 import sudoku.constants.Messages;
 import sudoku.problemdomain.Coordinates;
@@ -61,7 +63,6 @@ public class ControlLogic implements IUserInterfaceContract.EventListener {
 
 	@Override
 	public void onNewGameButtonClick() {
-		System.out.println("test");
 		try {
 			storage.updateGameData(
 					GameLogic.getNewGame()
@@ -72,6 +73,56 @@ public class ControlLogic implements IUserInterfaceContract.EventListener {
 		catch (IOException e) {
 			view.showError(Messages.ERROR);
 		}
+	}
+
+	@Override
+	public void onSolveButtonClicked() throws InvalidBoardException {
+		try {
+			SudokuGame gameData = storage.getGameData();
+			int[][] solvedGame = gameData.getGridStateCopy();
+			SudokuSolver.solvePuzzleRandomly(solvedGame);
+			gameData = new SudokuGame(
+					GameState.COMPLETE,
+					solvedGame
+					);
+			storage.updateGameData(gameData);
+			view.updateBoard(gameData);
+		} catch (IOException e) {
+			e.printStackTrace();
+			view.showError(Messages.ERROR);
+		}
+		// try {
+		// 	SudokuGame gameData = storage.getGameData();
+		// 	int[][] solvedGame = gameData.getGridStateCopy();
+		// 	try {
+		// 		SudokuSolver.solvePuzzleEfficiently(solvedGame);
+		// 	} catch (InvalidBoardException e) {
+		// 		throw e;
+		// 	}
+		// 	gameData = new SudokuGame(
+		// 			GameState.COMPLETE,
+		// 			solvedGame
+		// 			);
+		// 	storage.updateGameData(gameData);
+		// 	view.updateBoard(gameData);
+		// } catch (IOException e) {
+		// 	e.printStackTrace();
+		// 	view.showError(Messages.ERROR);
+		// }
+	}
+
+	@Override
+	public void onEmptyBoardButtonClicked() {
+		try {
+			storage.updateGameData(
+					new SudokuGame(GameState.NEW,new int[SudokuGame.GRID_BOUNDARY][SudokuGame.GRID_BOUNDARY])
+					);
+			view.updateBoard(storage.getGameData());
+		}
+		catch (IOException e) {
+			view.showError(Messages.ERROR);
+		}
+		
 	}
 }
 

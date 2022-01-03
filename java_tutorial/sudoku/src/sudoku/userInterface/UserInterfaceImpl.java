@@ -18,6 +18,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import sudoku.computationLogic.InvalidBoardException;
 import sudoku.constants.GameState;
 import sudoku.problemdomain.Coordinates;
 import sudoku.problemdomain.SudokuGame;
@@ -63,8 +64,12 @@ public class UserInterfaceImpl implements IUserInterfaceContract.View, EventHand
 
 	public void drawButton() {
 		Button newGame = drawNewGame();
+		Button Solve = drawSolveButton();
+		Button emptyBoard = drawEmptyBoardButton();
 		// Button withdraw = drawWithdraw();
-		root.getChildren().add(newGame);
+		root.getChildren().addAll(newGame,
+				Solve,
+				emptyBoard);
 	}
 
 	// private Button drawWithdraw() {
@@ -79,6 +84,40 @@ public class UserInterfaceImpl implements IUserInterfaceContract.View, EventHand
 	// }
 
 
+	private Button drawEmptyBoardButton() {
+		Button emptyBoard = new Button();
+		emptyBoard.setText("Empty Board");
+		emptyBoard.setFont(Font.font("Arial",30));
+		emptyBoard.setLayoutX(BUTTON_PADDING);
+		emptyBoard.setLayoutY(BOARD_PADDING + 150);
+		emptyBoard.setMinWidth(BUTTON_WIDTH);
+		emptyBoard.setMinHeight(BUTTON_HEIGHT);
+		emptyBoard.setOnAction(event -> {
+			listener.onEmptyBoardButtonClicked();
+			event.consume();
+		});
+		return emptyBoard;
+	}
+
+	private Button drawSolveButton() {
+		Button solve = new Button();
+		solve.setText("Solve");
+		solve.setFont(Font.font("Arial",30));
+		solve.setLayoutX(BUTTON_PADDING);
+		solve.setLayoutY(BOARD_PADDING + 80);
+		solve.setMinWidth(BUTTON_WIDTH);
+		solve.setMinHeight(BUTTON_HEIGHT);
+		solve.setOnAction(event -> {
+			try {
+				listener.onSolveButtonClicked();
+			} catch (InvalidBoardException e) {
+				e.printStackTrace();
+			}
+			event.consume();
+		});
+		return solve;
+	}
+
 	private Button drawNewGame() {
 		Button newGame = new Button();
 		newGame.setText("New Game");
@@ -88,7 +127,6 @@ public class UserInterfaceImpl implements IUserInterfaceContract.View, EventHand
 		newGame.setMinWidth(BUTTON_WIDTH);
 		newGame.setMinHeight(BUTTON_HEIGHT);
 		newGame.setOnAction(event -> {
-			System.out.println("test ");
 			listener.onNewGameButtonClick();
 			event.consume();
 		});

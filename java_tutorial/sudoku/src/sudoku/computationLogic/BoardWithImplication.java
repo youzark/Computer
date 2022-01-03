@@ -10,25 +10,37 @@ public class BoardWithImplication {
 	private int [][] grid;
 	private PriorityQueue<GridWithImplication> gridsToTackle = new PriorityQueue<GridWithImplication>(81);
 
-	public BoardWithImplication(int[][] grid) {
+	public BoardWithImplication(int[][] grid) throws InvalidBoardException {
 		this.grid = grid;
-		initAllImplication();
+		this.impliedGrid = new GridWithImplication[SudokuGame.GRID_BOUNDARY][SudokuGame.GRID_BOUNDARY];
+		try {
+			initAllImplication();
+		} catch (InvalidBoardException e) {
+			throw e;
+		}
 		initGridPriorityQueue();
 	}
 
-	private void initAllImplication() {
-		ArrayList<Integer> allAlternatives = new ArrayList<Integer>();
-		for (int i = 1; i <= SudokuGame.GRID_BOUNDARY; i ++) {
-			allAlternatives.add(i);
-		}
+	private void initAllImplication() throws InvalidBoardException {
 		for (int i = 0;i < SudokuGame.GRID_BOUNDARY; i ++) {
 			for (int j = 0; j < SudokuGame.GRID_BOUNDARY; j ++) {
-				impliedGrid[i][j] = new	GridWithImplication(0,allAlternatives,9);
+				ArrayList<Integer> allAlternatives = new ArrayList<Integer>();
+				for (int k = 1; k <= SudokuGame.GRID_BOUNDARY; k ++) {
+					allAlternatives.add(k);
+				}
+				impliedGrid[i][j] = new	GridWithImplication(0
+						,new Coordinates(i,j)
+						,allAlternatives
+						,9);
 			}
 		}
 		ArrayList<Coordinates> filledGrids = getFilledGrids(grid);
 		for(Coordinates gridPos : filledGrids) {
-			maintainImplicationByOneGrid(gridPos,grid[gridPos.getX()][gridPos.getY()]);
+			try {
+				maintainImplicationByOneGrid(gridPos,grid[gridPos.getX()][gridPos.getY()]);
+			} catch (InvalidBoardException e) {
+				throw e;
+			}
 		}
 	}
 
@@ -44,7 +56,7 @@ public class BoardWithImplication {
 		return filledGrids;
 	}
 
-	private void maintainImplicationByOneGrid(Coordinates gridPos, int value) {
+	private void maintainImplicationByOneGrid(Coordinates gridPos, int value) throws InvalidBoardException {
 		makeImplicationInLine(gridPos,value);
 		makeImplicationInColumn(gridPos,value);
 		makeImplicationInSector(gridPos,value);
@@ -89,9 +101,15 @@ public class BoardWithImplication {
 		grid[xIndex][yIndex] = value;
 		impliedGrid[xIndex][yIndex] = 
 			new GridWithImplication(value,
+					new Coordinates(xIndex, yIndex),
 					new ArrayList<Integer>(),
 					0);
-		maintainImplicationByOneGrid(gridPos,value);
+		try {
+			maintainImplicationByOneGrid(gridPos,value);
+		} catch (InvalidBoardException e) {
+			throw e;
+		}
+
     }
 
 	private void makeImplicationInLine(Coordinates coordinates, int value) throws InvalidBoardException{
@@ -108,7 +126,7 @@ public class BoardWithImplication {
 		}
 	}
 
-	private void makeImplicationInColumn(Coordinates coordinates, int value) {
+	private void makeImplicationInColumn(Coordinates coordinates, int value) throws InvalidBoardException{
 		int xIndex = coordinates.getX();
 		int yIndex = coordinates.getY();
 		for(int x = 0;x < SudokuGame.GRID_BOUNDARY && x != xIndex ; x ++) {
@@ -122,7 +140,7 @@ public class BoardWithImplication {
 		}
 	}
 
-	private void makeImplicationInSector(Coordinates coordinates, int value) {
+	private void makeImplicationInSector(Coordinates coordinates, int value) throws  InvalidBoardException{
 		int sectorLocX = (coordinates.getX() / 3) * 3;
 		int sectorLocY = (coordinates.getY() / 3) * 3;
 		int xIndex = coordinates.getX();
@@ -146,6 +164,7 @@ public class BoardWithImplication {
 		int value = grid[xIndex][yIndex];
 		impliedGrid[xIndex][yIndex] = 
 			new GridWithImplication(value,
+					new Coordinates(xIndex, yIndex),
 					new ArrayList<Integer>(),
 					0);
 		withdrawImplicationByOneGrid(gridPos,value);
