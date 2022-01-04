@@ -40,7 +40,7 @@ public class SudokuSolver {
 		}
 		Collections.shuffle(possibleNumbers);
 		// System.out.println(possibleNumbers);
-		while(!emptyCells.empty()) {
+		if(!emptyCells.empty()) {
 			Coordinates emptyCell = emptyCells.pop();
 			for (int value : possibleNumbers) {
 				puzzle[emptyCell.getX()][emptyCell.getY()] = value;
@@ -74,6 +74,7 @@ public class SudokuSolver {
 	
 	public static boolean solvePuzzleEfficiently(int[][] puzzle) throws InvalidBoardException {
 		try {
+			// SudokuUtilities.printBoard(puzzle);
 			BoardWithImplication board = new BoardWithImplication(puzzle);
 			boolean solvable = recursiveEfficientSolver(board);
 			puzzle = board.getPuzzle();
@@ -85,19 +86,27 @@ public class SudokuSolver {
 
 	private static boolean recursiveEfficientSolver(BoardWithImplication board) {
 		if(!board.isFull()) {
+			board.printQueue();
 			GridWithImplication grid = board.getNextGridWithMostClearImplication();
 			ArrayList<Integer> alternatives = grid.getAlternatives();
 			Coordinates gridPos = grid.getCoordinates();
-			try {
-				for (Integer value : alternatives) {
+			for (Integer value : alternatives) {
+				System.out.println("alternatives:" + alternatives);
+				System.out.println(gridPos);
+				SudokuUtilities.printBoard(board.getPuzzle());
+				try {
 					board.updateGrid(gridPos, value);
-					return recursiveEfficientSolver(board);
+				} catch (InvalidBoardException e) {
+					board.withdrawChangeOnGrid(gridPos);
+					continue;
 				}
-				return false;
-			} catch (InvalidBoardException e) {
+				if(recursiveEfficientSolver(board)) {
+					return true;
+				}
 				board.withdrawChangeOnGrid(gridPos);
-				board.setWithdrawedGridasUntackled(gridPos);
 			}
+			board.setWithdrawedGridasUntackled(gridPos);
+			return false;
 		}
 		return true;
 		// if(grid.noChoiceLeft()) {

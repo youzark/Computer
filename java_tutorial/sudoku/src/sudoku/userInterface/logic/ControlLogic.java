@@ -77,28 +77,10 @@ public class ControlLogic implements IUserInterfaceContract.EventListener {
 
 	@Override
 	public void onSolveButtonClicked() throws InvalidBoardException {
-		try {
-			SudokuGame gameData = storage.getGameData();
-			int[][] solvedGame = gameData.getGridStateCopy();
-			SudokuSolver.solvePuzzleRandomly(solvedGame);
-			gameData = new SudokuGame(
-					GameState.COMPLETE,
-					solvedGame
-					);
-			storage.updateGameData(gameData);
-			view.updateBoard(gameData);
-		} catch (IOException e) {
-			e.printStackTrace();
-			view.showError(Messages.ERROR);
-		}
 		// try {
 		// 	SudokuGame gameData = storage.getGameData();
 		// 	int[][] solvedGame = gameData.getGridStateCopy();
-		// 	try {
-		// 		SudokuSolver.solvePuzzleEfficiently(solvedGame);
-		// 	} catch (InvalidBoardException e) {
-		// 		throw e;
-		// 	}
+		// 	SudokuSolver.solvePuzzleRandomly(solvedGame);
 		// 	gameData = new SudokuGame(
 		// 			GameState.COMPLETE,
 		// 			solvedGame
@@ -109,6 +91,24 @@ public class ControlLogic implements IUserInterfaceContract.EventListener {
 		// 	e.printStackTrace();
 		// 	view.showError(Messages.ERROR);
 		// }
+		try {
+			SudokuGame gameData = storage.getGameData();
+			int[][] solvedGame = gameData.getGridStateCopy();
+			try {
+				SudokuSolver.solvePuzzleEfficiently(solvedGame);
+			} catch (InvalidBoardException e) {
+				throw e;
+			}
+			gameData = new SudokuGame(
+					GameState.COMPLETE,
+					solvedGame
+					);
+			storage.updateGameData(gameData);
+			view.updateBoard(gameData);
+		} catch (IOException e) {
+			e.printStackTrace();
+			view.showError(Messages.ERROR);
+		}
 	}
 
 	@Override

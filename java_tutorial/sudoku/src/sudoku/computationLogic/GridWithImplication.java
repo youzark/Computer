@@ -48,10 +48,13 @@ public class GridWithImplication implements Comparable<GridWithImplication>{
     public boolean noChoiceLeft() {
 		return choices == 0;
     }
-    public void addGivenAlternative(int value) {
-		alternatives.add(value);
+	public void addGivenAlternative(int value) {
+		if(!alternatives.contains(value)) {
+			alternatives.add(value);
+			choices++;
+		}
     }
     public boolean isFilled() {
-        return false;
+		return value != 0;
     }
 }

@@ -21,6 +21,11 @@ public class Coordinates
 	}
 
 	@Override
+	public String toString() {
+		return String.format("Pos:[%d,%d]",x + 1,y + 1);
+	}
+
+	@Override
 	public boolean equals(Object o) 
 	{
 		if (this == o) return true;
