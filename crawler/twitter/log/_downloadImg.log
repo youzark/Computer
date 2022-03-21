@@ -1,0 +1,688 @@
+2022-03-19 22:14:58,945-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f7a1c648730>,), and kwargs: {}
+2022-03-19 22:19:02,959-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf8fe4c0>,), and kwargs: {}
+2022-03-19 22:19:04,070-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77d027c250>,), and kwargs: {}
+2022-03-19 22:19:04,241-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FOI1U3oXwAIkVOA?format=png&name=small', '@LMBroadhurst_2022-3-18_14-16-34seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:19:05,241-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f78050c9bb0>,), and kwargs: {}
+2022-03-19 22:19:05,397-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1504824542975479810/Pt3acsv3?format=jpg&name=small', '@LMBroadhurst_2022-3-18_14-18-23seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:19:06,398-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf75b580>,), and kwargs: {}
+2022-03-19 22:19:07,543-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77d027eb80>,), and kwargs: {}
+2022-03-19 22:19:08,677-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77bdfbcfd0>,), and kwargs: {}
+2022-03-19 22:19:08,824-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FN9S4ipXIAEUJ9v?format=jpg&name=small', '@shirtinabox1_2022-3-16_8-29-23seq-0', '/home/youzark/.local/.personalData/twitter/@shirtinabox1/pic/'), and kwargs: {}
+2022-03-19 22:19:09,825-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f77bdf820d0>, 0), and kwargs: {}
+2022-03-19 22:19:11,703-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf8d8490>,), and kwargs: {}
+2022-03-19 22:19:11,846-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FN9S4ipXIAEUJ9v?format=jpg&name=small', '@shirtinabox1_2022-3-16_8-29-23seq-0', '/home/youzark/.local/.personalData/twitter/@shirtinabox1/pic/'), and kwargs: {}
+2022-03-19 22:19:12,847-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf7a4160>,), and kwargs: {}
+2022-03-19 22:19:13,144-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FN3zCVlWYAEjZVT?format=jpg&name=small', '@shirtinabox1_2022-3-15_6-52-8seq-0', '/home/youzark/.local/.personalData/twitter/@shirtinabox1/pic/'), and kwargs: {}
+2022-03-19 22:19:14,144-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf731160>,), and kwargs: {}
+2022-03-19 22:19:15,276-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf9002b0>,), and kwargs: {}
+2022-03-19 22:19:16,376-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf9a8700>,), and kwargs: {}
+2022-03-19 22:19:17,594-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf7131f0>,), and kwargs: {}
+2022-03-19 22:19:17,739-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1503018883069976577/m80x9bkZ?format=jpg&name=small', '@LMBroadhurst_2022-3-13_14-43-22seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:19:18,740-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf95fb80>,), and kwargs: {}
+2022-03-19 22:19:19,882-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf8aa9a0>,), and kwargs: {}
+2022-03-19 22:19:21,112-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf7fdb20>,), and kwargs: {}
+2022-03-19 22:19:22,213-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf84dd90>,), and kwargs: {}
+2022-03-19 22:19:23,348-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf713580>,), and kwargs: {}
+2022-03-19 22:19:23,526-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FNeNfwZXMAMBa84?format=jpg&name=small', '@shirtinabox1_2022-3-10_7-37-37seq-0', '/home/youzark/.local/.personalData/twitter/@shirtinabox1/pic/'), and kwargs: {}
+2022-03-19 22:19:24,527-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf7955b0>,), and kwargs: {}
+2022-03-19 22:19:25,660-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf7c4d90>,), and kwargs: {}
+2022-03-19 22:19:25,985-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FNV6aR6XEAIXxs3?format=jpg&name=small', '@LMBroadhurst_2022-3-8_17-1-32seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:19:26,986-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf84d760>,), and kwargs: {}
+2022-03-19 22:19:28,093-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf8b7d90>,), and kwargs: {}
+2022-03-19 22:19:29,396-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf7e7130>,), and kwargs: {}
+2022-03-19 22:19:29,582-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1503450527350337542/jWQ75l8q?format=jpg&name=small', '@LMBroadhurst_2022-3-7_15-25-42seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:19:30,583-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f77bdf820d0>, 5427), and kwargs: {}
+2022-03-19 22:19:32,358-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77d139dbb0>,), and kwargs: {}
+2022-03-19 22:19:32,467-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FNV6aR6XEAIXxs3?format=jpg&name=small', '@LMBroadhurst_2022-3-8_17-1-32seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:19:33,467-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf8e68e0>,), and kwargs: {}
+2022-03-19 22:19:34,554-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf770e20>,), and kwargs: {}
+2022-03-19 22:19:35,679-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf713040>,), and kwargs: {}
+2022-03-19 22:19:35,847-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1503450527350337542/jWQ75l8q?format=jpg&name=small', '@LMBroadhurst_2022-3-7_15-25-42seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:19:36,848-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f78050c93a0>,), and kwargs: {}
+2022-03-19 22:19:37,968-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf8b7370>,), and kwargs: {}
+2022-03-19 22:19:39,079-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf7e73a0>,), and kwargs: {}
+2022-03-19 22:19:40,200-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77d1322640>,), and kwargs: {}
+2022-03-19 22:19:41,303-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf9aad00>,), and kwargs: {}
+2022-03-19 22:19:42,421-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77d027e280>,), and kwargs: {}
+2022-03-19 22:19:42,601-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1503661629904412677/o8agbGod?format=jpg&name=small', '@LMBroadhurst_2022-2-28_21-13-16seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:19:43,603-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf7039d0>,), and kwargs: {}
+2022-03-19 22:19:44,694-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77d1386670>,), and kwargs: {}
+2022-03-19 22:19:44,831-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FMoGZ-TX0AYWNF6?format=jpg&name=small', '@LFC_2022-2-27_19-27-20seq-0', '/home/youzark/.local/.personalData/twitter/@LFC/pic/'), and kwargs: {}
+2022-03-19 22:19:45,832-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf9941c0>,), and kwargs: {}
+2022-03-19 22:19:45,954-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FMm1lQ7XsAEm_sK?format=jpg&name=small', '@LFC_2022-2-27_13-35-37seq-0', '/home/youzark/.local/.personalData/twitter/@LFC/pic/'), and kwargs: {}
+2022-03-19 22:19:46,955-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf86ce80>,), and kwargs: {}
+2022-03-19 22:19:47,100-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FMmmlh_XoAEuikh?format=jpg&name=small', '@rico_74__2022-2-27_12-28-31seq-0', '/home/youzark/.local/.personalData/twitter/@rico_74_/pic/'), and kwargs: {}
+2022-03-19 22:19:48,101-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf8c3250>,), and kwargs: {}
+2022-03-19 22:19:48,258-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1503004710168576005/a2WGzFCn?format=jpg&name=small', '@LMBroadhurst_2022-2-27_11-29-55seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:19:49,259-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77d1365b80>,), and kwargs: {}
+2022-03-19 22:19:50,392-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf9a4700>,), and kwargs: {}
+2022-03-19 22:19:51,511-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77bdfbc850>,), and kwargs: {}
+2022-03-19 22:19:51,699-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1502662399131799552/Tsm2qEl9?format=jpg&name=small', '@LMBroadhurst_2022-2-25_20-27-25seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:19:52,700-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f77bdf820d0>, 10743), and kwargs: {}
+2022-03-19 22:19:54,006-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf8fb0d0>,), and kwargs: {}
+2022-03-19 22:19:54,160-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1503004710168576005/a2WGzFCn?format=jpg&name=small', '@LMBroadhurst_2022-2-27_11-29-55seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:19:55,161-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf8bc2b0>,), and kwargs: {}
+2022-03-19 22:19:56,286-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf9cdb80>,), and kwargs: {}
+2022-03-19 22:19:57,369-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf802a60>,), and kwargs: {}
+2022-03-19 22:19:57,535-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1502662399131799552/Tsm2qEl9?format=jpg&name=small', '@LMBroadhurst_2022-2-25_20-27-25seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:19:58,537-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf75bca0>,), and kwargs: {}
+2022-03-19 22:19:58,720-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FMcx6Y8WYAkfv03?format=png&name=small', '@theSchoolOfCode_2022-2-25_14-42-55seq-0', '/home/youzark/.local/.personalData/twitter/@theSchoolOfCode/pic/'), and kwargs: {}
+2022-03-19 22:19:59,720-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf8e6790>,), and kwargs: {}
+2022-03-19 22:20:00,817-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf9ef6d0>,), and kwargs: {}
+2022-03-19 22:20:01,031-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1504700400586280962/Y8FEIeqx?format=jpg&name=small', '@LMBroadhurst_2022-2-24_17-8-17seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:20:02,032-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf7c9430>,), and kwargs: {}
+2022-03-19 22:20:03,131-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77d12efd30>,), and kwargs: {}
+2022-03-19 22:20:03,297-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FMT1pnFWUAMYICY?format=png&name=small', '@LMBroadhurst_2022-2-23_21-2-26seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:20:04,298-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf95fcd0>,), and kwargs: {}
+2022-03-19 22:20:04,407-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FMT2DRfXwAMFRNL?format=jpg&name=900x900', '@LMBroadhurst_2022-2-23_21-3-17seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:20:05,408-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f77bdf820d0>, 16384), and kwargs: {}
+2022-03-19 22:20:07,325-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77d02d0c40>,), and kwargs: {}
+2022-03-19 22:20:07,475-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1504012452748476419/xpLf_Luz?format=jpg&name=small', '@TheEconomist_2022-2-21_20-37-1seq-0', '/home/youzark/.local/.personalData/twitter/@TheEconomist/pic/'), and kwargs: {}
+2022-03-19 22:20:08,476-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf815fa0>,), and kwargs: {}
+2022-03-19 22:20:09,567-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf7a4490>,), and kwargs: {}
+2022-03-19 22:20:10,753-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf884ac0>,), and kwargs: {}
+2022-03-19 22:20:11,938-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf78c340>,), and kwargs: {}
+2022-03-19 22:20:13,057-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf7583a0>,), and kwargs: {}
+2022-03-19 22:20:14,174-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf758730>,), and kwargs: {}
+2022-03-19 22:20:15,357-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77d1347820>,), and kwargs: {}
+2022-03-19 22:20:16,461-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77d02b3280>,), and kwargs: {}
+2022-03-19 22:20:17,564-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf7c4760>,), and kwargs: {}
+2022-03-19 22:20:18,683-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77d02afd00>,), and kwargs: {}
+2022-03-19 22:20:19,781-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf83d5b0>,), and kwargs: {}
+2022-03-19 22:20:20,918-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf83d100>,), and kwargs: {}
+2022-03-19 22:20:21,120-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FLtAspHWUAgwZIz?format=jpg&name=360x360', '@secretshirtco_2022-2-16_8-4-37seq-0', '/home/youzark/.local/.personalData/twitter/@secretshirtco/pic/'), and kwargs: {}
+2022-03-19 22:20:21,120-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FLtAspIXoAIzXv2?format=jpg&name=360x360', '@secretshirtco_2022-2-16_8-4-37seq-1', '/home/youzark/.local/.personalData/twitter/@secretshirtco/pic/'), and kwargs: {}
+2022-03-19 22:20:21,120-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FLtAspHWYAk4wS7?format=jpg&name=360x360', '@secretshirtco_2022-2-16_8-4-37seq-2', '/home/youzark/.local/.personalData/twitter/@secretshirtco/pic/'), and kwargs: {}
+2022-03-19 22:20:22,121-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cfa0b520>,), and kwargs: {}
+2022-03-19 22:20:23,254-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf916a30>,), and kwargs: {}
+2022-03-19 22:20:23,425-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FLlJBWrWYAkY5qf?format=png&name=small', '@LMBroadhurst_2022-2-14_19-25-24seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:20:24,427-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cfa0ba60>,), and kwargs: {}
+2022-03-19 22:20:25,543-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77d02d6250>,), and kwargs: {}
+2022-03-19 22:20:25,765-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FLgP__zWYAIWOi2?format=png&name=small', '@LMBroadhurst_2022-2-13_20-39-37seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:20:26,767-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77d0295f70>,), and kwargs: {}
+2022-03-19 22:20:26,943-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FLUkM8HWUAUpHuB?format=jpg&name=small', '@LMBroadhurst_2022-2-11_14-12-50seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:20:27,944-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf7c4160>,), and kwargs: {}
+2022-03-19 22:20:28,124-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FLQ3vTIXIAIUZcD?format=png&name=small', '@LMBroadhurst_2022-2-10_20-58-33seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:20:29,124-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f77bdf820d0>, 21745), and kwargs: {}
+2022-03-19 22:20:30,626-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf706100>,), and kwargs: {}
+2022-03-19 22:20:30,852-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FLUkM8HWUAUpHuB?format=jpg&name=small', '@LMBroadhurst_2022-2-11_14-12-50seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:20:31,855-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf740ee0>,), and kwargs: {}
+2022-03-19 22:20:32,001-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FLQ3vTIXIAIUZcD?format=png&name=small', '@LMBroadhurst_2022-2-10_20-58-33seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:20:33,002-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf982dc0>,), and kwargs: {}
+2022-03-19 22:20:34,109-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf817130>,), and kwargs: {}
+2022-03-19 22:20:34,331-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FLLhZy1XIAcgwU_?format=png&name=small', '@LMBroadhurst_2022-2-9_20-3-37seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:20:35,332-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf9ef760>,), and kwargs: {}
+2022-03-19 22:20:35,508-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FLGdIrBWUAYoE22?format=png&name=small', '@LMBroadhurst_2022-2-8_20-46-30seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:20:36,509-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf770c10>,), and kwargs: {}
+2022-03-19 22:20:37,671-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77d026d9d0>,), and kwargs: {}
+2022-03-19 22:20:38,812-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf6f80d0>,), and kwargs: {}
+2022-03-19 22:20:39,914-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf817a90>,), and kwargs: {}
+2022-03-19 22:20:41,063-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf6f20d0>,), and kwargs: {}
+2022-03-19 22:20:41,213-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FKgVhgPXoAQzrl-?format=jpg&name=small', '@theSchoolOfCode_2022-2-1_10-59-22seq-0', '/home/youzark/.local/.personalData/twitter/@theSchoolOfCode/pic/'), and kwargs: {}
+2022-03-19 22:20:42,214-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f77bdf820d0>, 27145), and kwargs: {}
+2022-03-19 22:20:44,077-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf7d8400>,), and kwargs: {}
+2022-03-19 22:20:45,193-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf7aa460>,), and kwargs: {}
+2022-03-19 22:20:46,358-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf7e7100>,), and kwargs: {}
+2022-03-19 22:20:47,471-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf854a90>,), and kwargs: {}
+2022-03-19 22:20:48,608-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf7e7640>,), and kwargs: {}
+2022-03-19 22:20:48,847-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/ext_tw_video_thumb/1486161223154638848/pu/img/AtijXMYrq-aPxvyj.jpg', '@BojanaVukov_2022-1-26_21-30-1seq-0', '/home/youzark/.local/.personalData/twitter/@BojanaVukov/pic/'), and kwargs: {}
+2022-03-19 22:20:49,848-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf857700>,), and kwargs: {}
+2022-03-19 22:20:50,997-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77d02c48e0>,), and kwargs: {}
+2022-03-19 22:20:52,141-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cfa19c40>,), and kwargs: {}
+2022-03-19 22:20:53,264-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77d1386730>,), and kwargs: {}
+2022-03-19 22:20:54,434-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf8547f0>,), and kwargs: {}
+2022-03-19 22:20:55,589-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77d0276d60>,), and kwargs: {}
+2022-03-19 22:20:55,714-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FJpH-JZXoAEyb6P?format=jpg&name=small', '@theSchoolOfCode_2022-1-21_17-38-27seq-0', '/home/youzark/.local/.personalData/twitter/@theSchoolOfCode/pic/'), and kwargs: {}
+2022-03-19 22:20:56,714-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf752550>,), and kwargs: {}
+2022-03-19 22:20:56,918-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1503049251605073924/zEzodmDO?format=jpg&name=small', '@LMBroadhurst_2022-1-20_21-45-44seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:20:57,921-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf81f340>,), and kwargs: {}
+2022-03-19 22:20:59,047-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf7e1310>,), and kwargs: {}
+2022-03-19 22:21:00,190-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf912760>,), and kwargs: {}
+2022-03-19 22:21:00,339-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FJU0tHvaMAElNGG?format=jpg&name=small', '@anamkaa__2022-1-17_18-49-57seq-0', '/home/youzark/.local/.personalData/twitter/@anamkaa_/pic/'), and kwargs: {}
+2022-03-19 22:21:01,340-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf7dd3d0>,), and kwargs: {}
+2022-03-19 22:21:02,459-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf7fc3a0>,), and kwargs: {}
+2022-03-19 22:21:03,621-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf747c70>,), and kwargs: {}
+2022-03-19 22:21:04,758-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf7477f0>,), and kwargs: {}
+2022-03-19 22:21:04,950-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1501238452003741703/ihi516pL?format=jpg&name=small', '@LMBroadhurst_2022-1-14_17-39-56seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:21:05,951-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf7aa6d0>,), and kwargs: {}
+2022-03-19 22:21:07,085-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f77bdf820d0>, 32483), and kwargs: {}
+2022-03-19 22:21:08,790-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77d023bd90>,), and kwargs: {}
+2022-03-19 22:21:08,967-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1501238452003741703/ihi516pL?format=jpg&name=small', '@LMBroadhurst_2022-1-14_17-39-56seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:21:09,967-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf7aa970>,), and kwargs: {}
+2022-03-19 22:21:11,119-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cfa150d0>,), and kwargs: {}
+2022-03-19 22:21:11,278-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FI5tl66XwAI7vYW?format=jpg&name=small', '@theSchoolOfCode_2022-1-12_12-29-12seq-0', '/home/youzark/.local/.personalData/twitter/@theSchoolOfCode/pic/'), and kwargs: {}
+2022-03-19 22:21:12,279-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf7eeeb0>,), and kwargs: {}
+2022-03-19 22:21:13,406-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf9586a0>,), and kwargs: {}
+2022-03-19 22:21:13,562-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1503049261184958464/UFyMKNd7?format=jpg&name=small', '@LMBroadhurst_2022-1-8_16-27-32seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:21:14,564-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf997a00>,), and kwargs: {}
+2022-03-19 22:21:15,694-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77d131ba00>,), and kwargs: {}
+2022-03-19 22:21:16,803-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77d131b820>,), and kwargs: {}
+2022-03-19 22:21:16,992-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1503049249042448389/fTghGbIp?format=jpg&name=small', '@LMBroadhurst_2022-1-5_20-56-41seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:21:17,993-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf87ce80>,), and kwargs: {}
+2022-03-19 22:21:19,131-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf7959a0>,), and kwargs: {}
+2022-03-19 22:21:20,270-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf7953d0>,), and kwargs: {}
+2022-03-19 22:21:20,406-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FHZRgLGX0AAL-8L?format=jpg&name=small', '@somacdivad_2021-12-24_19-5-55seq-0', '/home/youzark/.local/.personalData/twitter/@somacdivad/pic/'), and kwargs: {}
+2022-03-19 22:21:21,407-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf8375e0>,), and kwargs: {}
+2022-03-19 22:21:21,627-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/tweet_video_thumb/FHjilXeXIAIhdUx.jpg', '@LMBroadhurst_2021-12-26_18-53-41seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:21:22,628-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf7d84f0>,), and kwargs: {}
+2022-03-19 22:21:23,777-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf837dc0>,), and kwargs: {}
+2022-03-19 22:21:23,955-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1503049274094931973/MyEnaeZ3?format=jpg&name=small', '@LMBroadhurst_2021-12-23_13-34-37seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:21:24,956-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf9efc40>,), and kwargs: {}
+2022-03-19 22:21:25,290-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FHLc0q-VQAAroVH?format=jpg&name=small', '@NVIDIAGeForce_2021-12-22_2-37-57seq-0', '/home/youzark/.local/.personalData/twitter/@NVIDIAGeForce/pic/'), and kwargs: {}
+2022-03-19 22:21:25,290-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/profile_images/1300837125487620098/6G5ShNsy_mini.jpg', '@NVIDIAGeForce_2021-12-22_2-37-57seq-1', '/home/youzark/.local/.personalData/twitter/@NVIDIAGeForce/pic/'), and kwargs: {}
+2022-03-19 22:21:25,291-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FHJQ4mrVkAQo4Il?format=jpg&name=240x240', '@NVIDIAGeForce_2021-12-22_2-37-57seq-2', '/home/youzark/.local/.personalData/twitter/@NVIDIAGeForce/pic/'), and kwargs: {}
+2022-03-19 22:21:26,291-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f77bdf820d0>, 38259), and kwargs: {}
+2022-03-19 22:21:27,534-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf7eec10>,), and kwargs: {}
+2022-03-19 22:21:28,558-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/tweet_video_thumb/FHjilXeXIAIhdUx.jpg', '@LMBroadhurst_2021-12-26_18-53-41seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:21:29,559-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77bdfbcca0>,), and kwargs: {}
+2022-03-19 22:21:30,647-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf8b3940>,), and kwargs: {}
+2022-03-19 22:21:30,852-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1503049274094931973/MyEnaeZ3?format=jpg&name=small', '@LMBroadhurst_2021-12-23_13-34-37seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:21:31,853-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77d02ab610>,), and kwargs: {}
+2022-03-19 22:21:32,189-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FHLc0q-VQAAroVH?format=jpg&name=small', '@NVIDIAGeForce_2021-12-22_2-37-57seq-0', '/home/youzark/.local/.personalData/twitter/@NVIDIAGeForce/pic/'), and kwargs: {}
+2022-03-19 22:21:32,190-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/profile_images/1300837125487620098/6G5ShNsy_mini.jpg', '@NVIDIAGeForce_2021-12-22_2-37-57seq-1', '/home/youzark/.local/.personalData/twitter/@NVIDIAGeForce/pic/'), and kwargs: {}
+2022-03-19 22:21:32,190-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FHJQ4mrVkAQo4Il?format=jpg&name=240x240', '@NVIDIAGeForce_2021-12-22_2-37-57seq-2', '/home/youzark/.local/.personalData/twitter/@NVIDIAGeForce/pic/'), and kwargs: {}
+2022-03-19 22:21:33,190-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cfa0b3d0>,), and kwargs: {}
+2022-03-19 22:21:34,303-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77d02361c0>,), and kwargs: {}
+2022-03-19 22:21:35,418-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf7cd1c0>,), and kwargs: {}
+2022-03-19 22:21:36,562-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f77bdf820d0>, 42326), and kwargs: {}
+2022-03-19 22:21:37,857-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf7eec40>,), and kwargs: {}
+2022-03-19 22:21:37,993-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FGrOhV5XoAkMRk8?format=jpg&name=small', '@LMBroadhurst_2021-12-15_20-29-3seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:21:38,994-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf8571c0>,), and kwargs: {}
+2022-03-19 22:21:39,327-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/ext_tw_video_thumb/1471151648735068162/pu/img/dp-P-Uvis-5E1Id5.jpg', '@NVIDIAGeForce_2021-12-15_16-45-16seq-0', '/home/youzark/.local/.personalData/twitter/@NVIDIAGeForce/pic/'), and kwargs: {}
+2022-03-19 22:21:40,328-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf77b7f0>,), and kwargs: {}
+2022-03-19 22:21:40,475-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FGmUoUyWUBMhaNq?format=png&name=small', '@LMBroadhurst_2021-12-14_21-35-58seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:21:41,476-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77d13395b0>,), and kwargs: {}
+2022-03-19 22:21:41,638-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FGhRcpVXwAMrejy?format=png&name=small', '@LMBroadhurst_2021-12-13_22-7-22seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:21:42,638-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77d1376550>,), and kwargs: {}
+2022-03-19 22:21:42,783-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FGaPPVRXMAYpb6y?format=png&name=small', '@LMBroadhurst_2021-12-12_13-19-8seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:21:43,784-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf9fcf10>,), and kwargs: {}
+2022-03-19 22:21:44,884-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf9e65e0>,), and kwargs: {}
+2022-03-19 22:21:46,167-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77d0a9e8b0>,), and kwargs: {}
+2022-03-19 22:21:46,306-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FGSAk5oXIAUMm2U?format=png&name=small', '@LMBroadhurst_2021-12-10_22-56-16seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:21:47,308-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77d02c3c70>,), and kwargs: {}
+2022-03-19 22:21:47,614-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/ext_tw_video_thumb/1469240727850868737/pu/img/uDUX1adNYmv3NZNS.jpg', '@uxlinks_2021-12-10_9-41-12seq-0', '/home/youzark/.local/.personalData/twitter/@uxlinks/pic/'), and kwargs: {}
+2022-03-19 22:21:48,617-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77d1386dc0>,), and kwargs: {}
+2022-03-19 22:21:49,696-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77d0a9e130>,), and kwargs: {}
+2022-03-19 22:21:49,841-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FGMmwjeWQAIcqFx?format=png&name=small', '@LMBroadhurst_2021-12-9_21-45-32seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:21:50,841-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf916df0>,), and kwargs: {}
+2022-03-19 22:21:50,991-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FGMpjh9WQAQBclo?format=png&name=small', '@LMBroadhurst_2021-12-9_21-57-48seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:21:51,992-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf831ee0>,), and kwargs: {}
+2022-03-19 22:21:53,089-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f77bdf820d0>, 47726), and kwargs: {}
+2022-03-19 22:21:54,281-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf9f2100>,), and kwargs: {}
+2022-03-19 22:21:55,653-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf8a2f40>,), and kwargs: {}
+2022-03-19 22:21:55,756-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FGSAk5oXIAUMm2U?format=png&name=small', '@LMBroadhurst_2021-12-10_22-56-16seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:21:56,758-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf78cf10>,), and kwargs: {}
+2022-03-19 22:21:57,077-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/ext_tw_video_thumb/1469240727850868737/pu/img/uDUX1adNYmv3NZNS.jpg', '@uxlinks_2021-12-10_9-41-12seq-0', '/home/youzark/.local/.personalData/twitter/@uxlinks/pic/'), and kwargs: {}
+2022-03-19 22:21:58,078-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77d0ad5bb0>,), and kwargs: {}
+2022-03-19 22:21:59,187-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77cf9f6d90>,), and kwargs: {}
+2022-03-19 22:21:59,311-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FGMmwjeWQAIcqFx?format=png&name=small', '@LMBroadhurst_2021-12-9_21-45-32seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:22:00,312-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77d12b3c10>,), and kwargs: {}
+2022-03-19 22:22:00,429-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FGMpjh9WQAQBclo?format=png&name=small', '@LMBroadhurst_2021-12-9_21-57-48seq-0', '/home/youzark/.local/.personalData/twitter/@LMBroadhurst/pic/'), and kwargs: {}
+2022-03-19 22:22:01,430-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7f77d12937f0>,), and kwargs: {}
+2022-03-19 22:22:02,541-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f77bdf820d0>, 51253), and kwargs: {}
+2022-03-19 22:25:00,106-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598cbd070>,), and kwargs: {}
+2022-03-19 22:25:00,260-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FNUY3n-WUAAKI2r?format=png&name=small', '@AlgoFoundation_2022-3-8_9-51-18seq-0', '/home/youzark/.local/.personalData/twitter/@AlgoFoundation/pic/'), and kwargs: {}
+2022-03-19 22:25:01,261-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598b05880>,), and kwargs: {}
+2022-03-19 22:25:01,442-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FMJZ4cjXoAM41Ii?format=jpg&name=small', '@FeellingsNFT_2022-2-21_20-24-1seq-0', '/home/youzark/.local/.personalData/twitter/@FeellingsNFT/pic/'), and kwargs: {}
+2022-03-19 22:25:02,444-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598bc1520>,), and kwargs: {}
+2022-03-19 22:25:02,675-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1502188001488691204/ieiKPJw6?format=jpg&name=small', '@zengxiang4_2022-2-6_3-27-21seq-0', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:25:03,676-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598f21190>,), and kwargs: {}
+2022-03-19 22:25:03,845-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FKGxgmKVEAIFJTI?format=jpg&name=small', '@EinsteinYipie_2022-1-27_11-37-0seq-0', '/home/youzark/.local/.personalData/twitter/@EinsteinYipie/pic/'), and kwargs: {}
+2022-03-19 22:25:04,846-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5997382e0>,), and kwargs: {}
+2022-03-19 22:25:04,962-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FJ7_TCGVQAEI-DS?format=jpg&name=900x900', '@hellosuoha_2022-1-25_9-30-21seq-0', '/home/youzark/.local/.personalData/twitter/@hellosuoha/pic/'), and kwargs: {}
+2022-03-19 22:25:05,963-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fc582aeb250>, 0), and kwargs: {}
+2022-03-19 22:25:07,832-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598cf1d30>,), and kwargs: {}
+2022-03-19 22:25:08,032-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FKGxgmKVEAIFJTI?format=jpg&name=small', '@EinsteinYipie_2022-1-27_11-37-0seq-0', '/home/youzark/.local/.personalData/twitter/@EinsteinYipie/pic/'), and kwargs: {}
+2022-03-19 22:25:09,033-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598cd6490>,), and kwargs: {}
+2022-03-19 22:25:09,336-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FJ7_TCGVQAEI-DS?format=jpg&name=900x900', '@hellosuoha_2022-1-25_9-30-21seq-0', '/home/youzark/.local/.personalData/twitter/@hellosuoha/pic/'), and kwargs: {}
+2022-03-19 22:25:10,337-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598cc89a0>,), and kwargs: {}
+2022-03-19 22:25:11,536-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598dab0a0>,), and kwargs: {}
+2022-03-19 22:25:13,365-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598c3b3d0>,), and kwargs: {}
+2022-03-19 22:25:14,575-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598dd3d90>,), and kwargs: {}
+2022-03-19 22:25:14,930-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/profile_images/1479693191620161539/U69gBobQ_mini.jpg', '@zengxiang4_2021-10-17_13-5-55seq-0', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:25:14,930-INFO:_downloadImg Ran with args: ('https://abs.twimg.com/hashflags/Bitcoin_evergreen/Bitcoin_evergreen.png', '@zengxiang4_2021-10-17_13-5-55seq-1', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:25:14,930-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FB5d7kqXoAAbr36?format=jpg&name=small', '@zengxiang4_2021-10-17_13-5-55seq-2', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:25:15,931-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598eb6c70>,), and kwargs: {}
+2022-03-19 22:25:16,100-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1502188001488691204/ieiKPJw6?format=jpg&name=small', '@zengxiang4_2021-10-9_7-47-21seq-0', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:25:17,101-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598c80190>,), and kwargs: {}
+2022-03-19 22:25:18,233-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5c0685a90>,), and kwargs: {}
+2022-03-19 22:25:18,391-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1503366522890162183/I3mmHcOc?format=png&name=240x240', '@zengxiang4_2021-9-7_13-34-14seq-0', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:25:19,392-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598ced340>,), and kwargs: {}
+2022-03-19 22:25:19,608-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1503146491824640000/my7XCLQg?format=jpg&name=small', '@zengxiang4_2021-9-4_14-34-36seq-0', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:25:20,609-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5997a9610>,), and kwargs: {}
+2022-03-19 22:25:20,776-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/E-NsQIeUUAAjSa1?format=jpg&name=small', '@MoonWarriorsBSC_2021-9-1_16-44-33seq-0', '/home/youzark/.local/.personalData/twitter/@MoonWarriorsBSC/pic/'), and kwargs: {}
+2022-03-19 22:25:21,777-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598dc3940>,), and kwargs: {}
+2022-03-19 22:25:21,941-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1503958562204123138/vivmbYCw?format=jpg&name=small', '@DragonSlayerNFT_2021-8-11_15-56-29seq-0', '/home/youzark/.local/.personalData/twitter/@DragonSlayerNFT/pic/'), and kwargs: {}
+2022-03-19 22:25:22,942-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fc582aeb250>, 5400), and kwargs: {}
+2022-03-19 22:25:24,796-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598cf1550>,), and kwargs: {}
+2022-03-19 22:25:24,931-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1503958562204123138/vivmbYCw?format=jpg&name=small', '@DragonSlayerNFT_2021-8-11_15-56-29seq-0', '/home/youzark/.local/.personalData/twitter/@DragonSlayerNFT/pic/'), and kwargs: {}
+2022-03-19 22:25:25,932-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598d20610>,), and kwargs: {}
+2022-03-19 22:25:26,185-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/profile_images/1422911283578298372/AYTQduyf_mini.jpg', '@zengxiang4_2021-8-14_4-5-43seq-0', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:25:27,186-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598c36fd0>,), and kwargs: {}
+2022-03-19 22:25:27,561-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/profile_images/1423189544107532294/SCqscwaI_mini.jpg', '@zengxiang4_2021-8-14_3-0-18seq-0', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:25:27,561-INFO:_downloadImg Ran with args: ('https://abs.twimg.com/hashflags/Binance_Flag_Q1_2022/Binance_Flag_Q1_2022.png', '@zengxiang4_2021-8-14_3-0-18seq-1', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:25:27,561-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/E8fpxkzWYAMdYYg?format=jpg&name=small', '@zengxiang4_2021-8-14_3-0-18seq-2', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:25:28,562-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598d75a30>,), and kwargs: {}
+2022-03-19 22:25:28,781-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/E8fpxkzWYAMdYYg?format=jpg&name=small', '@DogeDealerCoin_2021-8-11_7-57-9seq-0', '/home/youzark/.local/.personalData/twitter/@DogeDealerCoin/pic/'), and kwargs: {}
+2022-03-19 22:25:29,782-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598cdf400>,), and kwargs: {}
+2022-03-19 22:25:30,887-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598a89b20>,), and kwargs: {}
+2022-03-19 22:25:32,004-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598d92400>,), and kwargs: {}
+2022-03-19 22:25:33,115-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598d75670>,), and kwargs: {}
+2022-03-19 22:25:34,274-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598ab2c70>,), and kwargs: {}
+2022-03-19 22:25:34,447-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1503366522890162183/I3mmHcOc?format=png&name=240x240', '@zengxiang4_2021-6-30_13-37-48seq-0', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:25:35,448-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598b5c2b0>,), and kwargs: {}
+2022-03-19 22:25:36,589-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598e6c400>,), and kwargs: {}
+2022-03-19 22:25:37,702-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598c06d00>,), and kwargs: {}
+2022-03-19 22:25:37,943-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/profile_images/1400997768949239809/rfkMds-x_mini.jpg', '@zengxiang4_2021-4-29_14-13-12seq-0', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:25:38,944-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598ab5460>,), and kwargs: {}
+2022-03-19 22:25:39,097-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1501831736627367937/mpGsfiWo?format=jpg&name=900x900', '@EsterFinance_2021-4-28_16-36-13seq-0', '/home/youzark/.local/.personalData/twitter/@EsterFinance/pic/'), and kwargs: {}
+2022-03-19 22:25:40,098-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598d92280>,), and kwargs: {}
+2022-03-19 22:25:40,259-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1503761508043481091/6foaOzy8?format=jpg&name=900x900', '@LiquidDriver_2021-4-27_15-35-3seq-0', '/home/youzark/.local/.personalData/twitter/@LiquidDriver/pic/'), and kwargs: {}
+2022-03-19 22:25:41,260-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598c568b0>,), and kwargs: {}
+2022-03-19 22:25:42,374-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598dce310>,), and kwargs: {}
+2022-03-19 22:25:42,671-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/profile_images/1456279807486947328/R8iItHAZ_mini.jpg', '@zengxiang4_2021-4-5_13-22-31seq-0', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:25:42,672-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/EyJIRDwW8AcbFkY?format=jpg&name=small', '@zengxiang4_2021-4-5_13-22-31seq-1', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:25:43,673-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598ab5370>,), and kwargs: {}
+2022-03-19 22:25:43,960-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/profile_images/1479680860915855361/VqeyOfk-_mini.jpg', '@zengxiang4_2021-4-4_7-35-57seq-0', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:25:44,961-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598d52760>,), and kwargs: {}
+2022-03-19 22:25:45,148-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1504506653718290436/2Zxefy5R?format=jpg&name=small', '@epnsproject_2021-4-1_17-0-42seq-0', '/home/youzark/.local/.personalData/twitter/@epnsproject/pic/'), and kwargs: {}
+2022-03-19 22:25:46,149-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fc582aeb250>, 11331), and kwargs: {}
+2022-03-19 22:25:47,734-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598f242b0>,), and kwargs: {}
+2022-03-19 22:25:48,664-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/profile_images/1479680860915855361/VqeyOfk-_mini.jpg', '@zengxiang4_2021-4-4_7-35-57seq-0', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:25:49,665-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598c79940>,), and kwargs: {}
+2022-03-19 22:25:49,844-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1504506653718290436/2Zxefy5R?format=jpg&name=small', '@epnsproject_2021-4-1_17-0-42seq-0', '/home/youzark/.local/.personalData/twitter/@epnsproject/pic/'), and kwargs: {}
+2022-03-19 22:25:50,844-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598b055b0>,), and kwargs: {}
+2022-03-19 22:25:51,214-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/profile_images/1361316363151810566/kYZbnrtz_mini.jpg', '@zengxiang4_2021-4-4_1-59-42seq-0', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:25:51,215-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/ext_tw_video_thumb/1378030561495764995/pu/img/TROwznLZN9kqzkvf.jpg', '@zengxiang4_2021-4-4_1-59-42seq-1', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:25:52,216-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598b984c0>,), and kwargs: {}
+2022-03-19 22:25:52,599-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/profile_images/1361316363151810566/kYZbnrtz_mini.jpg', '@zengxiang4_2021-3-30_15-45-58seq-0', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:25:52,600-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/ext_tw_video_thumb/1376520096840056836/pu/img/hFoLViKRCaurbaab.jpg', '@zengxiang4_2021-3-30_15-45-58seq-1', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:25:53,601-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598e1bee0>,), and kwargs: {}
+2022-03-19 22:25:53,821-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/ext_tw_video_thumb/1376520096840056836/pu/img/hFoLViKRCaurbaab.jpg', '@polkalokr_2021-3-29_13-4-45seq-0', '/home/youzark/.local/.personalData/twitter/@polkalokr/pic/'), and kwargs: {}
+2022-03-19 22:25:54,822-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598ea0fa0>,), and kwargs: {}
+2022-03-19 22:25:54,959-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1505093480250585088/knzsu9FR?format=jpg&name=small', '@westarter_org_2021-3-26_17-59-18seq-0', '/home/youzark/.local/.personalData/twitter/@westarter_org/pic/'), and kwargs: {}
+2022-03-19 22:25:55,960-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598ea0970>,), and kwargs: {}
+2022-03-19 22:25:57,070-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fc582aeb250>, 16731), and kwargs: {}
+2022-03-19 22:25:58,787-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598c9ff10>,), and kwargs: {}
+2022-03-19 22:25:58,948-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/Ewsbr3EUYAA1D2b?format=jpg&name=small', '@tidaldefi_2021-3-17_16-19-4seq-0', '/home/youzark/.local/.personalData/twitter/@tidaldefi/pic/'), and kwargs: {}
+2022-03-19 22:25:59,949-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598e34070>,), and kwargs: {}
+2022-03-19 22:26:00,235-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/EwhB_2UXEAAaKo1?format=jpg&name=small', '@dao_duck_2021-3-15_11-11-1seq-0', '/home/youzark/.local/.personalData/twitter/@dao_duck/pic/'), and kwargs: {}
+2022-03-19 22:26:01,236-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598cc8070>,), and kwargs: {}
+2022-03-19 22:26:01,404-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1503366522890162183/I3mmHcOc?format=png&name=240x240', '@zengxiang4_2021-3-14_11-30-8seq-0', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:26:02,405-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598cbcdc0>,), and kwargs: {}
+2022-03-19 22:26:02,698-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/profile_images/1492051076459405318/F91fs-Xi_mini.jpg', '@zengxiang4_2021-3-8_2-26-16seq-0', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:26:02,699-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/EvvCKVJUcAAgjKr?format=jpg&name=small', '@zengxiang4_2021-3-8_2-26-16seq-1', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:26:03,702-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598aab9a0>,), and kwargs: {}
+2022-03-19 22:26:03,856-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/EvvCKVJUcAAgjKr?format=jpg&name=small', '@oddz_finance_2021-3-5_18-10-43seq-0', '/home/youzark/.local/.personalData/twitter/@oddz_finance/pic/'), and kwargs: {}
+2022-03-19 22:26:04,857-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5997a9d00>,), and kwargs: {}
+2022-03-19 22:26:05,165-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/profile_images/1496716839745093632/Ur8E4x3w_mini.jpg', '@zengxiang4_2021-3-6_12-19-1seq-0', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:26:06,166-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598b05130>,), and kwargs: {}
+2022-03-19 22:26:06,513-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/profile_images/1395408347013259269/Vdx5uVb2_mini.jpg', '@zengxiang4_2021-3-6_5-52-43seq-0', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:26:07,514-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5997a98b0>,), and kwargs: {}
+2022-03-19 22:26:07,776-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/profile_images/1359801542661066754/R9i2HjAL_mini.jpg', '@zengxiang4_2021-3-4_3-1-4seq-0', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:26:08,777-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5997384c0>,), and kwargs: {}
+2022-03-19 22:26:09,131-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/profile_images/1491628432333049862/3rqc17rz_mini.jpg', '@zengxiang4_2021-3-4_2-47-5seq-0', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:26:09,131-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/EvjykReU4AEC9FU?format=jpg&name=small', '@zengxiang4_2021-3-4_2-47-5seq-1', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:26:10,132-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598c2dc40>,), and kwargs: {}
+2022-03-19 22:26:10,353-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/EvjykReU4AEC9FU?format=jpg&name=small', '@PolkaFoundry_2021-3-3_14-0-17seq-0', '/home/youzark/.local/.personalData/twitter/@PolkaFoundry/pic/'), and kwargs: {}
+2022-03-19 22:26:11,354-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598bb39d0>,), and kwargs: {}
+2022-03-19 22:26:11,695-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/profile_images/1343968861658353664/4DE4WeGa_mini.jpg', '@zengxiang4_2021-3-3_15-36-28seq-0', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:26:11,695-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/EvcvwtxUYAM14dj?format=jpg&name=small', '@zengxiang4_2021-3-3_15-36-28seq-1', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:26:12,696-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598b93df0>,), and kwargs: {}
+2022-03-19 22:26:13,857-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5997863a0>,), and kwargs: {}
+2022-03-19 22:26:15,013-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598dedbb0>,), and kwargs: {}
+2022-03-19 22:26:15,288-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/profile_images/1499513393207730181/o4Tnu5bA_mini.png', '@zengxiang4_2021-3-1_8-58-10seq-0', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:26:16,289-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598dd3040>,), and kwargs: {}
+2022-03-19 22:26:16,523-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/profile_images/1401228968624328708/bcBWvbrk_mini.jpg', '@zengxiang4_2021-2-24_6-44-58seq-0', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:26:17,524-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fc582aeb250>, 22131), and kwargs: {}
+2022-03-19 22:26:19,352-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598ceb2b0>,), and kwargs: {}
+2022-03-19 22:26:20,481-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598caa040>,), and kwargs: {}
+2022-03-19 22:26:20,770-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/profile_images/1499513393207730181/o4Tnu5bA_mini.png', '@zengxiang4_2021-3-1_8-58-10seq-0', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:26:21,771-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598ebb5e0>,), and kwargs: {}
+2022-03-19 22:26:22,009-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/profile_images/1401228968624328708/bcBWvbrk_mini.jpg', '@zengxiang4_2021-2-24_6-44-58seq-0', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:26:23,010-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598ca2760>,), and kwargs: {}
+2022-03-19 22:26:24,187-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598cff940>,), and kwargs: {}
+2022-03-19 22:26:25,336-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598ebb5e0>,), and kwargs: {}
+2022-03-19 22:26:25,594-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/profile_images/1374755507928494081/_RFFfRyC_mini.png', '@zengxiang4_2021-2-17_1-31-6seq-0', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:26:26,594-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598a78d30>,), and kwargs: {}
+2022-03-19 22:26:26,852-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/profile_images/1440249277314265097/Ou5vVZ5u_mini.jpg', '@zengxiang4_2021-2-7_1-55-58seq-0', '/home/youzark/.local/.personalData/twitter/@zengxiang4/pic/'), and kwargs: {}
+2022-03-19 22:26:27,854-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598a78d60>,), and kwargs: {}
+2022-03-19 22:26:28,034-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1504482252595494917/IV1xJpKo?format=jpg&name=small', '@VenturesDao_2021-2-4_15-10-0seq-0', '/home/youzark/.local/.personalData/twitter/@VenturesDao/pic/'), and kwargs: {}
+2022-03-19 22:26:29,034-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5997344f0>,), and kwargs: {}
+2022-03-19 22:26:30,177-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598cb8be0>,), and kwargs: {}
+2022-03-19 22:26:31,324-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598c685e0>,), and kwargs: {}
+2022-03-19 22:26:32,454-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598ba5e50>,), and kwargs: {}
+2022-03-19 22:26:32,629-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/EqzcSM-XUAIlGG5?format=png&name=small', '@CoverCompared_2021-1-3_12-8-5seq-0', '/home/youzark/.local/.personalData/twitter/@CoverCompared/pic/'), and kwargs: {}
+2022-03-19 22:26:33,631-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598e66850>,), and kwargs: {}
+2022-03-19 22:26:34,728-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598b76f40>,), and kwargs: {}
+2022-03-19 22:26:35,837-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598e84eb0>,), and kwargs: {}
+2022-03-19 22:26:36,018-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1503787041640747010/ZEnvzz4a?format=jpg&name=small', '@Royale_Finance_2020-12-14_12-26-6seq-0', '/home/youzark/.local/.personalData/twitter/@Royale_Finance/pic/'), and kwargs: {}
+2022-03-19 22:26:37,021-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598ab9790>,), and kwargs: {}
+2022-03-19 22:26:37,234-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/tweet_video_thumb/El2iXHcXUAA-rIe.jpg', '@spamtoken_2020-11-2_22-31-49seq-0', '/home/youzark/.local/.personalData/twitter/@spamtoken/pic/'), and kwargs: {}
+2022-03-19 22:26:38,234-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc599763610>,), and kwargs: {}
+2022-03-19 22:26:39,330-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598f152b0>,), and kwargs: {}
+2022-03-19 22:26:40,494-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598caddf0>,), and kwargs: {}
+2022-03-19 22:26:41,624-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fc582aeb250>, 27673), and kwargs: {}
+2022-03-19 22:26:42,782-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598bad4f0>,), and kwargs: {}
+2022-03-19 22:26:43,899-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc59976e310>,), and kwargs: {}
+2022-03-19 22:26:45,033-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598c802b0>,), and kwargs: {}
+2022-03-19 22:26:45,203-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/EqzcSM-XUAIlGG5?format=png&name=small', '@CoverCompared_2021-1-3_12-8-5seq-0', '/home/youzark/.local/.personalData/twitter/@CoverCompared/pic/'), and kwargs: {}
+2022-03-19 22:26:46,204-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598b3b6a0>,), and kwargs: {}
+2022-03-19 22:26:47,314-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598e14190>,), and kwargs: {}
+2022-03-19 22:26:48,449-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598c802b0>,), and kwargs: {}
+2022-03-19 22:26:48,644-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1503787041640747010/ZEnvzz4a?format=jpg&name=small', '@Royale_Finance_2020-12-14_12-26-6seq-0', '/home/youzark/.local/.personalData/twitter/@Royale_Finance/pic/'), and kwargs: {}
+2022-03-19 22:26:49,646-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598d73f70>,), and kwargs: {}
+2022-03-19 22:26:49,853-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/tweet_video_thumb/El2iXHcXUAA-rIe.jpg', '@spamtoken_2020-11-2_22-31-49seq-0', '/home/youzark/.local/.personalData/twitter/@spamtoken/pic/'), and kwargs: {}
+2022-03-19 22:26:50,854-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598e404f0>,), and kwargs: {}
+2022-03-19 22:26:51,951-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc599795d60>,), and kwargs: {}
+2022-03-19 22:26:53,113-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598eca5b0>,), and kwargs: {}
+2022-03-19 22:26:54,204-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fc582aeb250>, 30438), and kwargs: {}
+2022-03-19 22:35:35,513-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc580091af0>,), and kwargs: {}
+2022-03-19 22:35:36,607-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5800ae040>,), and kwargs: {}
+2022-03-19 22:35:37,815-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc580091220>,), and kwargs: {}
+2022-03-19 22:35:37,957-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FIuIbLJVgAE9N1b?format=jpg&name=900x900', '@16kiranteja_2022-1-10_6-30-54seq-0', '/home/youzark/.local/.personalData/twitter/@16kiranteja/pic/'), and kwargs: {}
+2022-03-19 22:35:38,959-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598e29730>,), and kwargs: {}
+2022-03-19 22:35:40,057-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598e29070>,), and kwargs: {}
+2022-03-19 22:35:41,167-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc582715f10>,), and kwargs: {}
+2022-03-19 22:35:41,362-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FIjtCdGVIAAMnj9?format=jpg&name=900x900', '@16kiranteja_2022-1-8_5-55-3seq-0', '/home/youzark/.local/.personalData/twitter/@16kiranteja/pic/'), and kwargs: {}
+2022-03-19 22:35:42,363-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fc582aeb250>, 0), and kwargs: {}
+2022-03-19 22:35:44,171-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598d656d0>,), and kwargs: {}
+2022-03-19 22:35:44,337-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FIjtCdGVIAAMnj9?format=jpg&name=900x900', '@16kiranteja_2022-1-8_5-55-3seq-0', '/home/youzark/.local/.personalData/twitter/@16kiranteja/pic/'), and kwargs: {}
+2022-03-19 22:35:45,337-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598a02100>,), and kwargs: {}
+2022-03-19 22:35:45,507-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FIeXak0UUAIGnRX?format=jpg&name=900x900', '@16kiranteja_2022-1-7_5-2-29seq-0', '/home/youzark/.local/.personalData/twitter/@16kiranteja/pic/'), and kwargs: {}
+2022-03-19 22:35:46,507-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598a645e0>,), and kwargs: {}
+2022-03-19 22:35:46,677-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FIcBUTKVIAE-tl3?format=jpg&name=900x900', '@16kiranteja_2022-1-6_18-6-41seq-0', '/home/youzark/.local/.personalData/twitter/@16kiranteja/pic/'), and kwargs: {}
+2022-03-19 22:35:47,678-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5822d4370>,), and kwargs: {}
+2022-03-19 22:35:48,786-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598d656d0>,), and kwargs: {}
+2022-03-19 22:35:49,933-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598d20790>,), and kwargs: {}
+2022-03-19 22:35:51,319-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598d20730>,), and kwargs: {}
+2022-03-19 22:35:52,450-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5826832e0>,), and kwargs: {}
+2022-03-19 22:35:53,574-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc582683280>,), and kwargs: {}
+2022-03-19 22:35:54,680-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598d2a430>,), and kwargs: {}
+2022-03-19 22:35:55,797-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc58279b5b0>,), and kwargs: {}
+2022-03-19 22:35:56,902-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598df6220>,), and kwargs: {}
+2022-03-19 22:35:57,080-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FDFeLpMVQAAdjQV?format=jpg&name=small', '@Prathkum_2021-11-1_5-43-4seq-0', '/home/youzark/.local/.personalData/twitter/@Prathkum/pic/'), and kwargs: {}
+2022-03-19 22:35:57,080-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FDFeLpRUUAAKQPx?format=jpg&name=small', '@Prathkum_2021-11-1_5-43-4seq-1', '/home/youzark/.local/.personalData/twitter/@Prathkum/pic/'), and kwargs: {}
+2022-03-19 22:35:58,081-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598adef40>,), and kwargs: {}
+2022-03-19 22:35:59,183-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5800e0b80>,), and kwargs: {}
+2022-03-19 22:36:00,292-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598a02220>,), and kwargs: {}
+2022-03-19 22:36:01,394-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5826a0be0>,), and kwargs: {}
+2022-03-19 22:36:02,510-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5800de040>,), and kwargs: {}
+2022-03-19 22:36:03,609-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fc582aeb250>, 6439), and kwargs: {}
+2022-03-19 22:36:05,263-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5800ae7c0>,), and kwargs: {}
+2022-03-19 22:36:05,538-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/profile_images/1498747110660968448/GP6DDnps_mini.jpg', '@16kiranteja_2021-9-22_12-17-35seq-0', '/home/youzark/.local/.personalData/twitter/@16kiranteja/pic/'), and kwargs: {}
+2022-03-19 22:36:05,538-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/E_z6bpbUUAM51aF?format=jpg&name=small', '@16kiranteja_2021-9-22_12-17-35seq-1', '/home/youzark/.local/.personalData/twitter/@16kiranteja/pic/'), and kwargs: {}
+2022-03-19 22:36:06,539-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5800a7460>,), and kwargs: {}
+2022-03-19 22:36:07,665-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598cc80a0>,), and kwargs: {}
+2022-03-19 22:36:07,951-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/profile_images/1498747110660968448/GP6DDnps_mini.jpg', '@16kiranteja_2021-9-22_12-17-35seq-0', '/home/youzark/.local/.personalData/twitter/@16kiranteja/pic/'), and kwargs: {}
+2022-03-19 22:36:07,952-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/E_z6bpbUUAM51aF?format=jpg&name=small', '@16kiranteja_2021-9-22_12-17-35seq-1', '/home/youzark/.local/.personalData/twitter/@16kiranteja/pic/'), and kwargs: {}
+2022-03-19 22:36:08,952-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598e4fe20>,), and kwargs: {}
+2022-03-19 22:36:09,086-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/E_z6bpbUUAM51aF?format=jpg&name=small', '@Mrwhosetheboss_2021-9-21_13-6-35seq-0', '/home/youzark/.local/.personalData/twitter/@Mrwhosetheboss/pic/'), and kwargs: {}
+2022-03-19 22:36:10,087-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598c48af0>,), and kwargs: {}
+2022-03-19 22:36:11,184-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5826fb9d0>,), and kwargs: {}
+2022-03-19 22:36:11,523-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/E-rI6-cVkAEDXTD?format=jpg&name=small', '@16kiranteja_2021-9-7_9-57-15seq-0', '/home/youzark/.local/.personalData/twitter/@16kiranteja/pic/'), and kwargs: {}
+2022-03-19 22:36:11,524-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/E-rI6-hVQAQyiMu?format=jpg&name=small', '@16kiranteja_2021-9-7_9-57-15seq-1', '/home/youzark/.local/.personalData/twitter/@16kiranteja/pic/'), and kwargs: {}
+2022-03-19 22:36:11,524-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/E-rI6-eUUAAGM-U?format=jpg&name=small', '@16kiranteja_2021-9-7_9-57-15seq-2', '/home/youzark/.local/.personalData/twitter/@16kiranteja/pic/'), and kwargs: {}
+2022-03-19 22:36:11,526-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/E-rI6-dVgAIURkF?format=jpg&name=small', '@16kiranteja_2021-9-7_9-57-15seq-3', '/home/youzark/.local/.personalData/twitter/@16kiranteja/pic/'), and kwargs: {}
+2022-03-19 22:36:12,524-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598ec6490>,), and kwargs: {}
+2022-03-19 22:36:13,637-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598e214f0>,), and kwargs: {}
+2022-03-19 22:36:13,785-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1503340163866722315/7Uq9VQzK?format=jpg&name=small', '@_georgemoller_2021-9-4_1-28-36seq-0', '/home/youzark/.local/.personalData/twitter/@_georgemoller/pic/'), and kwargs: {}
+2022-03-19 22:36:14,786-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598c1a6a0>,), and kwargs: {}
+2022-03-19 22:36:15,871-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598dfb520>,), and kwargs: {}
+2022-03-19 22:36:17,022-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc599774970>,), and kwargs: {}
+2022-03-19 22:36:18,165-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5997744f0>,), and kwargs: {}
+2022-03-19 22:36:19,317-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc599734340>,), and kwargs: {}
+2022-03-19 22:36:20,396-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598d1c5e0>,), and kwargs: {}
+2022-03-19 22:36:21,469-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598d1c3a0>,), and kwargs: {}
+2022-03-19 22:36:22,603-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598cc80a0>,), and kwargs: {}
+2022-03-19 22:36:22,791-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/E-ILe6MWYAAbNkJ?format=jpg&name=small', '@_georgemoller_2021-8-31_15-1-50seq-0', '/home/youzark/.local/.personalData/twitter/@_georgemoller/pic/'), and kwargs: {}
+2022-03-19 22:36:23,792-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5822dce80>,), and kwargs: {}
+2022-03-19 22:36:25,206-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598d7cdc0>,), and kwargs: {}
+2022-03-19 22:36:25,391-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/E-ENPzRWYAYJ1gj?format=jpg&name=small', '@DannPetty_2021-8-30_20-32-43seq-0', '/home/youzark/.local/.personalData/twitter/@DannPetty/pic/'), and kwargs: {}
+2022-03-19 22:36:26,393-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598d7c1c0>,), and kwargs: {}
+2022-03-19 22:36:27,549-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fc582aeb250>, 12883), and kwargs: {}
+2022-03-19 22:36:29,087-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc582a49520>,), and kwargs: {}
+2022-03-19 22:36:29,316-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/E-ILe6MWYAAbNkJ?format=jpg&name=small', '@_georgemoller_2021-8-31_15-1-50seq-0', '/home/youzark/.local/.personalData/twitter/@_georgemoller/pic/'), and kwargs: {}
+2022-03-19 22:36:30,317-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5989db8e0>,), and kwargs: {}
+2022-03-19 22:36:31,431-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc582683220>,), and kwargs: {}
+2022-03-19 22:36:31,605-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/E-ENPzRWYAYJ1gj?format=jpg&name=small', '@DannPetty_2021-8-30_20-32-43seq-0', '/home/youzark/.local/.personalData/twitter/@DannPetty/pic/'), and kwargs: {}
+2022-03-19 22:36:32,607-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598dd8250>,), and kwargs: {}
+2022-03-19 22:36:33,780-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5822c24c0>,), and kwargs: {}
+2022-03-19 22:36:34,938-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598e21a00>,), and kwargs: {}
+2022-03-19 22:36:36,099-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5822cdf10>,), and kwargs: {}
+2022-03-19 22:36:37,220-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598eba550>,), and kwargs: {}
+2022-03-19 22:36:38,313-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598e4fc40>,), and kwargs: {}
+2022-03-19 22:36:39,461-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598d5b1c0>,), and kwargs: {}
+2022-03-19 22:36:39,654-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/E-DMjygVkAIXwID?format=png&name=large', '@thegeniusidiot__2021-8-30_15-48-49seq-0', '/home/youzark/.local/.personalData/twitter/@thegeniusidiot_/pic/'), and kwargs: {}
+2022-03-19 22:36:40,654-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598d5b8b0>,), and kwargs: {}
+2022-03-19 22:36:40,828-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/E932RtOWQAQwybG?format=jpg&name=small', '@telmo_2021-8-28_10-55-9seq-0', '/home/youzark/.local/.personalData/twitter/@telmo/pic/'), and kwargs: {}
+2022-03-19 22:36:41,829-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598b31280>,), and kwargs: {}
+2022-03-19 22:36:43,202-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fc582aeb250>, 17978), and kwargs: {}
+2022-03-19 22:36:44,304-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598e12310>,), and kwargs: {}
+2022-03-19 22:36:44,456-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/E-ENPzRWYAYJ1gj?format=jpg&name=small', '@DannPetty_2021-8-30_20-32-43seq-0', '/home/youzark/.local/.personalData/twitter/@DannPetty/pic/'), and kwargs: {}
+2022-03-19 22:36:45,457-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598a325e0>,), and kwargs: {}
+2022-03-19 22:36:46,604-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598c486a0>,), and kwargs: {}
+2022-03-19 22:36:47,751-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598a32c70>,), and kwargs: {}
+2022-03-19 22:36:48,831-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598c48a00>,), and kwargs: {}
+2022-03-19 22:36:50,001-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598a326d0>,), and kwargs: {}
+2022-03-19 22:36:51,133-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc582a62040>,), and kwargs: {}
+2022-03-19 22:36:52,292-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598b73100>,), and kwargs: {}
+2022-03-19 22:36:52,450-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/E-DMjygVkAIXwID?format=png&name=large', '@thegeniusidiot__2021-8-30_15-48-49seq-0', '/home/youzark/.local/.personalData/twitter/@thegeniusidiot_/pic/'), and kwargs: {}
+2022-03-19 22:36:53,451-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5826bee20>,), and kwargs: {}
+2022-03-19 22:36:53,658-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/E932RtOWQAQwybG?format=jpg&name=small', '@telmo_2021-8-28_10-55-9seq-0', '/home/youzark/.local/.personalData/twitter/@telmo/pic/'), and kwargs: {}
+2022-03-19 22:36:54,659-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598a73880>,), and kwargs: {}
+2022-03-19 22:36:55,790-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fc582aeb250>, 18833), and kwargs: {}
+2022-03-19 22:37:49,317-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5800d0460>,), and kwargs: {}
+2022-03-19 22:37:51,191-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5826d14f0>,), and kwargs: {}
+2022-03-19 22:37:52,334-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598d1c2b0>,), and kwargs: {}
+2022-03-19 22:37:52,456-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FIuIbLJVgAE9N1b?format=jpg&name=900x900', '@16kiranteja_2022-1-10_6-30-54seq-0', '/home/youzark/.local/.personalData/twitter/@16kiranteja/pic/'), and kwargs: {}
+2022-03-19 22:37:53,457-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598c5d280>,), and kwargs: {}
+2022-03-19 22:37:54,571-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc58279ad60>,), and kwargs: {}
+2022-03-19 22:37:55,679-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598eed970>,), and kwargs: {}
+2022-03-19 22:37:55,849-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FIjtCdGVIAAMnj9?format=jpg&name=900x900', '@16kiranteja_2022-1-8_5-55-3seq-0', '/home/youzark/.local/.personalData/twitter/@16kiranteja/pic/'), and kwargs: {}
+2022-03-19 22:37:56,850-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fc582aeb250>, 0), and kwargs: {}
+2022-03-19 22:37:58,774-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5823bc1c0>,), and kwargs: {}
+2022-03-19 22:37:58,912-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FIjtCdGVIAAMnj9?format=jpg&name=900x900', '@16kiranteja_2022-1-8_5-55-3seq-0', '/home/youzark/.local/.personalData/twitter/@16kiranteja/pic/'), and kwargs: {}
+2022-03-19 22:37:59,913-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5826ad430>,), and kwargs: {}
+2022-03-19 22:38:00,152-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FIeXak0UUAIGnRX?format=jpg&name=900x900', '@16kiranteja_2022-1-7_5-2-29seq-0', '/home/youzark/.local/.personalData/twitter/@16kiranteja/pic/'), and kwargs: {}
+2022-03-19 22:38:01,153-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598d7c250>,), and kwargs: {}
+2022-03-19 22:38:01,348-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FIcBUTKVIAE-tl3?format=jpg&name=900x900', '@16kiranteja_2022-1-6_18-6-41seq-0', '/home/youzark/.local/.personalData/twitter/@16kiranteja/pic/'), and kwargs: {}
+2022-03-19 22:38:02,349-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598bf3610>,), and kwargs: {}
+2022-03-19 22:38:03,454-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598d5d370>,), and kwargs: {}
+2022-03-19 22:38:04,561-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5827ec730>,), and kwargs: {}
+2022-03-19 22:38:05,677-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598b3ba60>,), and kwargs: {}
+2022-03-19 22:38:06,800-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598d46fa0>,), and kwargs: {}
+2022-03-19 22:38:07,921-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598c08cd0>,), and kwargs: {}
+2022-03-19 22:38:09,018-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598e55a00>,), and kwargs: {}
+2022-03-19 22:38:10,124-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598cf9160>,), and kwargs: {}
+2022-03-19 22:38:11,230-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598cf9670>,), and kwargs: {}
+2022-03-19 22:38:11,403-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FDFeLpMVQAAdjQV?format=jpg&name=small', '@Prathkum_2021-11-1_5-43-4seq-0', '/home/youzark/.local/.personalData/twitter/@Prathkum/pic/'), and kwargs: {}
+2022-03-19 22:38:11,403-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/FDFeLpRUUAAKQPx?format=jpg&name=small', '@Prathkum_2021-11-1_5-43-4seq-1', '/home/youzark/.local/.personalData/twitter/@Prathkum/pic/'), and kwargs: {}
+2022-03-19 22:38:12,404-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598d3c4c0>,), and kwargs: {}
+2022-03-19 22:38:13,507-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc58237b280>,), and kwargs: {}
+2022-03-19 22:38:14,613-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598d7ca00>,), and kwargs: {}
+2022-03-19 22:38:15,711-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598a1fdc0>,), and kwargs: {}
+2022-03-19 22:38:16,816-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5822c8580>,), and kwargs: {}
+2022-03-19 22:38:17,927-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fc582aeb250>, 6439), and kwargs: {}
+2022-03-19 22:38:20,047-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598b98e80>,), and kwargs: {}
+2022-03-19 22:38:20,312-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/profile_images/1498747110660968448/GP6DDnps_mini.jpg', '@16kiranteja_2021-9-22_12-17-35seq-0', '/home/youzark/.local/.personalData/twitter/@16kiranteja/pic/'), and kwargs: {}
+2022-03-19 22:38:20,312-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/E_z6bpbUUAM51aF?format=jpg&name=small', '@16kiranteja_2021-9-22_12-17-35seq-1', '/home/youzark/.local/.personalData/twitter/@16kiranteja/pic/'), and kwargs: {}
+2022-03-19 22:38:21,313-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc58237b490>,), and kwargs: {}
+2022-03-19 22:38:22,411-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598df6760>,), and kwargs: {}
+2022-03-19 22:38:22,699-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/profile_images/1498747110660968448/GP6DDnps_mini.jpg', '@16kiranteja_2021-9-22_12-17-35seq-0', '/home/youzark/.local/.personalData/twitter/@16kiranteja/pic/'), and kwargs: {}
+2022-03-19 22:38:22,699-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/E_z6bpbUUAM51aF?format=jpg&name=small', '@16kiranteja_2021-9-22_12-17-35seq-1', '/home/youzark/.local/.personalData/twitter/@16kiranteja/pic/'), and kwargs: {}
+2022-03-19 22:38:23,700-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598e21100>,), and kwargs: {}
+2022-03-19 22:38:23,832-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/E_z6bpbUUAM51aF?format=jpg&name=small', '@Mrwhosetheboss_2021-9-21_13-6-35seq-0', '/home/youzark/.local/.personalData/twitter/@Mrwhosetheboss/pic/'), and kwargs: {}
+2022-03-19 22:38:24,833-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598ec6400>,), and kwargs: {}
+2022-03-19 22:38:25,929-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598df6760>,), and kwargs: {}
+2022-03-19 22:38:26,157-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/E-rI6-cVkAEDXTD?format=jpg&name=small', '@16kiranteja_2021-9-7_9-57-15seq-0', '/home/youzark/.local/.personalData/twitter/@16kiranteja/pic/'), and kwargs: {}
+2022-03-19 22:38:26,157-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/E-rI6-hVQAQyiMu?format=jpg&name=small', '@16kiranteja_2021-9-7_9-57-15seq-1', '/home/youzark/.local/.personalData/twitter/@16kiranteja/pic/'), and kwargs: {}
+2022-03-19 22:38:26,157-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/E-rI6-eUUAAGM-U?format=jpg&name=small', '@16kiranteja_2021-9-7_9-57-15seq-2', '/home/youzark/.local/.personalData/twitter/@16kiranteja/pic/'), and kwargs: {}
+2022-03-19 22:38:26,158-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/E-rI6-dVgAIURkF?format=jpg&name=small', '@16kiranteja_2021-9-7_9-57-15seq-3', '/home/youzark/.local/.personalData/twitter/@16kiranteja/pic/'), and kwargs: {}
+2022-03-19 22:38:27,157-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598ca2c40>,), and kwargs: {}
+2022-03-19 22:38:28,280-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5822e5610>,), and kwargs: {}
+2022-03-19 22:38:28,436-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/card_img/1503340163866722315/7Uq9VQzK?format=jpg&name=small', '@_georgemoller_2021-9-4_1-28-36seq-0', '/home/youzark/.local/.personalData/twitter/@_georgemoller/pic/'), and kwargs: {}
+2022-03-19 22:38:29,438-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598b568e0>,), and kwargs: {}
+2022-03-19 22:38:30,549-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598edd5b0>,), and kwargs: {}
+2022-03-19 22:38:31,664-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598edd7f0>,), and kwargs: {}
+2022-03-19 22:38:32,801-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5822a1bb0>,), and kwargs: {}
+2022-03-19 22:38:33,910-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5822e5fd0>,), and kwargs: {}
+2022-03-19 22:38:35,008-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598a19640>,), and kwargs: {}
+2022-03-19 22:38:36,121-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598d3cb80>,), and kwargs: {}
+2022-03-19 22:38:37,233-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598d3c9a0>,), and kwargs: {}
+2022-03-19 22:38:37,372-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/E-ILe6MWYAAbNkJ?format=jpg&name=small', '@_georgemoller_2021-8-31_15-1-50seq-0', '/home/youzark/.local/.personalData/twitter/@_georgemoller/pic/'), and kwargs: {}
+2022-03-19 22:38:38,373-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598a2e7f0>,), and kwargs: {}
+2022-03-19 22:38:39,466-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598d74d90>,), and kwargs: {}
+2022-03-19 22:38:39,612-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/E-ENPzRWYAYJ1gj?format=jpg&name=small', '@DannPetty_2021-8-30_20-32-43seq-0', '/home/youzark/.local/.personalData/twitter/@DannPetty/pic/'), and kwargs: {}
+2022-03-19 22:38:40,613-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598bf48b0>,), and kwargs: {}
+2022-03-19 22:38:41,724-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fc582aeb250>, 12883), and kwargs: {}
+2022-03-19 22:38:43,050-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598f0e490>,), and kwargs: {}
+2022-03-19 22:38:43,291-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/E-ILe6MWYAAbNkJ?format=jpg&name=small', '@_georgemoller_2021-8-31_15-1-50seq-0', '/home/youzark/.local/.personalData/twitter/@_georgemoller/pic/'), and kwargs: {}
+2022-03-19 22:38:44,292-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598b52310>,), and kwargs: {}
+2022-03-19 22:38:45,411-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598aafe20>,), and kwargs: {}
+2022-03-19 22:38:45,546-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/E-ENPzRWYAYJ1gj?format=jpg&name=small', '@DannPetty_2021-8-30_20-32-43seq-0', '/home/youzark/.local/.personalData/twitter/@DannPetty/pic/'), and kwargs: {}
+2022-03-19 22:38:46,547-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598e38880>,), and kwargs: {}
+2022-03-19 22:38:47,650-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598a0c760>,), and kwargs: {}
+2022-03-19 22:38:48,760-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc582717430>,), and kwargs: {}
+2022-03-19 22:38:49,887-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598df6700>,), and kwargs: {}
+2022-03-19 22:38:50,987-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598e81430>,), and kwargs: {}
+2022-03-19 22:38:52,100-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598e81af0>,), and kwargs: {}
+2022-03-19 22:38:53,223-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598e81ac0>,), and kwargs: {}
+2022-03-19 22:38:53,364-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/E-DMjygVkAIXwID?format=png&name=large', '@thegeniusidiot__2021-8-30_15-48-49seq-0', '/home/youzark/.local/.personalData/twitter/@thegeniusidiot_/pic/'), and kwargs: {}
+2022-03-19 22:38:54,365-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598ea2310>,), and kwargs: {}
+2022-03-19 22:38:54,499-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/E932RtOWQAQwybG?format=jpg&name=small', '@telmo_2021-8-28_10-55-9seq-0', '/home/youzark/.local/.personalData/twitter/@telmo/pic/'), and kwargs: {}
+2022-03-19 22:38:55,500-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598e61370>,), and kwargs: {}
+2022-03-19 22:38:56,617-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fc582aeb250>, 17980), and kwargs: {}
+2022-03-19 22:38:57,711-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598cd1fd0>,), and kwargs: {}
+2022-03-19 22:38:57,841-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/E-ENPzRWYAYJ1gj?format=jpg&name=small', '@DannPetty_2021-8-30_20-32-43seq-0', '/home/youzark/.local/.personalData/twitter/@DannPetty/pic/'), and kwargs: {}
+2022-03-19 22:38:58,841-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5800f1040>,), and kwargs: {}
+2022-03-19 22:38:59,945-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598dc9ac0>,), and kwargs: {}
+2022-03-19 22:39:01,066-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5800a7e80>,), and kwargs: {}
+2022-03-19 22:39:02,178-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5800a4e50>,), and kwargs: {}
+2022-03-19 22:39:03,290-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5800a4820>,), and kwargs: {}
+2022-03-19 22:39:04,399-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598a73310>,), and kwargs: {}
+2022-03-19 22:39:05,519-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc598b76dc0>,), and kwargs: {}
+2022-03-19 22:39:05,668-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/E-DMjygVkAIXwID?format=png&name=large', '@thegeniusidiot__2021-8-30_15-48-49seq-0', '/home/youzark/.local/.personalData/twitter/@thegeniusidiot_/pic/'), and kwargs: {}
+2022-03-19 22:39:06,669-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc5997957c0>,), and kwargs: {}
+2022-03-19 22:39:06,803-INFO:_downloadImg Ran with args: ('https://pbs.twimg.com/media/E932RtOWQAQwybG?format=jpg&name=small', '@telmo_2021-8-28_10-55-9seq-0', '/home/youzark/.local/.personalData/twitter/@telmo/pic/'), and kwargs: {}
+2022-03-19 22:39:07,804-INFO:separateTweet Ran with args: (<twitterInfo.twitterInfo object at 0x7fc59973e940>,), and kwargs: {}
+2022-03-19 22:39:08,901-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fc582aeb250>, 18853), and kwargs: {}
+2022-03-20 14:11:20,820-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fb698788910>, 0), and kwargs: {}
+2022-03-20 14:11:34,655-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fb698788910>, 7817), and kwargs: {}
+2022-03-20 14:11:51,183-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fb698788910>, 15142), and kwargs: {}
+2022-03-20 14:12:00,401-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fb698788910>, 19388), and kwargs: {}
+2022-03-20 14:12:13,692-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fb698788910>, 25868), and kwargs: {}
+2022-03-20 14:12:31,303-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fb698788910>, 32140), and kwargs: {}
+2022-03-20 14:12:41,796-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fb698788910>, 37940), and kwargs: {}
+2022-03-20 14:12:56,368-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fb698788910>, 44420), and kwargs: {}
+2022-03-20 14:19:28,166-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fe3400868e0>, 0), and kwargs: {}
+2022-03-20 14:22:10,489-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fa201d32190>, 0), and kwargs: {}
+2022-03-20 14:22:19,752-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fa201d32190>, 5417), and kwargs: {}
+2022-03-20 14:22:31,995-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fa201d32190>, 11245), and kwargs: {}
+2022-03-20 14:22:42,258-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fa201d32190>, 16458), and kwargs: {}
+2022-03-21 13:08:22,645-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f7650289ac0>, 0), and kwargs: {}
+2022-03-21 13:08:25,255-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f7650289ac0>, 7030), and kwargs: {}
+2022-03-21 13:08:28,007-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f7650289ac0>, 14037), and kwargs: {}
+2022-03-21 13:08:30,243-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f7650289ac0>, 20360), and kwargs: {}
+2022-03-21 13:08:32,495-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f7650289ac0>, 27139), and kwargs: {}
+2022-03-21 13:08:35,053-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f7650289ac0>, 34310), and kwargs: {}
+2022-03-21 13:08:37,517-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f7650289ac0>, 40790), and kwargs: {}
+2022-03-21 13:08:39,895-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f7650289ac0>, 46791), and kwargs: {}
+2022-03-21 13:08:42,055-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f7650289ac0>, 52241), and kwargs: {}
+2022-03-21 13:08:44,288-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f7650289ac0>, 56980), and kwargs: {}
+2022-03-21 13:08:46,610-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f7650289ac0>, 63851), and kwargs: {}
+2022-03-21 13:08:48,814-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f7650289ac0>, 69923), and kwargs: {}
+2022-03-21 13:08:51,321-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f7650289ac0>, 76639), and kwargs: {}
+2022-03-21 13:08:53,462-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f7650289ac0>, 80632), and kwargs: {}
+2022-03-21 13:08:55,634-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f7650289ac0>, 87671), and kwargs: {}
+2022-03-21 13:08:58,363-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f7650289ac0>, 93593), and kwargs: {}
+2022-03-21 13:09:00,930-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f7650289ac0>, 96798), and kwargs: {}
+2022-03-21 13:09:03,122-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f7650289ac0>, 103278), and kwargs: {}
+2022-03-21 13:09:05,320-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f7650289ac0>, 110147), and kwargs: {}
+2022-03-21 13:09:07,636-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f7650289ac0>, 117287), and kwargs: {}
+2022-03-21 13:09:09,682-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f7650289ac0>, 121986), and kwargs: {}
+2022-03-21 13:09:12,242-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f7650289ac0>, 127458), and kwargs: {}
+2022-03-21 13:09:17,379-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f7650289ac0>, 131902), and kwargs: {}
+2022-03-21 13:09:19,512-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f7650289ac0>, 133714), and kwargs: {}
+2022-03-21 13:09:21,818-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f7650289ac0>, 138571), and kwargs: {}
+2022-03-21 21:13:53,013-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f4c48288640>, 0), and kwargs: {}
+2022-03-21 21:13:55,317-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f4c48288640>, 5029), and kwargs: {}
+2022-03-21 21:13:57,390-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f4c48288640>, 11629), and kwargs: {}
+2022-03-21 21:13:59,823-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f4c48288640>, 18109), and kwargs: {}
+2022-03-21 21:14:02,005-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f4c48288640>, 20571), and kwargs: {}
+2022-03-21 21:14:04,205-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f4c48288640>, 27051), and kwargs: {}
+2022-03-21 21:14:06,456-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f4c48288640>, 33531), and kwargs: {}
+2022-03-21 21:14:08,724-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f4c48288640>, 38767), and kwargs: {}
+2022-03-21 21:14:10,908-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f4c48288640>, 43159), and kwargs: {}
+2022-03-21 21:14:13,007-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f4c48288640>, 46491), and kwargs: {}
+2022-03-21 21:14:15,391-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f4c48288640>, 51822), and kwargs: {}
+2022-03-21 21:14:18,010-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f4c48288640>, 53906), and kwargs: {}
+2022-03-21 21:18:01,200-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fb0bef7ae50>, 0), and kwargs: {}
+2022-03-21 21:18:03,324-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fb0bef7ae50>, 3307), and kwargs: {}
+2022-03-21 21:18:05,533-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fb0bef7ae50>, 6591), and kwargs: {}
+2022-03-21 21:18:07,779-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fb0bef7ae50>, 12278), and kwargs: {}
+2022-03-21 21:18:09,940-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fb0bef7ae50>, 18177), and kwargs: {}
+2022-03-21 21:18:12,210-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fb0bef7ae50>, 24939), and kwargs: {}
+2022-03-21 21:18:14,323-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fb0bef7ae50>, 27893), and kwargs: {}
+2022-03-21 21:18:16,790-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fb0bef7ae50>, 34413), and kwargs: {}
+2022-03-21 21:18:18,872-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fb0bef7ae50>, 40893), and kwargs: {}
+2022-03-21 21:18:21,716-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fb0bef7ae50>, 46270), and kwargs: {}
+2022-03-21 21:18:24,398-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fb0bef7ae50>, 50662), and kwargs: {}
+2022-03-21 21:18:26,543-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fb0bef7ae50>, 53994), and kwargs: {}
+2022-03-21 21:46:35,158-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f424e7814c0>, 0), and kwargs: {}
+2022-03-21 21:46:37,456-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f424e7814c0>, 6079), and kwargs: {}
+2022-03-21 21:46:40,022-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f424e7814c0>, 11012), and kwargs: {}
+2022-03-21 21:46:42,296-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f424e7814c0>, 16308), and kwargs: {}
+2022-03-21 21:46:44,572-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f424e7814c0>, 21085), and kwargs: {}
+2022-03-21 21:46:47,336-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f424e7814c0>, 24843), and kwargs: {}
+2022-03-21 21:46:49,505-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f424e7814c0>, 29867), and kwargs: {}
+2022-03-21 21:46:51,568-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f424e7814c0>, 34736), and kwargs: {}
+2022-03-21 21:46:53,766-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f424e7814c0>, 39850), and kwargs: {}
+2022-03-21 21:46:55,966-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f424e7814c0>, 45563), and kwargs: {}
+2022-03-21 22:13:38,008-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f8c4ca48c40>, 0), and kwargs: {}
+2022-03-21 22:13:40,041-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f8c4ca48c40>, 4233), and kwargs: {}
+2022-03-21 22:13:42,586-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f8c4ca48c40>, 9215), and kwargs: {}
+2022-03-21 22:13:45,065-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f8c4ca48c40>, 14054), and kwargs: {}
+2022-03-21 22:13:47,735-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f8c4ca48c40>, 18512), and kwargs: {}
+2022-03-21 22:13:50,020-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f8c4ca48c40>, 23088), and kwargs: {}
+2022-03-21 22:13:52,212-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f8c4ca48c40>, 29414), and kwargs: {}
+2022-03-21 22:28:51,550-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fc07b4bfc40>, 0), and kwargs: {}
+2022-03-21 22:28:53,809-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fc07b4bfc40>, 5490), and kwargs: {}
+2022-03-21 22:28:55,959-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fc07b4bfc40>, 12558), and kwargs: {}
+2022-03-21 22:28:58,959-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fc07b4bfc40>, 18314), and kwargs: {}
+2022-03-21 22:29:01,192-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7fc07b4bfc40>, 23116), and kwargs: {}
+2022-03-21 22:32:28,226-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f0eeb9b9c40>, 0), and kwargs: {}
+2022-03-21 22:32:30,622-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f0eeb9b9c40>, 4452), and kwargs: {}
+2022-03-21 22:32:32,806-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f0eeb9b9c40>, 7850), and kwargs: {}
+2022-03-21 22:32:34,868-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f0eeb9b9c40>, 14002), and kwargs: {}
+2022-03-21 22:32:37,108-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f0eeb9b9c40>, 19629), and kwargs: {}
+2022-03-21 22:32:39,364-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f0eeb9b9c40>, 25817), and kwargs: {}
+2022-03-21 22:32:41,772-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f0eeb9b9c40>, 30975), and kwargs: {}
+2022-03-21 22:32:44,362-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f0eeb9b9c40>, 36062), and kwargs: {}
+2022-03-21 22:32:46,475-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f0eeb9b9c40>, 39501), and kwargs: {}
+2022-03-21 22:32:48,584-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f0eeb9b9c40>, 44119), and kwargs: {}
+2022-03-21 22:32:50,892-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f0eeb9b9c40>, 48798), and kwargs: {}
+2022-03-21 22:32:53,407-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f0eeb9b9c40>, 53077), and kwargs: {}
+2022-03-21 22:32:55,745-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f0eeb9b9c40>, 59279), and kwargs: {}
+2022-03-21 22:32:57,999-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f0eeb9b9c40>, 62423), and kwargs: {}
+2022-03-21 22:33:00,248-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f0eeb9b9c40>, 68455), and kwargs: {}
+2022-03-21 22:33:02,485-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f0eeb9b9c40>, 76153), and kwargs: {}
+2022-03-21 22:33:04,662-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f0eeb9b9c40>, 82077), and kwargs: {}
+2022-03-21 22:33:06,920-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f0eeb9b9c40>, 88057), and kwargs: {}
+2022-03-21 22:33:09,145-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f0eeb9b9c40>, 94038), and kwargs: {}
+2022-03-21 22:33:11,690-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f0eeb9b9c40>, 99879), and kwargs: {}
+2022-03-21 22:33:14,033-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f0eeb9b9c40>, 102146), and kwargs: {}
+2022-03-21 22:33:16,392-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f0eeb9b9c40>, 107659), and kwargs: {}
+2022-03-21 22:33:18,641-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f0eeb9b9c40>, 114236), and kwargs: {}
+2022-03-21 22:33:20,715-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f0eeb9b9c40>, 119080), and kwargs: {}
+2022-03-21 22:36:41,961-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f2c95dc4c40>, 0), and kwargs: {}
+2022-03-21 22:36:44,168-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f2c95dc4c40>, 5261), and kwargs: {}
+2022-03-21 22:36:46,841-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f2c95dc4c40>, 10414), and kwargs: {}
+2022-03-21 22:36:49,222-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f2c95dc4c40>, 14480), and kwargs: {}
+2022-03-21 22:38:20,843-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f70cf6dec40>, 0), and kwargs: {}
+2022-03-21 22:38:23,107-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f70cf6dec40>, 5085), and kwargs: {}
+2022-03-21 22:38:25,348-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f70cf6dec40>, 9974), and kwargs: {}
+2022-03-21 22:38:27,869-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f70cf6dec40>, 16042), and kwargs: {}
+2022-03-21 22:38:30,006-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f70cf6dec40>, 19514), and kwargs: {}
+2022-03-21 22:38:32,221-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f70cf6dec40>, 25664), and kwargs: {}
+2022-03-21 22:38:34,446-INFO:scrollPageDown Ran with args: (<engine.tweetEngine object at 0x7f70cf6dec40>, 31563), and kwargs: {}

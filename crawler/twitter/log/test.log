@@ -1,0 +1,4 @@
+INFO:myLog:Ran with args:
+ (1, 2)
+, and kwargs
+: {}
